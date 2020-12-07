@@ -4,8 +4,9 @@ echo VLC
 echo 7-ZIP
 echo Winrar
 echo Chrome
+echo Firefox
+echo Chromium
 echo Java
-echo FireFox
 echo Python
 echo Malwarebytes
 echo FileZilla
