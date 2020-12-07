@@ -2,6 +2,7 @@ echo off
 cls
 echo            Web apps
 echo Chrome
+echo Chromex64
 echo Firefox
 echo Chromium
 echo Opera
@@ -36,6 +37,7 @@ echo QBittorrent
 echo WindowsStore
 echo.
 echo AnyDesk
+echo DolphinEmulator
 cd..
 cd Apps
 cmd
