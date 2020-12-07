@@ -16,6 +16,7 @@ echo.
 echo            ZIP-Rar Readers  + Editors
 echo 7-ZIP
 echo Winrar
+echo PowerISO
 echo.
 echo            RunTimes
 echo K-Lite-Codec-Pack-Full
