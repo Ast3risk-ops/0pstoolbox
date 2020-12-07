@@ -34,6 +34,8 @@ echo            Online Downloaders + uploaders
 echo Dropbox
 echo QBittorrent
 echo WindowsStore
+echo.
+echo AnyDesk
 cd..
 cd Apps
 cmd
