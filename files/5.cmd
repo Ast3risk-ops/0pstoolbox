@@ -38,6 +38,9 @@ echo WindowsStore
 echo.
 echo AnyDesk
 echo DolphinEmulator
+echo CPU-Z
+echo Blender
+echo Etcher
 cd..
 cd Apps
 cmd
