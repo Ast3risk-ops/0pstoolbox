@@ -10,6 +10,7 @@ echo Python
 echo Malwarebytes
 echo FileZilla
 echo ClassicShell
+echo K-Lite-Codec-Pack-Full
 cd..
 cd Apps
 cmd
