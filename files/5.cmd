@@ -42,6 +42,7 @@ echo CPU-Z
 echo Blender
 echo Etcher
 echo Lastpass
+echo Discord
 cd..
 cd Apps
 cmd
