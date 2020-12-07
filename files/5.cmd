@@ -33,6 +33,7 @@ echo.
 echo            Online Downloaders + uploaders
 echo Dropbox
 echo QBittorrent
+echo WindowsStore
 cd..
 cd Apps
 cmd
