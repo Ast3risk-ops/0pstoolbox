@@ -41,6 +41,7 @@ echo DolphinEmulator
 echo CPU-Z
 echo Blender
 echo Etcher
+echo Lastpass
 cd..
 cd Apps
 cmd
