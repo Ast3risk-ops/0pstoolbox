@@ -9,5 +9,6 @@ echo 5-Apps
 echo 6-Christitus DebloaterBox
 echo 7-Restore search bar
 echo 8-Reinstall all Windows build in apps
+echo 9-WinaeroTweaker
 cd files
 cmd
