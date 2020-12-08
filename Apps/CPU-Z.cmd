@@ -5,4 +5,4 @@ powershell.exe "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.Se
 choco install cpu-z -y
 @pause
 cd..
-SteavenToolBox.cmd
+SteavenToolBox.cmdh
