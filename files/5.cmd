@@ -60,6 +60,7 @@ echo Unity
 echo OBS
 echo uplay
 echo TeamSpeak
+echo ShutUp10
 cd..
 cd Apps
 cmd
