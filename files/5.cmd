@@ -57,6 +57,7 @@ echo DolphinEmulator
 echo uplay
 echo GOG-Galaxy2
 echo Unity
+echo Battle.net
 echo.
 echo AnyDesk
 echo CPU-Z
