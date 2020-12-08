@@ -43,22 +43,26 @@ echo.
 echo            Online Downloaders + uploaders
 echo Dropbox
 echo OneDrive
+echo AppleiCloud
 echo QBittorrent
 echo uTorrentClassic
 echo WindowsStore
 echo GitHub
 echo.
-echo AnyDesk
+echo            Game Apps
 echo DolphinEmulator
+echo uplay
+echo GOG-Galaxy2
+echo Unity
+echo.
+echo AnyDesk
 echo CPU-Z
 echo Blender
 echo Etcher
 echo Lastpass
 echo Discord
 echo ProcessHacker
-echo Unity
 echo OBS
-echo uplay
 echo TeamSpeak
 echo ShutUp10
 cd..
