@@ -29,6 +29,7 @@ echo            Codeing
 echo Python
 echo NotePad++
 echo Windows-Terminal
+echo Windows-Subsystem
 echo FileZilla
 echo.
 echo Anitviers
@@ -36,6 +37,7 @@ echo Malwarebytes
 echo Avast
 echo 360TotalSecurity
 echo AVG
+echo McAfee-Stinger
 echo.
 echo            Old Start Menus
 echo ClassicShell
@@ -48,6 +50,7 @@ echo QBittorrent
 echo uTorrentClassic
 echo WindowsStore
 echo GitHub
+echo PatchMyPC
 echo.
 echo            Game Apps
 echo DolphinEmulator
@@ -65,6 +68,9 @@ echo ProcessHacker
 echo OBS
 echo TeamSpeak
 echo ShutUp10
+echo Lightshot
+echo Rainmeter
+echo Recuva
 cd..
 cd Apps
 cmd

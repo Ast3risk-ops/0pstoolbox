@@ -3,6 +3,7 @@ cls
 title Install Unity
 powershell.exe "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))"
 choco install unity -y
+choco install unity-hub -y
 @pause
 cd..
 SteavenToolBox.cmd
