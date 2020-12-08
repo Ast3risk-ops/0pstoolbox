@@ -72,6 +72,7 @@ echo ShutUp10
 echo Lightshot
 echo Rainmeter
 echo Recuva
+echo Rufus
 cd..
 cd Apps
 cmd
