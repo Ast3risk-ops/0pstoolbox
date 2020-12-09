@@ -10,6 +10,8 @@ echo 6-Christitus DebloaterBox
 echo 7-Restore search bar
 echo 8-Reinstall all Windows build in apps
 echo 9-WinaeroTweaker
+echo 10-MadBomb122 ToolBox
+echo 11-Debotnet
 echo Discord: https://discord.gg/zYekYdRhM7
 cd files
 cmd
