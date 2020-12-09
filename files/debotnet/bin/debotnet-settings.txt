@@ -3,7 +3,7 @@ RunOnce=1
 DateRun=12/9/2020
 [Settings]
 Design=0
-Category=4
+Category=2
 UseDebotnetEditor=1
 RunAlwaysInElevatedMode=0
 [Repository]
@@ -16,6 +16,7 @@ WgetParam=-q --show-progress --progress=bar:force --no-hsts --no-check-certifica
 windows defender=0;0;0;0
 security=0;0
 debloat windows 10=-1;-1;0;-1;0;0
+chocolatey software=0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
 [Release]
 Stable=True
 Nightly=False
