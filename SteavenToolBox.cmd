@@ -2,7 +2,7 @@
 cls
 call :IsAdmin
 :start
-title SteavenToolBox 1.0
+title SteavenToolBox 1.1
 cls
 ECHO.
 echo ---------------------------------------------------------------------------------------------------------------------
