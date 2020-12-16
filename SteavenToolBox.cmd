@@ -2,18 +2,22 @@
 cls
 call :IsAdmin
 :start
-title SteavenToolBox 1.1
+title SteavenToolBox 1.2
 cls
 ECHO.
+echo ===================
+echo STEAVEN TOOLBOX 1.2 
+echo ===================
 echo ---------------------------------------------------------------------------------------------------------------------
 ECHO "TWEAK | FIXED | CLEANER | OTHER"                         Installer
-color 2
-ECHO 1. Print Spooler                                          7. Install choco So you can install any app
-echo 2. Clear Event Viewer Logs                                8. Firefox Mozilla (browser)
-echo 3. "Clear Cache Updates | Delivery Optimization"          9. Google Chrome (browser)
-echo 4. "Hibernation | Fastboot | Sleepmode | Sysmain"         10. 7-Zip
-echo 5. Stops Windows Updates Forever                          11. Users Request
-echo 6.Actviate Windows 10                                     14. Reinstall Windows 10 preinstalled apps
+echo "--------------------------------"                        7. Install choco So you can install any app
+color 2                                   
+ECHO 1. Print Spooler                                          8. Firefox Mozilla (browser)
+echo 2. Clear Event Viewer Logs                                9. Google Chrome (browser)
+echo 3. "Clear Cache Updates | Delivery Optimization"          10. 7-Zip
+echo 4. "Hibernation | Fastboot | Sleepmode | Sysmain"         11. Users Request
+echo 5. Stops Windows Updates Forever                          14. Reinstall Windows 10 preinstalled apps
+echo 6.Actviate Windows 10                                     20. Uninstall onedrive
 echo 12. Trimors Stuff                                     
 echo 13. Disable Windows Defender
 echo 15. Right click Take Ownership Menu
@@ -21,7 +25,6 @@ echo 16. Disable Services
 echo 17. Right Click Open Command Window here
 echo 18. Steaven Speed up
 echo 19. Disable Action Center
-echo 20. Uninstall onedrive
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
 set /p choice=Type the number.
@@ -50,7 +53,7 @@ ECHO "%choice%" is not valid, try again
 ECHO.
 goto start
 :1
-title SteavenToolBox 1.1 Print Spooler
+title SteavenToolBox 1.2 Print Spooler
 cls
 echo Print Spooler for Printer (services)
 echo 1. Enable
@@ -75,7 +78,7 @@ SC CONFIG Spooler start= disabled
 goto start
 :2
 cls
-title SteavenToolBox 1.1 Clear Event Logs
+title SteavenToolBox 1.2 Clear Event Logs
 color 7
 FOR /F "tokens=1, 2 * " %%V IN ('bcdedit') DO SET adminTest=%%V
 IF (%adminTest%)==(Access) goto noAdmin
@@ -88,7 +91,7 @@ goto :eof
 goto start
 :3
 cls
-title SteavenToolBox 1.1 Clear Cache
+title SteavenToolBox 1.2 Clear Cache
 color 4
 SC stop DoSvc
 del c:\WIN386.SWP
@@ -109,7 +112,7 @@ del /s /f /q "%USERPROFILE%\Cookies"\*.*
 goto start
 :4
 cls
-title SteavenToolBox 1.1 Hibernation "| Fastboot | Sleepmode | Sysmain"
+title SteavenToolBox 1.2 Hibernation "| Fastboot | Sleepmode | Sysmain"
 echo Hibernation / Fastboot / Sleep mode
 echo 1. Disable : hiberfil.sys
 echo 2. Enable  : hiberfil.sys
@@ -181,7 +184,7 @@ slmgr /ato
 goto start
 :11
 cls
-title SteavenToolBox 1.1 Users Request Apps
+title SteavenToolBox 1.2 Users Request Apps
 echo Users Request
 echo 1. Avast
 echo 2. AnyDesk
@@ -900,7 +903,7 @@ Reg.exe add "HKCR\Drive\shell\runas\command" /v "IsolatedCommand" /t REG_SZ /d "
 goto start
 :16
 cls
-title SteavenToolBox 1.1 Disable Services
+title SteavenToolBox 1.2 Disable Services
 SC STOP Spooler
 SC CONFIG Spooler start= disabled
 SC STOP WMPNetworkSvc
