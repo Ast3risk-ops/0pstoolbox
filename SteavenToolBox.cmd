@@ -50,7 +50,7 @@ ECHO "%choice%" is not valid, try again
 ECHO.
 goto start
 :1
-title SteavenToolBox 1.0 Print Spooler
+title SteavenToolBox 1.1 Print Spooler
 cls
 echo Print Spooler for Printer (services)
 echo 1. Enable
@@ -75,7 +75,7 @@ SC CONFIG Spooler start= disabled
 goto start
 :2
 cls
-title SteavenToolBox 1.0 Clear Event Logs
+title SteavenToolBox 1.1 Clear Event Logs
 color 7
 FOR /F "tokens=1, 2 * " %%V IN ('bcdedit') DO SET adminTest=%%V
 IF (%adminTest%)==(Access) goto noAdmin
@@ -88,7 +88,7 @@ goto :eof
 goto start
 :3
 cls
-title SteavenToolBox 1.0 Clear Cache
+title SteavenToolBox 1.1 Clear Cache
 color 4
 SC stop DoSvc
 del c:\WIN386.SWP
@@ -109,7 +109,7 @@ del /s /f /q "%USERPROFILE%\Cookies"\*.*
 goto start
 :4
 cls
-title SteavenToolBox 1.0 Hibernation "| Fastboot | Sleepmode | Sysmain"
+title SteavenToolBox 1.1 Hibernation "| Fastboot | Sleepmode | Sysmain"
 echo Hibernation / Fastboot / Sleep mode
 echo 1. Disable : hiberfil.sys
 echo 2. Enable  : hiberfil.sys
@@ -181,7 +181,7 @@ slmgr /ato
 goto start
 :11
 cls
-title SteavenToolBox 1.0 Users Request Apps
+title SteavenToolBox 1.1 Users Request Apps
 echo Users Request
 echo 1. Avast
 echo 2. AnyDesk
@@ -900,7 +900,7 @@ Reg.exe add "HKCR\Drive\shell\runas\command" /v "IsolatedCommand" /t REG_SZ /d "
 goto start
 :16
 cls
-title SteavenToolBox 1.0 Disable Services
+title SteavenToolBox 1.1 Disable Services
 SC STOP Spooler
 SC CONFIG Spooler start= disabled
 SC STOP WMPNetworkSvc
