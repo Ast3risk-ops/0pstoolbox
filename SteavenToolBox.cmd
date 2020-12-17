@@ -6,11 +6,11 @@ title SteavenToolBox 1.2
 cls
 ECHO.
 echo ===================
-echo STEAVEN TOOLBOX 1.2 
+echo STEAVENTOOLBOX 1.2 
 echo ===================
 echo ---------------------------------------------------------------------------------------------------------------------
 ECHO "TWEAK | FIXED | CLEANER | OTHER"                         Installer
-echo "--------------------------------"                        7. Install choco So you can install any app
+echo --------------------------------                          7. Install choco So you can install any app
 color 2                                   
 ECHO 1. Print Spooler                                          8. Firefox Mozilla (browser)
 echo 2. Clear Event Viewer Logs                                9. Google Chrome (browser)
