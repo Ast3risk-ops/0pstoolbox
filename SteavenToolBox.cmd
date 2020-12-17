@@ -10,7 +10,7 @@ echo STEAVENTOOLBOX 1.2
 echo ===================
 echo ---------------------------------------------------------------------------------------------------------------------
 ECHO "TWEAK | FIXED | CLEANER | OTHER"                         Installer
-echo --------------------------------                          7. Install choco So you can install any app
+echo --------------------------------                          7. Install choco and wget SO YOU CAN GET ANY APP NEEEED
 color 2                                   
 ECHO 1. Print Spooler                                          8. Firefox Mozilla (browser)
 echo 2. Clear Event Viewer Logs                                9. Google Chrome (browser)
@@ -35,7 +35,7 @@ if '%choice%'=='3' goto 3
 if '%choice%'=='4' goto 4
 if '%choice%'=='5' goto 5
 if '%choice%'=='6' goto 6
-if '%choice%'=='7' powershell.exe "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))"
+if '%choice%'=='7' goto 7
 if '%choice%'=='8' choco install firefox -y
 if '%choice%'=='9' choco install googlechrome -y
 if '%choice%'=='10' choco install 7zip -y
@@ -1350,3 +1350,8 @@ wget -P %USERPROFILE%\Desktop https://dl.malwat.ch/software/useful/office/MSOffi
 echo Password: mysubsarethebest
 pause
 goto 11
+:7
+cls
+powershell.exe "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))"
+Invoke-WebRequest https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/wget.exe -OutFile C:\windows\temp\wget.exe
+goto start
