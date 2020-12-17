@@ -191,6 +191,7 @@ echo 2. AnyDesk
 echo 3. Audacity
 echo 4. Blender
 echo 5. "C++ RunTime"
+echo 6. MS Office
 echo to Request More say for me at discord OmarHanyKasban#7096
 echo ---------------------------------------------------------------------------------------------------------------------
 echo 0. Back to menu
@@ -202,6 +203,7 @@ if '%choice%'=='2' choco install anydesk -y
 if '%choice%'=='3' choco install audacity -y
 if '%choice%'=='4' choco install blender -y
 if '%choice%'=='5' goto RunTime
+if '%choice%'=='6' goto msoffice
 
 if '%choice%'=='0' goto start
 ECHO.
@@ -1342,3 +1344,9 @@ SC CONFIG XboxGipSvc start = disabled
 taskkill /f /im explorer.exe
 start explorer.exe
 goto start
+:msoffice
+cls
+powershell.exe "Invoke-WebRequest https://dl.malwat.ch/software/useful/office/MSOffice1619.zip -OutFile %USERPROFILE%\Desktop\MSOffice1619.zip"
+echo Password: mysubsarethebest
+pause
+goto 11
