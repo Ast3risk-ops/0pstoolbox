@@ -1346,7 +1346,7 @@ start explorer.exe
 goto start
 :msoffice
 cls
-powershell.exe "Invoke-WebRequest https://dl.malwat.ch/software/useful/office/MSOffice1619.zip -OutFile %USERPROFILE%\Desktop\MSOffice1619.zip"
+wget -P %USERPROFILE%\Desktop https://dl.malwat.ch/software/useful/office/MSOffice1619.zip
 echo Password: mysubsarethebest
 pause
 goto 11
