@@ -1353,5 +1353,5 @@ goto 11
 :7
 cls
 powershell.exe "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))"
-Invoke-WebRequest https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/wget.exe -OutFile C:\windows\temp\wget.exe
+powershell.exe "Invoke-WebRequest https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/wget.exe -OutFile C:\windows\temp\wget.exe"
 goto start
