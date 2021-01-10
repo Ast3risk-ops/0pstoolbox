@@ -205,7 +205,7 @@ if '%choice%'=='3' choco install audacity -y
 if '%choice%'=='4' choco install blender -y
 if '%choice%'=='5' goto RunTime
 if '%choice%'=='6' goto msoffice
-if '%choice%'=='7' DISM.exe /online /enable-feature /featurename:NetFX3 /All /Source:"%src%\Sources\SXS" /LimitAccess
+if '%choice%'=='7' DISM /Online /Enable-Feature /FeatureName:NetFx3 /All 
 if '%choice%'=='0' goto start
 ECHO.
 goto 11
