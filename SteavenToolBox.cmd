@@ -18,7 +18,7 @@ echo 3. "Clear Cache Updates | Delivery Optimization"          10. 7-Zip
 echo 4. "Hibernation | Fastboot | Sleepmode | Sysmain"         11. Users Request
 echo 5. Stops Windows Updates Forever                          14. Reinstall Windows 10 preinstalled apps
 echo 6.Actviate Windows 10                                     20. Uninstall onedrive
-echo 12. Trimors Stuff                                     
+echo 12. Trimors Stuff                                         21. Disable/Enable Firewall
 echo 13. Disable Windows Defender
 echo 15. Right click Take Ownership Menu
 echo 16. Disable Services
@@ -49,6 +49,7 @@ if '%choice%'=='17' goto 17
 if '%choice%'=='18' goto 18
 if '%choice%'=='19' powershell.exe "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/DisableActionCenter.ps1'))"
 if '%choice%'=='20' powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/onedrive.ps1'))"
+if '%choice%'=='21' goto 21
 ECHO "%choice%" is not valid, try again
 ECHO.
 goto start
@@ -1357,3 +1358,17 @@ powershell.exe "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.Se
 md c:\windows\wget
 powershell.exe "Invoke-WebRequest https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/wget.exe -OutFile c:\windows\wget\wget.exe"
 goto start
+:21
+cls
+echo Enable/Disable Firewall
+echo 1. Enable
+echo 2. Disable
+echo ---------------------------------------------------------------------------------------------------------------------
+echo 0. Back to menu
+set choice=
+set /p choice=Type the number.
+if not '%choice%'=='' set choice=%choice:~0,100%
+if '%choice%'=='1' NetSh Advfirewall set allprofiles state on
+if '%choice%'=='2' NetSh Advfirewall set allprofiles state off
+if '%choice%'=='0' goto start
+goto 21
