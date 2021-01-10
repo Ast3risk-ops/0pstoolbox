@@ -192,6 +192,7 @@ echo 3. Audacity
 echo 4. Blender
 echo 5. "C++ RunTime"
 echo 6. MS Office
+echo 7. netframwork 3
 echo to Request More say for me at discord OmarHanyKasban#7096
 echo ---------------------------------------------------------------------------------------------------------------------
 echo 0. Back to menu
@@ -204,7 +205,7 @@ if '%choice%'=='3' choco install audacity -y
 if '%choice%'=='4' choco install blender -y
 if '%choice%'=='5' goto RunTime
 if '%choice%'=='6' goto msoffice
-
+if '%choice%'=='7' DISM.exe /online /enable-feature /featurename:NetFX3 /All /Source:"%src%\Sources\SXS" /LimitAccess
 if '%choice%'=='0' goto start
 ECHO.
 goto 11
@@ -1346,12 +1347,13 @@ start explorer.exe
 goto start
 :msoffice
 cls
-wget -P %USERPROFILE%\Desktop https://dl.malwat.ch/software/useful/office/MSOffice1619.zip
+c:\windows\wget\wget.exe -P %USERPROFILE%\Desktop https://dl.malwat.ch/software/useful/office/MSOffice1619.zip
 echo Password: mysubsarethebest
 pause
 goto 11
 :7
 cls
 powershell.exe "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))"
-powershell.exe "Invoke-WebRequest https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/wget.exe -OutFile C:\windows\temp\wget.exe"
+md c:\windows\wget
+powershell.exe "Invoke-WebRequest https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/wget.exe -OutFile c:\windows\wget\wget.exe"
 goto start
