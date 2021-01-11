@@ -194,6 +194,7 @@ echo 4. Blender
 echo 5. "C++ RunTime"
 echo 6. MS Office
 echo 7. netframwork 3
+echo 8. winrar
 echo to Request More say for me at discord OmarHanyKasban#7096
 echo ---------------------------------------------------------------------------------------------------------------------
 echo 0. Back to menu
@@ -207,6 +208,7 @@ if '%choice%'=='4' choco install blender -y
 if '%choice%'=='5' goto RunTime
 if '%choice%'=='6' goto msoffice
 if '%choice%'=='7' DISM /Online /Enable-Feature /FeatureName:NetFx3 /All 
+if '%choice%'=='8' choco install winrar -y
 if '%choice%'=='0' goto start
 ECHO.
 goto 11
