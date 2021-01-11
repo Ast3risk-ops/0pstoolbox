@@ -195,6 +195,7 @@ echo 5. "C++ RunTime"
 echo 6. MS Office
 echo 7. netframwork 3
 echo 8. winrar
+echo 9. DirectX
 echo to Request More say for me at discord OmarHanyKasban#7096
 echo ---------------------------------------------------------------------------------------------------------------------
 echo 0. Back to menu
@@ -209,6 +210,7 @@ if '%choice%'=='5' goto RunTime
 if '%choice%'=='6' goto msoffice
 if '%choice%'=='7' DISM /Online /Enable-Feature /FeatureName:NetFx3 /All 
 if '%choice%'=='8' choco install winrar -y
+if '%choice%'=='9' goto directx
 if '%choice%'=='0' goto start
 ECHO.
 goto 11
@@ -1374,3 +1376,9 @@ if '%choice%'=='1' NetSh Advfirewall set allprofiles state on
 if '%choice%'=='2' NetSh Advfirewall set allprofiles state off
 if '%choice%'=='0' goto start
 goto 21
+:directx
+cls
+choco install directx
+c:\windows\wget\wget.exe -P %USERPROFILE%\Desktop https://github.com/omartube706/SteavenToolBox/raw/main/dxwebsetup.exe
+@pause
+goto 11
