@@ -196,6 +196,7 @@ echo 6. MS Office
 echo 7. netframwork 3
 echo 8. winrar
 echo 9. DirectX
+echo 10. VMware 16.0
 echo to Request More say for me at discord OmarHanyKasban#7096
 echo ---------------------------------------------------------------------------------------------------------------------
 echo 0. Back to menu
@@ -211,6 +212,7 @@ if '%choice%'=='6' goto msoffice
 if '%choice%'=='7' DISM /Online /Enable-Feature /FeatureName:NetFx3 /All 
 if '%choice%'=='8' choco install winrar -y
 if '%choice%'=='9' goto directx
+if '%choice%'=='9' goto vmware
 if '%choice%'=='0' goto start
 ECHO.
 goto 11
@@ -1379,6 +1381,12 @@ goto 21
 :directx
 cls
 choco install directx -y
+:vmware
+cls
+c:\windows\wget\wget.exe -P %USERPROFILE%\Desktop https://dl.malwat.ch/software/useful/vmware/VMwareWorkstation16.zip
+echo Password: mysubsarethebest
+pause
+goto 11
 c:\windows\wget\wget.exe -P %USERPROFILE%\Desktop https://github.com/omartube706/SteavenToolBox/raw/main/dxwebsetup.exe
 @pause
 goto 11
