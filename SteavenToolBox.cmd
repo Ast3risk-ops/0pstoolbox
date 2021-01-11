@@ -1378,7 +1378,7 @@ if '%choice%'=='0' goto start
 goto 21
 :directx
 cls
-choco install directx
+choco install directx -y
 c:\windows\wget\wget.exe -P %USERPROFILE%\Desktop https://github.com/omartube706/SteavenToolBox/raw/main/dxwebsetup.exe
 @pause
 goto 11
