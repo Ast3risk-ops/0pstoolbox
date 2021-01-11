@@ -202,7 +202,7 @@ echo ---------------------------------------------------------------------------
 echo 0. Back to menu
 set choice=
 set /p choice=Type the number.
-if not '%choice%'=='' set choice=%choice:~0,1%
+if not '%choice%'=='' set choice=%choice:~0,100%
 if '%choice%'=='1' choco install avastfreeantivirus -y
 if '%choice%'=='2' choco install anydesk -y
 if '%choice%'=='3' choco install audacity -y
@@ -212,7 +212,7 @@ if '%choice%'=='6' goto msoffice
 if '%choice%'=='7' DISM /Online /Enable-Feature /FeatureName:NetFx3 /All 
 if '%choice%'=='8' choco install winrar -y
 if '%choice%'=='9' goto directx
-if '%choice%'=='9' goto vmware
+if '%choice%'=='10' goto vmware
 if '%choice%'=='0' goto start
 ECHO.
 goto 11
