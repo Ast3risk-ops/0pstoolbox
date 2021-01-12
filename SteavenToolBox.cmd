@@ -5,9 +5,9 @@ call :IsAdmin
 title SteavenToolBox 1.3.1
 cls
 ECHO.
-echo ===================
-echo SteavenToolBox 1.3.1 
-echo ===================
+echo =====================================================================
+echo "SteavenToolBox 1.3.1 | Current Working Windows 10 Version 2009 20h2"
+echo =====================================================================
 echo ---------------------------------------------------------------------------------------------------------------------
 ECHO "TWEAK | FIXED | CLEANER | OTHER"                         Installer
 echo --------------------------------                          7. Install choco and wget SO YOU CAN GET ANY APP NEEEED
@@ -187,11 +187,11 @@ goto start
 cls
 title SteavenToolBox 1.3.1 Users Request Apps
 echo Users Request
-echo 1. Avast
-echo 2. AnyDesk
-echo 3. Audacity
-echo 4. Blender
-echo 5. "C++ RunTime"
+echo 1. Avast                    11. Adobe Acrobat Reader DC
+echo 2. AnyDesk                  12. Java SE Runtime Environment 8
+echo 3. Audacity                 13. Notepad++
+echo 4. Blender                  14. VLC
+echo 5. "C++ RunTime"            15. Pyhton
 echo 6. MS Office
 echo 7. netframwork 3
 echo 8. winrar
@@ -213,6 +213,11 @@ if '%choice%'=='7' DISM /Online /Enable-Feature /FeatureName:NetFx3 /All
 if '%choice%'=='8' choco install winrar -y
 if '%choice%'=='9' goto directx
 if '%choice%'=='10' goto vmware
+if '%choice%'=='11' choco install adobereader -y
+if '%choice%'=='12' choco install jre8 -y
+if '%choice%'=='13' choco install notepadplusplus.install -y
+if '%choice%'=='14' choco install vlc -y
+if '%choice%'=='15' choco install python3 -y
 if '%choice%'=='0' goto start
 ECHO.
 goto 11
