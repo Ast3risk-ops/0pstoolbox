@@ -225,7 +225,7 @@ if '%choice%'=='14' choco install vlc -y
 if '%choice%'=='15' choco install python3 -y
 if '%choice%'=='16' choco install office365business -y
 if '%choice%'=='17' choco install paint.net -y
-if '%choice%'=='18' goto trial
+if '%choice%'=='18' goto rufus
 if '%choice%'=='0' goto start
 ECHO.
 goto 11
