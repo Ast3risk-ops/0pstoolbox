@@ -1367,7 +1367,7 @@ start explorer.exe
 goto start
 :msoffice
 cls
-c:\windows\wget\wget.exe -P %USERPROFILE%\Desktop https://dl.malwat.ch/software/useful/office/MSOffice1619.zip
+c:\windows\wget\wget.exe -P c: https://dl.malwat.ch/software/useful/office/MSOffice1619.zip
 echo Password: mysubsarethebest
 pause
 goto 11
@@ -1396,11 +1396,11 @@ cls
 choco install directx -y
 :vmware
 cls
-c:\windows\wget\wget.exe -P %USERPROFILE%\Desktop https://dl.malwat.ch/software/useful/vmware/VMwareWorkstation16.zip
+c:\windows\wget\wget.exe -P c: https://dl.malwat.ch/software/useful/vmware/VMwareWorkstation16.zip
 echo Password: mysubsarethebest
 pause
 goto 11
-c:\windows\wget\wget.exe -P %USERPROFILE%\Desktop https://github.com/omartube706/SteavenToolBox/raw/main/dxwebsetup.exe
+c:\windows\wget\wget.exe -P c: https://github.com/omartube706/SteavenToolBox/raw/main/dxwebsetup.exe
 @pause
 goto 11
 :22
@@ -1738,7 +1738,7 @@ pause >nul
 goto start
 :rufus
 cls
-c:\windows\wget\wget.exe -P %USERPROFILE%\Desktop https://dl.malwat.ch/software/advanced/Rufus.zip
+c:\windows\wget\wget.exe -P c: https://dl.malwat.ch/software/advanced/Rufus.zip
 echo Password: mysubsarethebest
 pause
 goto 11
