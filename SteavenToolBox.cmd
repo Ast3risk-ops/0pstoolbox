@@ -23,7 +23,7 @@ echo 5. Stops Windows Updates Forever                          14. Reinstall Win
 echo 6.Actviate Windows 10                                     20. Uninstall onedrive
 echo 12. Trimors Stuff                                         21. Disable/Enable Firewall
 echo 13. Disable Windows Defender                              22. Get Steaven Windows 10 Cleanup
-echo 15. Right click Take Ownership Menu
+echo 15. Right click Take Ownership Menu                       23. Office 2016 Activation
 echo 16. Disable Services
 echo 17. Right Click Open Command Window here
 echo 18. Steaven Speed up
@@ -54,6 +54,7 @@ if '%choice%'=='19' powershell.exe "Set-ExecutionPolicy Bypass -Scope Process -F
 if '%choice%'=='20' powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/onedrive.ps1'))"
 if '%choice%'=='21' goto 21
 if '%choice%'=='22' goto 22
+if '%choice%'=='23' goto 23
 ECHO "%choice%" is not valid, try again
 ECHO.
 goto start
@@ -1715,4 +1716,20 @@ SC CONFIG Dnscache start= disabled
 SC STOP XboxGipSvc
 SC CONFIG XboxGipSvc start = disabled
 regsvr32 actxprxy.dll
+goto start
+:23
+cls
+title Microsoft Office 2016 Activation (Muaz Ahmed)!&cls&echo ============================================================================&echo #Project: Microsoft Office Activation by Muaz Ahmed/Alpha_R&echo ============================================================================&echo.&echo #Supported products:&echo - Microsoft Office Standard 2016&echo - Microsoft Office Professional Plus 2016&echo.&echo.&(if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16")&(for /f %%x in ('dir /b ..\root\Licenses16\proplusvl_kms*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)&(for /f %%x in ('dir /b ..\root\Licenses16\proplusvl_mak*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)&echo.&echo ============================================================================&echo Activating your Office...&cscript //nologo ospp.vbs /unpkey:WFG99 >nul&cscript //nologo ospp.vbs /unpkey:DRTFM >nul&cscript //nologo ospp.vbs /unpkey:BTDRB >nul&cscript //nologo ospp.vbs /unpkey:CPQVG >nul&cscript //nologo ospp.vbs /inpkey:XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99 >nul&set i=1
+:server
+if %i%==1 set KMS_Sev=kms7.MSGuides.com
+if %i%==2 set KMS_Sev=kms8.MSGuides.com
+if %i%==3 set KMS_Sev=kms9.MSGuides.com
+if %i%==4 goto notsupported
+cscript //nologo ospp.vbs /sethst:%KMS_Sev% >nul&echo ============================================================================&echo.&echo.
+cscript //nologo ospp.vbs /act | find /i "successful" && (echo.&echo ============================================================================&echo.&echo #My official blog: www.muazforpc.wordpress.com&echo.&echo #Please feel free to contact me at if you have any questions or concerns.&echo.&echo #Please consider supporting this project: www.muazforpc.wordpress.com&echo #Your support is helping me keep my servers running everyday!&echo.&echo ============================================================================&choice /n /c YN /m "Would you like to visit my blog [Y,N]?" & if errorlevel 2 exit) || (echo The connection to my KMS server failed! Trying to connect to another one... & echo Please wait... & echo. & echo. & set /a i+=1 & goto server)
+explorer "https://muazforpc.wordpress.com"&goto halt
+:notsupported
+echo.&echo ============================================================================&echo Sorry! Your version is not supported.&echo Please try installing the latest version here: bit.ly/odt2k16
+:halt
+pause >nul
 goto start
