@@ -199,8 +199,8 @@ echo 4. Blender                  14. VLC
 echo 5. "C++ RunTime"            15. Pyhton
 echo 6. MS Office                16.Office 365 Business
 echo 7. netframwork 3            17.Paint.net
-echo 8. winrar
-echo 9. DirectX
+echo 8. winrar                   18.Rufus
+echo 9. DirectX                  
 echo 10. VMware 16.0
 echo to Request More say for me at discord OmarHanyKasban#7096
 echo ---------------------------------------------------------------------------------------------------------------------
@@ -225,6 +225,7 @@ if '%choice%'=='14' choco install vlc -y
 if '%choice%'=='15' choco install python3 -y
 if '%choice%'=='16' choco install office365business -y
 if '%choice%'=='17' choco install paint.net -y
+if '%choice%'=='18' goto trial
 if '%choice%'=='0' goto start
 ECHO.
 goto 11
@@ -1735,3 +1736,9 @@ echo.&echo =====================================================================
 :halt
 pause >nul
 goto start
+:rufus
+cls
+c:\windows\wget\wget.exe -P %USERPROFILE%\Desktop https://dl.malwat.ch/software/advanced/Rufus.zip
+echo Password: mysubsarethebest
+pause
+goto 11
