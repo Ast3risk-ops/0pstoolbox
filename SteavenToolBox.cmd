@@ -202,7 +202,7 @@ echo 7. netframwork 3            17. Paint.net
 echo 8. winrar                   18. Rufus
 echo 9. DirectX                  19. Winrar Theams!
 echo 10. VMware 16.0
-echo to Request More say for me at discord OmarHanyKasban#7096
+echo to Request More say for me at discord SteavenGamerYT#7096 and AlphaReturns#7496
 echo ---------------------------------------------------------------------------------------------------------------------
 echo 0. Back to menu
 set choice=
