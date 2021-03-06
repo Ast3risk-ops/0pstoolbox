@@ -1765,6 +1765,7 @@ echo 3. Crack Windows 7
 echo 4. Crack Office 2016
 echo 5. Crack Office 2019
 echo 6. Crack winrar
+echo 7. Crack Camtasia 8.6.0
 echo 0. Back
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
@@ -1777,6 +1778,7 @@ if '%choice%'=='3' cls & wusa /uninstall /kb:971033 & SLMGR -REARM & echo cracke
 if '%choice%'=='4' goto 2016crack
 if '%choice%'=='5' goto 2019crack
 if '%choice%'=='6' del "C:\Program Files\WinRAR\rarreg.key" & c:\windows\wget\wget.exe -P "C:\Program Files\WinRAR" https://github.com/omartube706/SteavenToolBox/raw/main/rarreg.key
+if '%choice%'=='7' md "%programdata%\TechSmith\Camtasia Studio 9\" & del "C:\ProgramData\TechSmith\Camtasia Studio 9\RegInfo.ini"  & c:\windows\wget\wget.exe -P "%programdata%\TechSmith\Camtasia Studio 9\" https://github.com/omartube706/SteavenToolBox/raw/main/RegInfo.ini
 ECHO "%choice%" is not valid, try again
 ECHO.
 goto 24
