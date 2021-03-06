@@ -1032,6 +1032,7 @@ goto start
 cls
 title SteavenToolBox 1.3.1 Disable Services
 Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\NDIS" /v "Start" /t REG_DWORD /d "4" /f
+reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\ACPI" /v "Start" /t REG_DWORD /d "4" /f
 SC STOP Spooler
 SC CONFIG Spooler start= disabled
 SC STOP WMPNetworkSvc
