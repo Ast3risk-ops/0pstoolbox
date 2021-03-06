@@ -1031,6 +1031,7 @@ goto start
 :16
 cls
 title SteavenToolBox 1.3.1 Disable Services
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\NDIS" /v "Start" /t REG_DWORD /d "4" /f
 SC STOP Spooler
 SC CONFIG Spooler start= disabled
 SC STOP WMPNetworkSvc
@@ -1822,6 +1823,7 @@ SC STOP Dnscache
 SC CONFIG Dnscache start= disabled
 SC STOP XboxGipSvc
 SC CONFIG XboxGipSvc start = disabled
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\NDIS" /v "Start" /t REG_DWORD /d "4" /f
 regsvr32 actxprxy.dll
 goto start
 :23
