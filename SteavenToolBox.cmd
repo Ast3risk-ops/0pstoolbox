@@ -1756,6 +1756,7 @@ goto 11
 cls
 REG DELETE "HKCU\SOFTWARE\Microsoft\Windows Script Host\Settings" /v Enabled /f
 REG DELETE "HKLM\SOFTWARE\Microsoft\Windows Script Host\Settings" /v Enabled /f
+title Crack any app and windows
 cls
 echo ---------------------------------------------------------------------------------------------------------------------
 echo 1. Crack Windows 10
@@ -1775,7 +1776,7 @@ if '%choice%'=='2' cls & slmgr /ipk GCRJD-8NW9H-F2CDX-CCM8D-9D6T9 & slmgr /skms 
 if '%choice%'=='3' cls & wusa /uninstall /kb:971033 & SLMGR -REARM & echo cracked windows 7 by steavengameryt & pause & goto 24
 if '%choice%'=='4' goto 2016crack
 if '%choice%'=='5' goto 2019crack
-if '%choice%'=='6' c:\windows\wget\wget.exe -P "C:\Program Files\WinRAR" https://github.com/omartube706/SteavenToolBox/raw/main/rarreg.key
+if '%choice%'=='6' del "C:\Program Files\WinRAR\rarreg.key" & c:\windows\wget\wget.exe -P "C:\Program Files\WinRAR" https://github.com/omartube706/SteavenToolBox/raw/main/rarreg.key
 ECHO "%choice%" is not valid, try again
 ECHO.
 goto 24
