@@ -204,7 +204,7 @@ echo 8. winrar                   22. Google Chrome
 echo 9. DirectX                  23. GitHub
 echo 10. VMware 16.0             24. Visual Studio Code
 echo 11. Adobe Acrobat Reader DC 25. Discord
-echo 12. Java SE Runtime Environment 8  26. Spotify
+echo 12. Java SE Runtime Environment 8  26. Spotify and Toastify Mod
 echo 13. Notepad++
 echo 14. VLC
 echo to Request More say for me at discord SteavenGamerYT#7096 and AlphaReturns#7496
