@@ -214,7 +214,7 @@ set choice=
 set /p choice=Type the number.
 if not '%choice%'=='' set choice=%choice:~0,100%
 if '%choice%'=='1' choco install avastfreeantivirus -y
-if '%choice%'=='2' choco install anydesk -y
+if '%choice%'=='2' choco install anydesk anydesk.install anydesk.portable -y
 if '%choice%'=='3' choco install audacity -y
 if '%choice%'=='4' choco install blender -y
 if '%choice%'=='5' goto RunTime
