@@ -30,7 +30,7 @@ echo 12. Trimors Stuff                                         21. Disable/Enabl
 echo 13. Disable Windows Defender                              22. Get Steaven Windows 10 Cleanup
 echo 15. Right click Take Ownership Menu                       23. Office 2016 Activation
 echo 16. Disable Services                                      24. "Crack & Activation of apps"
-echo 17. Right Click Open Command Window here
+echo 17. Right Click Open Command Window here                  25. Full RunTime
 echo 18. Steaven Speed up
 echo 19. Disable Action Center
 echo ---------------------------------------------------------------------------------------------------------------------
@@ -61,6 +61,7 @@ if '%choice%'=='21' goto 21
 if '%choice%'=='22' goto 22
 if '%choice%'=='23' goto 23
 if '%choice%'=='24' goto 24
+if '%choice%'=='25' choco install vcredist2005 vcredist2008 vcredist2010  vcredist2012 msvisualcplusplus2012-redist vcredist2013 msvisualcplusplus2013-redis vcredist2017 vcredist140 vcredist-all jre8 directx -y & DISM /Online /Enable-Feature /FeatureName:NetFx3 /All & dism /Online /enable-feature /FeatureName:"LegacyComponents" /All & dism /Online /enable-feature /FeatureName:"DirectPlay" /All
 ECHO "%choice%" is not valid, try again
 ECHO.
 goto start
@@ -208,9 +209,9 @@ echo 7. netframwork 3            21. Windows Terminal and Icons Mod
 echo 8. winrar                   22. Google Chrome
 echo 9. DirectX                  23. GitHub
 echo 10. VMware 16.0             24. Visual Studio Code
-echo 11. Adobe Acrobat Reader DC 25. Discord
+echo 11. Adobe Acrobat Reader DC 25. Discord and Discord Canary
 echo 12. Java SE Runtime Environment 8  26. Spotify and Toastify Mod
-echo 13. Notepad++
+echo 13. Notepad++                      27. Razer Cortex
 echo 14. VLC
 echo to Request More say for me at discord SteavenGamerYT#7096 and AlphaReturns#7496
 echo ---------------------------------------------------------------------------------------------------------------------
@@ -222,11 +223,11 @@ if '%choice%'=='1' choco install avastfreeantivirus -y
 if '%choice%'=='2' choco install anydesk anydesk.install anydesk.portable -y
 if '%choice%'=='3' choco install audacity -y
 if '%choice%'=='4' choco install blender -y
-if '%choice%'=='5' goto RunTime
+if '%choice%'=='5' choco install vcredist2005 vcredist2008 vcredist2010  vcredist2012 msvisualcplusplus2012-redist vcredist2013 msvisualcplusplus2013-redis vcredist2017 vcredist140 vcredist-all -y
 if '%choice%'=='6' goto msoffice
 if '%choice%'=='7' DISM /Online /Enable-Feature /FeatureName:NetFx3 /All 
 if '%choice%'=='8' choco install winrar -y
-if '%choice%'=='9' goto directx
+if '%choice%'=='9' choco install directx -y
 if '%choice%'=='10' goto vmware
 if '%choice%'=='11' choco install adobereader -y
 if '%choice%'=='12' choco install jre8 -y
@@ -244,6 +245,7 @@ if '%choice%'=='23' choco install github github-desktop -y
 if '%choice%'=='24' choco install vscode -y
 if '%choice%'=='25' choco install discord discord.install discord-canary -y
 if '%choice%'=='26' choco install spotify toastify -y
+if '%choice%'=='27' choco install gamebooster -y
 if '%choice%'=='0' goto start
 ECHO.
 goto 11
@@ -1135,19 +1137,6 @@ SC CONFIG Dnscache start= disabled
 SC STOP XboxGipSvc
 SC CONFIG XboxGipSvc start = disabled
 goto start
-:RunTime
-cls
-choco install msvisualcplusplus2012-redist -y
-choco install msvisualcplusplus2013-redist -y
-choco install vcredist2012 -y
-choco install vcredist2010 -y
-choco install vcredist2013 -y
-choco install vcredist2008 -y
-choco install vcredist2005 -y
-choco install vcredist2017 -y
-choco install vcredist140 -y
-choco install vcredist-all -y
-goto 11
 :17
 cls
 Reg.exe delete "HKCR\Directory\shell\runas" /f
@@ -1508,9 +1497,6 @@ if '%choice%'=='1' NetSh Advfirewall set allprofiles state on
 if '%choice%'=='2' NetSh Advfirewall set allprofiles state off
 if '%choice%'=='0' goto start
 goto 21
-:directx
-cls
-choco install directx -y
 :vmware
 cls
 c:\windows\wget\wget.exe -P c: https://dl.malwat.ch/software/useful/vmware/VMwareWorkstation16.zip
