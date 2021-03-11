@@ -199,21 +199,23 @@ goto start
 cls
 title SteavenToolBox 1.3.1 Users Request Apps
 echo Users Request
-echo 1. Avast                    15. Pyhton
-echo 2. AnyDesk                  16. Office 365 Business
-echo 3. Audacity                 17. Paint.net
-echo 4. Blender                  18. Rufus
-echo 5. "C++ RunTime"            19. Winrar Theams!
-echo 6. MS Office                20. Windows Photo Viewer
-echo 7. netframwork 3            21. Windows Terminal and Icons Mod
-echo 8. winrar                   22. Google Chrome
-echo 9. DirectX                  23. GitHub
-echo 10. VMware 16.0             24. Visual Studio Code
-echo 11. Adobe Acrobat Reader DC 25. Discord and Discord Canary
-echo 12. Java SE Runtime Environment 8  26. Spotify and Toastify Mod
-echo 13. Notepad++                      27. Razer Cortex
+echo 1. Avast                    17. Paint.net
+echo 2. AnyDesk                  18. Rufus
+echo 3. Audacity                 19. Winrar Theams!
+echo 4. Blender                  20. Windows Photo Viewer
+echo 5. "C++ RunTime"            21. Windows Terminal and Icons Mod
+echo 6. MS Office                22. Google Chrome
+echo 7. netframwork 3            23. GitHub
+echo 8. winrar                   24. Visual Studio Code
+echo 9. DirectX                  25. Discord and Discord Canary
+echo 10. VMware 16.0             26. Spotify and Toastify Mod
+echo 11. Adobe Acrobat Reader DC 27. Razer Cortex
+echo 12. Java SE Runtime Environment 8  28. ApowerMirror
+echo 13. Notepad++
 echo 14. VLC
-echo to Request More say for me at discord SteavenGamerYT#7096 and AlphaReturns#7496
+echo 15. Pyhton
+echo 16. Office 365 Business
+echo to Request More say for me at discord SteavenGamerYT#2247 and AlphaReturns#7496
 echo ---------------------------------------------------------------------------------------------------------------------
 echo 0. Back to menu
 set choice=
@@ -246,6 +248,7 @@ if '%choice%'=='24' choco install vscode -y
 if '%choice%'=='25' choco install discord discord.install discord-canary -y
 if '%choice%'=='26' choco install spotify toastify -y
 if '%choice%'=='27' choco install gamebooster -y
+if '%choice%'=='28' start https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/apowermirror-setup.exe
 if '%choice%'=='0' goto start
 ECHO.
 goto 11
