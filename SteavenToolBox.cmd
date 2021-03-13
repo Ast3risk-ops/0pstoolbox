@@ -29,7 +29,7 @@ echo 6. Disable Services                                       20. Uninstall one
 echo 13. Right click Take Ownership Menu                       22. Get Steaven Windows 10 Cleanup
 echo 14. Right Click Open Command Window here                  23. Office 2016 Activation
 echo 15. Steaven Speed up                                      24. "Crack & Activation of apps"
-echo 16. Disable Action Center                                 5. Full RunTime
+echo 16. Disable Action Center                                 25. Full RunTime
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
 set /p choice=Type the number.
@@ -83,8 +83,8 @@ echo 0. Back to menu
 set choice=
 set /p choice=Type the number.
 if not '%choice%'=='' set choice=%choice:~0,1%
-if '%choice%'=='1' goto enableprint
-if '%choice%'=='2' goto disableprint
+if '%choice%'=='1' SC CONFIG Spooler start= auto & SC START Spooler
+if '%choice%'=='2' C STOP Spooler & SC CONFIG Spooler start= disabled
 if '%choice%'=='3' SC CONFIG wuauserv start= auto & SC START wuauserv
 if '%choice%'=='4' SC CONFIG wuauserv start= disabled & SC START wuauserv
 if '%choice%'=='5' NetSh Advfirewall set allprofiles state on
@@ -92,16 +92,6 @@ if '%choice%'=='6' NetSh Advfirewall set allprofiles state off
 if '%choice%'=='8' Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "EnableSmartScreen" /t REG_DWORD /d "0" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v "DisableAntiSpyware" /t REG_DWORD /d "1" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableBehaviorMonitoring" /t REG_DWORD /d "1" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableOnAccessProtection" /t REG_DWORD /d "1" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableScanOnRealtimeEnable" /t REG_DWORD /d "1" /f
 if '%choice%'=='7' Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "EnableSmartScreen" /t REG_DWORD /d "1" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v "DisableAntiSpyware" /t REG_DWORD /d "0" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableBehaviorMonitoring" /t REG_DWORD /d "0" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableOnAccessProtection" /t REG_DWORD /d "0" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableScanOnRealtimeEnable" /t REG_DWORD /d "0" /f
 if '%choice%'=='0' goto start
-:enableprint
-cls
-SC CONFIG Spooler start= auto
-SC START Spooler
-goto start
-:disableprint
-cls
-SC STOP Spooler
-SC CONFIG Spooler start= disabled
-goto start
 :2
 cls
 title SteavenToolBox 1.6.0 Clear Event Logs
