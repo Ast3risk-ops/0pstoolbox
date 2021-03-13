@@ -185,7 +185,7 @@ echo 10. VMware 16.0             26. Spotify and Toastify Mod
 echo 11. Adobe Acrobat Reader DC 27. Razer Cortex
 echo 12. Java SE Runtime Environment 8  28. ApowerMirror
 echo 13. Notepad++                    29. Aimp 
-echo 14. VLC
+echo 14. VLC                          30. Google Chrome
 echo 15. Pyhton
 echo 16. Office 365 Business
 echo to Request More say for me at discord SteavenGamerYT#2247 and AlphaReturns#7496
@@ -223,6 +223,7 @@ if '%choice%'=='26' choco install spotify toastify -y
 if '%choice%'=='27' choco install gamebooster -y
 if '%choice%'=='28' start https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/apowermirror-setup.exe
 if '%choice%'=='29' choco install aimp -y
+if '%choice%'=='30' choco install googlechrome  google-translate-chrome save-to-google-drive-chrome -y
 if '%choice%'=='0' goto start
 ECHO.
 goto 11
