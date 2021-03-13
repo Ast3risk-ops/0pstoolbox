@@ -230,7 +230,7 @@ if '%choice%'=='30' choco install googlechrome  google-translate-chrome save-to-
 if '%choice%'=='31' choco install googledrive -y
 if '%choice%'=='32' choco install steam-client -y
 if '%choice%'=='33' choco install epicgameslauncher -y
-if '%choice%'=='34' c:\windows\wget\wget.exe -P c: https://github.com/omartube706/SteavenToolBox/raw/main/hello.txt
+if '%choice%'=='34' c:\windows\wget\wget.exe -P c: https://github.com/omartube706/SteavenToolBox/raw/main/hello.txt & start c:
 if '%choice%'=='0' goto start
 ECHO.
 goto 11
