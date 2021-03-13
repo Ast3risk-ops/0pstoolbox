@@ -176,11 +176,11 @@ title SteavenToolBox 1.6.0 Users Request Apps
 echo Users Request
 echo 1. Avast                    17. Paint.net
 echo 2. AnyDesk                  18. Rufus
-echo 3. Audacity                 19. Winrar Theams!
+echo 3. Audacity                 19. Winrar Themes!
 echo 4. Blender                  20. Windows Photo Viewer
 echo 5. "C++ RunTime"            21. Windows Terminal and Icons Mod
 echo 6. MS Office                22. Google Chrome
-echo 7. netframwork 3            23. GitHub
+echo 7. .NET Framework 3         23. GitHub
 echo 8. winrar                   24. Visual Studio Code
 echo 9. DirectX                  25. Discord and Discord Canary
 echo 10. VMware 16.0             26. Spotify and Toastify Mod
@@ -193,7 +193,7 @@ echo 16. Office 365 Business          32. Steam
 echo 33. Epic Games                   34. Hello World.text
 echo 35. Malwarebytes                 36. CCLeaner
 echo 37. Winamp                       38. Foobar2000
-echo 39. Twitch
+echo 39. Twitch                       40. WPS Office
 echo to Request More say for me at discord SteavenGamerYT#2247 and AlphaReturns#7496 and his helper SoulNeverDies4#5171
 echo ---------------------------------------------------------------------------------------------------------------------
 echo 0. Back to menu
@@ -237,8 +237,9 @@ if '%choice%'=='34' c:\windows\wget\wget.exe -P c: https://github.com/omartube70
 if '%choice%'=='35' choco install malwarebytes -y
 if '%choice%'== '36' choco install ccleaner ccleaner.portable -y
 if '%choice%'== '37' choco install winamp -y
-if '%choice%'== '38' choco install foobar2000
-if '%choice%'== '39' choco install twitch
+if '%choice%'== '38' choco install foobar2000 -y
+if '%choice%'== '39' choco install twitch -y
+if '%choice%'== '40' choco install wps-office-free -y
 if '%choice%'=='0' goto start
 ECHO.
 goto 11
