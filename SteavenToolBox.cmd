@@ -197,6 +197,7 @@ echo 35. Malwarebytes                 36. CCLeaner
 echo 37. Winamp                       38. Foobar2000
 echo 39. Twitch                       40. WPS Office
 echo 41. Camtasia                     42. Sysinternals
+echo 43.Chromium                      44. CygWim
 echo to Request More say for me at discord SteavenGamerYT#2247 and AlphaReturns#7496 and his helper SoulNeverDies4#5171
 echo ---------------------------------------------------------------------------------------------------------------------
 echo 0. Back to menu
@@ -245,6 +246,8 @@ if '%choice%'== '39' choco install twitch -y
 if '%choice%'== '40' choco install wps-office-free -y
 if '%choice%'== '41' choco install camtasia -y
 if '%choice%'== '42' choco install sysinternals -y
+if '%choice%'== '42' choco install chromium -y
+if '%choice%'== '42' choco install cygwin -y
 if '%choice%'=='0' goto start
 ECHO.
 goto 11
