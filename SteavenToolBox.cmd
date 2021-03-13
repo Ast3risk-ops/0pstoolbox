@@ -31,6 +31,7 @@ echo 14. Right Click Open Command Window here                  23. Office 2016 A
 echo 15. Steaven Speed up                                      24. "Crack & Activation of apps"
 echo 16. Disable Action Center                                 25. Full RunTime
 echo 17. Game Launchers
+echo 18. Office
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
 set /p choice=Type the number.
@@ -51,6 +52,7 @@ if '%choice%'=='13' goto 13
 if '%choice%'=='14' goto 14
 if '%choice%'=='15' goto 15
 if '%choice%'=='17' goto 17
+if '%choice%'=='18' goto 18
 if '%choice%'=='16' powershell.exe "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/DisableActionCenter.ps1'))"
 if '%choice%'=='20' powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/onedrive.ps1'))"
 if '%choice%'=='21' goto 21
@@ -1915,5 +1917,27 @@ if '%choice%'=='2' choco install epicgameslauncher -y
 if '%choice%'=='3' choco install parsec -y
 if '%choice%'=='4' choco install origin -y
 if '%choice%'=='5' choco install playnite -y
+if '%choice%'=='0' goto start
+goto start
+:18
+cls
+echo 1. Kingsoft Office
+echo 2. Office 365 ProPlus
+echo 3. Microsoft Office 2019 ProPlus
+echo 4. Microsoft Office Professional Plus 2013
+echo 5. Office 365 Business
+echo 6. WPS Office
+echo 0. Back to menu
+set choice=
+set /p choice=Type the number.
+if not '%choice%'=='' set choice=%choice:~0,1%
+if '%choice%'=='1' choco install kingsoft-office-free -y
+if '%choice%'=='2' choco install office365proplus -y
+if '%choice%'=='3' choco install office2019proplus -y
+if '%choice%'=='4' choco install officeproplus2013 -y
+if '%choice%'=='5' choco install office365business -y
+if '%choice%'=='6' choco install wps-office-free -y
+if '%choice%'=='7' 
+if '%choice%'=='8' 
 if '%choice%'=='0' goto start
 goto start
