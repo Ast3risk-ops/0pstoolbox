@@ -193,7 +193,7 @@ echo 16. Office 365 Business          32. Steam
 echo 33. Epic Games                   34. Hello World.text
 echo 35. Malwarebytes                 36. CCLeaner
 echo 37. Winamp                       38. Foobar2000
-echo 39. Twitch                       40. Youtube
+echo 39. Twitch
 echo to Request More say for me at discord SteavenGamerYT#2247 and AlphaReturns#7496 and his helper SoulNeverDies4#5171
 echo ---------------------------------------------------------------------------------------------------------------------
 echo 0. Back to menu
@@ -239,7 +239,6 @@ if '%choice%'== '36' choco install ccleaner ccleaner.portable -y
 if '%choice%'== '37' choco install winamp -y
 if '%choice%'== '38' choco install foobar2000
 if '%choice%'== '39' choco install twitch
-if '%choice%'== '39' choco install th-ch-youtube-music
 if '%choice%'=='0' goto start
 ECHO.
 goto 11
