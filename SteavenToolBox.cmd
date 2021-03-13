@@ -30,7 +30,7 @@ echo 13. Right click Take Ownership Menu                       22. Get Steaven W
 echo 14. Right Click Open Command Window here                  23. Office 2016 Activation
 echo 15. Steaven Speed up                                      24. "Crack & Activation of apps"
 echo 16. Disable Action Center                                 25. Full RunTime
-echo 17. Gmaes Lanchers
+echo 17. Game Launchers
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
 set /p choice=Type the number.
