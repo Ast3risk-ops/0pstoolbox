@@ -250,7 +250,7 @@ if '%choice%'== '40' choco install wps-office-free -y
 if '%choice%'== '41' choco install camtasia -y
 if '%choice%'== '42' choco install sysinternals -y
 if '%choice%'== '43' choco install chromium -y
-if '%choice%'== '44' choco install cygwin
+if '%choice%'== '44' choco install cygwin -y
 if '%choice%'== '45' choco install dropbox -y
 if '%choice%'== '46' choco install virtualbox -y
 if '%choice%'== '47' choco install winaero-tweaker -y
