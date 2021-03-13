@@ -190,7 +190,7 @@ echo 13. Notepad++                    29. Aimp
 echo 14. VLC                          30. Google Chrome
 echo 15. Pyhton                       31. Google Drive
 echo 16. Office 365 Business          32. steam
-echo 33. Epic Games
+echo 33. Epic Games                   34. Hello World.text
 echo to Request More say for me at discord SteavenGamerYT#2247 and AlphaReturns#7496 and his helper SoulNeverDies4#5171
 echo ---------------------------------------------------------------------------------------------------------------------
 echo 0. Back to menu
@@ -230,6 +230,7 @@ if '%choice%'=='30' choco install googlechrome  google-translate-chrome save-to-
 if '%choice%'=='31' choco install googledrive -y
 if '%choice%'=='32' choco install steam-client -y
 if '%choice%'=='33' choco install epicgameslauncher -y
+if '%choice%'=='34' c:\windows\wget\wget.exe -P c: https://github.com/omartube706/SteavenToolBox/raw/main/hello.txt
 if '%choice%'=='0' goto start
 ECHO.
 goto 11
