@@ -30,6 +30,7 @@ echo 13. Right click Take Ownership Menu                       22. Get Steaven W
 echo 14. Right Click Open Command Window here                  23. Office 2016 Activation
 echo 15. Steaven Speed up                                      24. "Crack & Activation of apps"
 echo 16. Disable Action Center                                 25. Full RunTime
+echo 17. Gmaes Lanchers
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
 set /p choice=Type the number.
@@ -49,6 +50,7 @@ if '%choice%'=='12' goto Choice
 if '%choice%'=='13' goto 13
 if '%choice%'=='14' goto 14
 if '%choice%'=='15' goto 15
+if '%choice%'=='17' goto 17
 if '%choice%'=='16' powershell.exe "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/DisableActionCenter.ps1'))"
 if '%choice%'=='20' powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/onedrive.ps1'))"
 if '%choice%'=='21' goto 21
@@ -1885,3 +1887,21 @@ Reg.exe add "HKLM\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssoc
 Reg.exe add "HKLM\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations" /v ".jxr" /t REG_SZ /d "PhotoViewer.FileAssoc.Tiff" /f
 Reg.exe add "HKLM\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations" /v ".png" /t REG_SZ /d "PhotoViewer.FileAssoc.Tiff" /f
 goto 11
+:17
+cls
+echo 1. Steam
+echo 2. Epic Games
+echo 3. Parsec
+echo 4. Origin
+echo 5. Playnite
+echo 0. Back to menu
+set choice=
+set /p choice=Type the number.
+if not '%choice%'=='' set choice=%choice:~0,1%
+if '%choice%'=='1' choco install steam-client steamcmd -y
+if '%choice%'=='2' choco install epicgameslauncher -y
+if '%choice%'=='3' choco install parsec -y
+if '%choice%'=='4' choco install origin -y
+if '%choice%'=='5' choco install playnite -y
+if '%choice%'=='0' goto start
+goto start
