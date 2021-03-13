@@ -187,7 +187,8 @@ echo 12. Java SE Runtime Environment 8  28. ApowerMirror
 echo 13. Notepad++                    29. Aimp 
 echo 14. VLC                          30. Google Chrome
 echo 15. Pyhton                       31. Google Drive
-echo 16. Office 365 Business          32. Steam
+echo 16. Office 365 Business          32. steam
+echo 33. Epic Games
 echo to Request More say for me at discord SteavenGamerYT#2247 and AlphaReturns#7496 and his helper SoulNeverDies4#5171
 echo ---------------------------------------------------------------------------------------------------------------------
 echo 0. Back to menu
@@ -226,6 +227,7 @@ if '%choice%'=='29' choco install aimp -y
 if '%choice%'=='30' choco install googlechrome  google-translate-chrome save-to-google-drive-chrome -y
 if '%choice%'=='31' choco install googledrive -y
 if '%choice%'=='32' choco install steam-client -y
+if '%choice%'=='33' choco install epicgameslauncher -y
 if '%choice%'=='0' goto start
 ECHO.
 goto 11
