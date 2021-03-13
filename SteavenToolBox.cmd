@@ -7,11 +7,11 @@ fixing stuff
 Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\NDIS" /v "Start" /t REG_DWORD /d "0" /f
 reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\ACPI" /v "Start" /t REG_DWORD /d "0" /f
 echo off
-title SteavenToolBox 1.3.1
+title SteavenToolBox 1.6.0
 cls
 ECHO.
 echo =====================================================================
-echo "SteavenToolBox 1.3.1 | Current Working Windows 10 Version 2009 20h2"
+echo "SteavenToolBox 1.6.0 | Current Working Windows 10 Version 2009 20h2"
 echo =====================================================================
 echo =======================================================
 echo "Current Working the best on Normal Windows 10"
@@ -20,19 +20,16 @@ echo ---------------------------------------------------------------------------
 ECHO "TWEAK | FIXED | CLEANER | OTHER"                         Installer
 echo --------------------------------                          7. Install choco and wget SO YOU CAN GET ANY APP NEEEED
 color 2                                   
-ECHO 1. Print Spooler                                          8. Firefox Mozilla (browser)
+ECHO 1. Enable / Disable Windows 10 Apps                       8. Firefox Mozilla (browser)
 echo 2. Clear Event Viewer Logs                                9. Google Chrome (browser)
 echo 3. "Clear Cache Updates | Delivery Optimization"          10. 7-Zip
 echo 4. "Hibernation | Fastboot | Sleepmode | Sysmain"         11. Users Request
-echo 5. Stops Windows Updates Forever                          14. Reinstall Windows 10 preinstalled apps
-echo 6.Actviate Windows 10                                     20. Uninstall onedrive
-echo 12. Trimors Stuff                                         21. Disable/Enable Firewall
-echo 13. Disable Windows Defender                              22. Get Steaven Windows 10 Cleanup
-echo 15. Right click Take Ownership Menu                       23. Office 2016 Activation
-echo 16. Disable Services                                      24. "Crack & Activation of apps"
-echo 17. Right Click Open Command Window here                  25. Full RunTime
-echo 18. Steaven Speed up
-echo 19. Disable Action Center
+echo 5. Trimors Stuff                                          12. Reinstall Windows 10 preinstalled apps
+echo 6. Disable Services                                       20. Uninstall onedrive
+echo 13. Right click Take Ownership Menu                       22. Get Steaven Windows 10 Cleanup
+echo 14. Right Click Open Command Window here                  23. Office 2016 Activation
+echo 15. Steaven Speed up                                      24. "Crack & Activation of apps"
+echo 16. Disable Action Center                                 5. Full RunTime
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
 set /p choice=Type the number.
@@ -48,14 +45,11 @@ if '%choice%'=='8' choco install firefox -y
 if '%choice%'=='9' choco install googlechrome -y
 if '%choice%'=='10' choco install 7zip -y
 if '%choice%'=='11' goto 11
-if '%choice%'=='12' goto 12
+if '%choice%'=='12' goto Choice
 if '%choice%'=='13' goto 13
-if '%choice%'=='14' goto Choice
+if '%choice%'=='14' goto 14
 if '%choice%'=='15' goto 15
-if '%choice%'=='16' goto 16
-if '%choice%'=='17' goto 17
-if '%choice%'=='18' goto 18
-if '%choice%'=='19' powershell.exe "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/DisableActionCenter.ps1'))"
+if '%choice%'=='16' powershell.exe "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/DisableActionCenter.ps1'))"
 if '%choice%'=='20' powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/onedrive.ps1'))"
 if '%choice%'=='21' goto 21
 if '%choice%'=='22' goto 22
@@ -66,11 +60,24 @@ ECHO "%choice%" is not valid, try again
 ECHO.
 goto start
 :1
-title SteavenToolBox 1.3.1 Print Spooler
+title SteavenToolBox 1.6.0
 cls
+echo ---------------------------------------------------------------------------------------------------------------------
 echo Print Spooler for Printer (services)
 echo 1. Enable
 echo 2. Disable
+echo ---------------------------------------------------------------------------------------------------------------------
+echo Windows Updates (services)
+echo 3. Enable
+echo 4. Disable
+echo ---------------------------------------------------------------------------------------------------------------------
+echo Windows Firewall
+echo 5. Enable
+echo 6. Disable
+echo ---------------------------------------------------------------------------------------------------------------------
+echo Windows Defender
+echo 7. Enable
+echo 8. Disable
 echo ---------------------------------------------------------------------------------------------------------------------
 echo 0. Back to menu
 set choice=
@@ -78,6 +85,12 @@ set /p choice=Type the number.
 if not '%choice%'=='' set choice=%choice:~0,1%
 if '%choice%'=='1' goto enableprint
 if '%choice%'=='2' goto disableprint
+if '%choice%'=='3' SC CONFIG wuauserv start= auto & SC START wuauserv
+if '%choice%'=='4' SC CONFIG wuauserv start= disabled & SC START wuauserv
+if '%choice%'=='5' NetSh Advfirewall set allprofiles state on
+if '%choice%'=='6' NetSh Advfirewall set allprofiles state off
+if '%choice%'=='8' Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "EnableSmartScreen" /t REG_DWORD /d "0" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v "DisableAntiSpyware" /t REG_DWORD /d "1" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableBehaviorMonitoring" /t REG_DWORD /d "1" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableOnAccessProtection" /t REG_DWORD /d "1" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableScanOnRealtimeEnable" /t REG_DWORD /d "1" /f
+if '%choice%'=='7' Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "EnableSmartScreen" /t REG_DWORD /d "1" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v "DisableAntiSpyware" /t REG_DWORD /d "0" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableBehaviorMonitoring" /t REG_DWORD /d "0" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableOnAccessProtection" /t REG_DWORD /d "0" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableScanOnRealtimeEnable" /t REG_DWORD /d "0" /f
 if '%choice%'=='0' goto start
 :enableprint
 cls
@@ -91,7 +104,7 @@ SC CONFIG Spooler start= disabled
 goto start
 :2
 cls
-title SteavenToolBox 1.3.1 Clear Event Logs
+title SteavenToolBox 1.6.0 Clear Event Logs
 color 7
 FOR /F "tokens=1, 2 * " %%V IN ('bcdedit') DO SET adminTest=%%V
 IF (%adminTest%)==(Access) goto noAdmin
@@ -104,7 +117,7 @@ goto :eof
 goto start
 :3
 cls
-title SteavenToolBox 1.3.1 Clear Cache
+title SteavenToolBox 1.6.0 Clear Cache
 color 4
 SC stop DoSvc
 del c:\WIN386.SWP
@@ -125,7 +138,7 @@ del /s /f /q "%USERPROFILE%\Cookies"\*.*
 goto start
 :4
 cls
-title SteavenToolBox 1.3.1 Hibernation "| Fastboot | Sleepmode | Sysmain"
+title SteavenToolBox 1.6.0 Hibernation "| Fastboot | Sleepmode | Sysmain"
 echo Hibernation / Fastboot / Sleep mode
 echo 1. Disable : hiberfil.sys
 echo 2. Enable  : hiberfil.sys
@@ -165,39 +178,9 @@ cls
 SC CONFIG SysMain start= auto
 SC start SysMain
 goto 4
-:5
-cls
-echo Stop windows update forever
-echo 1. Stop
-echo 2. Enable
-echo ---------------------------------------------------------------------------------------------------------------------
-echo 0. Back to menu
-set choice=
-set /p choice=Type the number.
-if not '%choice%'=='' set choice=%choice:~0,1%
-if '%choice%'=='1' goto disablewindowsupdate
-if '%choice%'=='2' goto enablewindowsupdate
-if '%choice%'=='0' goto start
-goto start
-:disablewindowsupdate
-cls
-SC STOP wuauserv
-SC CONFIG wuauserv start= disabled
-goto start
-:enablewindowsupdate
-cls
-SC CONFIG wuauserv start= auto
-SC START wuauserv
-goto start
-:6
-cls
-slmgr /ipk NW6C2-QMPVW-D7KKK-3GKT6-VCFB2
-slmgr /skms kms8.msguides.com
-slmgr /ato
-goto start
 :11
 cls
-title SteavenToolBox 1.3.1 Users Request Apps
+title SteavenToolBox 1.6.0 Users Request Apps
 echo Users Request
 echo 1. Avast                    17. Paint.net
 echo 2. AnyDesk                  18. Rufus
@@ -254,7 +237,7 @@ if '%choice%'=='0' goto start
 ECHO.
 goto 11
 goto start
-:12
+:5
 cls
 color 3
 Echo 1. Windows 10 Optimization
@@ -384,14 +367,6 @@ Reg.exe add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\System
 Reg.exe add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games" /v "Scheduling Category" /t REG_SZ /d "High" /f
 Reg.exe add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games" /v "SFIO Priority" /t REG_SZ /d "High" /f
 goto 12
-:13
-cls
-Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "EnableSmartScreen" /t REG_DWORD /d "0" /f
-Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v "DisableAntiSpyware" /t REG_DWORD /d "1" /f
-Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableBehaviorMonitoring" /t REG_DWORD /d "1" /f
-Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableOnAccessProtection" /t REG_DWORD /d "1" /f
-Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableScanOnRealtimeEnable" /t REG_DWORD /d "1" /f
-goto start
 :InternetOptimization
 cls
 ping google.com
@@ -1019,7 +994,7 @@ If Not %ERRORLEVEL% EQU 0 (
 Cls
 goto:eof
 
-:15
+:13
 cls
 Reg.exe delete "HKCR\*\shell\TakeOwnership" /f
 Reg.exe delete "HKCR\*\shell\runas" /f
@@ -1047,9 +1022,9 @@ Reg.exe add "HKCR\Drive\shell\runas" /v "AppliesTo" /t REG_SZ /d "NOT (System.It
 Reg.exe add "HKCR\Drive\shell\runas\command" /ve /t REG_SZ /d "cmd.exe /c takeown /f \"%%1\\\" /r /d y && icacls \"%%1\\\" /grant *S-1-3-4:F /t /c" /f
 Reg.exe add "HKCR\Drive\shell\runas\command" /v "IsolatedCommand" /t REG_SZ /d "cmd.exe /c takeown /f \"%%1\\\" /r /d y && icacls \"%%1\\\" /grant *S-1-3-4:F /t /c" /f
 goto start
-:16
+:6
 cls
-title SteavenToolBox 1.3.1 Disable Services
+title SteavenToolBox 1.6.0 Disable Services
 SC STOP Spooler
 SC CONFIG Spooler start= disabled
 SC STOP WMPNetworkSvc
@@ -1141,7 +1116,7 @@ SC CONFIG Dnscache start= disabled
 SC STOP XboxGipSvc
 SC CONFIG XboxGipSvc start = disabled
 goto start
-:17
+:14
 cls
 Reg.exe delete "HKCR\Directory\shell\runas" /f
 Reg.exe add "HKCR\Directory\shell\runas" /ve /t REG_SZ /d "Open command window here as Administrator" /f
@@ -1160,7 +1135,7 @@ Reg.exe add "HKCR\LibraryFolder\background\shell\runas" /v "HasLUAShield" /t REG
 Reg.exe add "HKCR\LibraryFolder\background\shell\runas" /ve /t REG_SZ /d "Open command window here as Administrator" /f
 Reg.exe add "HKCR\LibraryFolder\background\shell\runas\command" /ve /t REG_SZ /d "cmd.exe /s /k pushd \"%%V\"" /f
 goto start
-:18
+:16
 cls
 Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "ClearPageFileAtShutdown" /t REG_DWORD /d "1" /f
 Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\943c8cb6-6f93-4227-ad87-e9a3feec08d1" /v "Attributes" /t REG_SZ /d "2" /f
@@ -1487,20 +1462,6 @@ powershell.exe "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.Se
 md c:\windows\wget
 powershell.exe "Invoke-WebRequest https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/wget.exe -OutFile c:\windows\wget\wget.exe"
 goto start
-:21
-cls
-echo Enable/Disable Firewall
-echo 1. Enable
-echo 2. Disable
-echo ---------------------------------------------------------------------------------------------------------------------
-echo 0. Back to menu
-set choice=
-set /p choice=Type the number.
-if not '%choice%'=='' set choice=%choice:~0,100%
-if '%choice%'=='1' NetSh Advfirewall set allprofiles state on
-if '%choice%'=='2' NetSh Advfirewall set allprofiles state off
-if '%choice%'=='0' goto start
-goto 21
 :vmware
 cls
 c:\windows\wget\wget.exe -P c: https://dl.malwat.ch/software/useful/vmware/VMwareWorkstation16.zip
