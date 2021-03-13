@@ -188,7 +188,7 @@ echo 13. Notepad++                    29. Aimp
 echo 14. VLC                          30. Google Chrome
 echo 15. Pyhton
 echo 16. Office 365 Business
-echo to Request More say for me at discord SteavenGamerYT#2247 and AlphaReturns#7496
+echo to Request More say for me at discord SteavenGamerYT#2247 and AlphaReturns#7496 and his helper SoulNeverDies4#5171
 echo ---------------------------------------------------------------------------------------------------------------------
 echo 0. Back to menu
 set choice=
