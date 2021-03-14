@@ -96,6 +96,9 @@ if '%choice%'=='6' NetSh Advfirewall set allprofiles state off
 if '%choice%'=='8' Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "EnableSmartScreen" /t REG_DWORD /d "0" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v "DisableAntiSpyware" /t REG_DWORD /d "1" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableBehaviorMonitoring" /t REG_DWORD /d "1" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableOnAccessProtection" /t REG_DWORD /d "1" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableScanOnRealtimeEnable" /t REG_DWORD /d "1" /f
 if '%choice%'=='7' Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "EnableSmartScreen" /t REG_DWORD /d "1" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v "DisableAntiSpyware" /t REG_DWORD /d "0" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableBehaviorMonitoring" /t REG_DWORD /d "0" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableOnAccessProtection" /t REG_DWORD /d "0" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableScanOnRealtimeEnable" /t REG_DWORD /d "0" /f
 if '%choice%'=='0' goto start
+ECHO "%choice%" is not valid, try again
+ECHO.
+goto 1
 :2
 cls
 title SteavenToolBox 1.6.0 Clear Event Logs
@@ -1934,6 +1937,9 @@ if '%choice%'=='4' choco install origin -y
 if '%choice%'=='5' choco install playnite -y
 if '%choice%'=='0' goto start
 goto start
+ECHO "%choice%" is not valid, try again
+ECHO.
+goto 17
 :18
 cls
 echo 1. Kingsoft Office
@@ -1956,3 +1962,6 @@ if '%choice%'=='7'
 if '%choice%'=='8' 
 if '%choice%'=='0' goto start
 goto start
+ECHO "%choice%" is not valid, try again
+ECHO.
+goto 18
