@@ -201,6 +201,7 @@ echo 43.Chromium                      44. CygWim
 echo 45. Dropbox                      46. Virtualbox
 echo 47. Winaero Tweaker              48. Iobit Program Pack
 echo 49. Process Explorer             50. WinDirStat
+echo 51. Everything
 echo to Request More say for me at discord SteavenGamerYT#2247 and AlphaReturns#7496 and his helper SoulNeverDies4#5171
 echo ---------------------------------------------------------------------------------------------------------------------
 echo 0. Back to menu
@@ -257,6 +258,7 @@ if '%choice%'== '47' choco install winaero-tweaker -y
 if '%choice%'== '48' choco install iobit-uninstaller iobit-malware-fighter io-unlocker -y
 if '%choice%'== '49' choco install procexp -y
 if '%choice%'== '50' choco install windirstat -y
+if '%choice%'== '51' choco install everything
 if '%choice%'=='0' goto start
 ECHO.
 goto 11
