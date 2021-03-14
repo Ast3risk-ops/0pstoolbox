@@ -10,6 +10,9 @@ echo off
 title SteavenToolBox 1.6.0
 cls
 ECHO.
+echo =========================================================================
+echo "If you see something glitchy or something else please tag us on Discord"
+echo =======================================================================
 echo =====================================================================
 echo "SteavenToolBox 1.6.0 | Current Working Windows 10 Version 2009 20h2"
 echo =====================================================================
