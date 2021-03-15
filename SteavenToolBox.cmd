@@ -12,7 +12,7 @@ cls
 ECHO.
 echo =========================================================================
 echo "If you see something glitchy or something else please tag us on Discord"
-echo =======================================================================
+echo =========================================================================
 echo =====================================================================
 echo "SteavenToolBox 1.6.0 | Current Working Windows 10 Version 2009 20h2"
 echo =====================================================================
@@ -208,6 +208,7 @@ echo 45. Dropbox                      46. Virtualbox
 echo 47. Winaero Tweaker              48. Iobit Program Pack
 echo 49. Process Explorer             50. WinDirStat
 echo 51. Everything                   52. Visual Studio 2017 Build Tools
+echo 53. Adobe Shockwave Player
 echo to Request More say for me at discord SteavenGamerYT#2247 and AlphaReturns#7496 and his helper SoulNeverDies4#5171
 echo ---------------------------------------------------------------------------------------------------------------------
 echo 0. Back to menu
@@ -266,6 +267,7 @@ if '%choice%'== '49' choco install procexp -y
 if '%choice%'== '50' choco install windirstat -y
 if '%choice%'== '51' choco install everything
 if '%choice%'== '52' choco install visualstudio2017buildtools
+if '%choice%'== '53' choco install adobeshockwaveplayer
 if '%choice%'=='0' goto start
 ECHO.
 goto 11
