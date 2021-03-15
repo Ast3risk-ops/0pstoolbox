@@ -3,7 +3,6 @@ cls
 call :IsAdmin
 :start
 ECHO on
-fixing stuff
 Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\NDIS" /v "Start" /t REG_DWORD /d "0" /f
 reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\ACPI" /v "Start" /t REG_DWORD /d "0" /f
 echo off
@@ -1858,6 +1857,7 @@ echo 4. Crack Office 2016
 echo 5. Crack Office 2019
 echo 6. Crack winrar
 echo 7. Crack Camtasia 8.6.0
+echo 8. Crack IObit Software Updater
 echo 0. Back
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
@@ -1871,6 +1871,7 @@ if '%choice%'=='4' goto 2016crack
 if '%choice%'=='5' goto 2019crack
 if '%choice%'=='6' del "C:\Program Files\WinRAR\rarreg.key" & c:\windows\wget\wget.exe -P "C:\Program Files\WinRAR" https://github.com/omartube706/SteavenToolBox/raw/main/rarreg.key
 if '%choice%'=='7' md "%programdata%\TechSmith\Camtasia Studio 9\" & attrib -R "F:\Software\Editors\Camtasia\8.6.0\Crack\RegInfo.ini" & del "C:\ProgramData\TechSmith\Camtasia Studio 9\RegInfo.ini"  & c:\windows\wget\wget.exe -P "%programdata%\TechSmith\Camtasia Studio 9\" https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/RegInfo.ini & attrib +R "F:\Software\Editors\Camtasia\8.6.0\Crack\RegInfo.ini"
+if '%choice%'=='8' del "C:\Program Files (x86)\IObit\Software Updater\version.dll" & c:\windows\wget\wget.exe -P "C:\Program Files (x86)\IObit\Software Updater" https://github.com/omartube706/SteavenToolBox/raw/main/version.dll
 ECHO "%choice%" is not valid, try again
 ECHO.
 goto 24
