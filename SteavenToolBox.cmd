@@ -202,7 +202,7 @@ echo 35. Malwarebytes                 36. CCLeaner
 echo 37. Winamp                       38. Foobar2000
 echo 39. Twitch                       40. WPS Office
 echo 41. Camtasia                     42. Sysinternals
-echo 43.Chromium                      44. CygWim
+echo 43. Chromium                     44. CygWim
 echo 45. Dropbox                      46. Virtualbox
 echo 47. Winaero Tweaker              48. Iobit Program Pack
 echo 49. Process Explorer             50. WinDirStat
