@@ -32,7 +32,6 @@ echo 15. Steaven Speed up                                      14. Office
 echo 16. Disable Action Center 
 echo 17. Right click Take Ownership Menu                      
 echo 18. Right Click Open Command Window here                  
-echo 
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
 set /p choice=Type the number.
