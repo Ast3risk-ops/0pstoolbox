@@ -1971,8 +1971,6 @@ if '%choice%'=='3' choco install office2019proplus -y
 if '%choice%'=='4' choco install officeproplus2013 -y
 if '%choice%'=='5' choco install office365business -y
 if '%choice%'=='6' choco install wps-office-free -y
-if '%choice%'=='7' 
-if '%choice%'=='8' 
 if '%choice%'=='0' goto start
 goto start
 ECHO "%choice%" is not valid, try again
