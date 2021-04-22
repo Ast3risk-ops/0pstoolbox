@@ -20,20 +20,19 @@ echo "Current Working the best on Normal Windows 10"
 echo =======================================================
 echo ---------------------------------------------------------------------------------------------------------------------
 ECHO "TWEAK | FIXED | CLEANER | OTHER"                         Installer
-echo --------------------------------                          7. Install Tools Need To Run Toolbox 100%
+echo --------------------------------                          7. Install Tools Need To Run Toolbox
 color 2                                   
-ECHO 1. Enable / Disable Windows 10 Apps                       8. Firefox Mozilla (browser)
-echo 2. Clear Event Viewer Logs                                9. Google Chrome (browser)
-echo 3. "Clear Cache Updates | Delivery Optimization"          10. 7-Zip
-echo 4. "Hibernation | Fastboot | Sleepmode | Sysmain"         11. Users Request
-echo 5. Trimors Stuff                                          12. Reinstall Windows 10 preinstalled apps
-echo 6. Disable Services                                       20. Uninstall onedrive
-echo 13. Right click Take Ownership Menu                       22. Get Steaven Windows 10 Cleanup
-echo 14. Right Click Open Command Window here                  23. Office 2016 Activation
-echo 15. Steaven Speed up                                      24. "Crack & Activation of apps"
-echo 16. Disable Action Center                                 25. Full RunTime
-echo 17. Game Launchers
-echo 18. Office
+ECHO 1. Enable / Disable Windows 10 Apps                       8. Users Request
+echo 2. Clear Event Viewer Logs                                9. Reinstall Windows 10 preinstalled apps
+echo 3. "Clear Cache Updates | Delivery Optimization"          10. "Crack & Activation of apps"
+echo 4. "Hibernation | Fastboot | Sleepmode | Sysmain"         11. Uninstall onedrive
+echo 5. Trimors Stuff                                          12. Full RunTime
+echo 6. Disable Services                                       13. Game Launchers
+echo 15. Steaven Speed up                                      14. Office
+echo 16. Disable Action Center 
+echo 17. Right click Take Ownership Menu                      
+echo 18. Right Click Open Command Window here                  
+echo 
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
 set /p choice=Type the number.
@@ -45,23 +44,17 @@ if '%choice%'=='4' goto 4
 if '%choice%'=='5' goto 5
 if '%choice%'=='6' goto 6
 if '%choice%'=='7' goto 7
-if '%choice%'=='8' choco install firefox -y
-if '%choice%'=='9' choco install googlechrome -y
-if '%choice%'=='10' choco install 7zip -y
-if '%choice%'=='11' goto 11
-if '%choice%'=='12' goto Choice
-if '%choice%'=='13' goto 13
-if '%choice%'=='14' goto 14
+if '%choice%'=='8' goto 11
+if '%choice%'=='9' goto Choice
+if '%choice%'=='10' goto 24
+if '%choice%'=='11' powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/onedrive.ps1'))"
+if '%choice%'=='12' choco install vcredist2005 vcredist2008 vcredist2010  vcredist2012 msvisualcplusplus2012-redist vcredist2013 msvisualcplusplus2013-redis vcredist2017 vcredist140 vcredist-all jre8 directx -y & DISM /Online /Enable-Feature /FeatureName:NetFx3 /All & dism /Online /enable-feature /FeatureName:"LegacyComponents" /All & dism /Online /enable-feature /FeatureName:"DirectPlay" /All
+if '%choice%'=='13' goto 17
+if '%choice%'=='14' goto 18
 if '%choice%'=='15' goto 15
-if '%choice%'=='17' goto 17
-if '%choice%'=='18' goto 18
+if '%choice%'=='17' goto 13
+if '%choice%'=='18' goto 14
 if '%choice%'=='16' powershell.exe "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/DisableActionCenter.ps1'))"
-if '%choice%'=='20' powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/onedrive.ps1'))"
-if '%choice%'=='21' goto 21
-if '%choice%'=='22' goto 22
-if '%choice%'=='23' goto 23
-if '%choice%'=='24' goto 24
-if '%choice%'=='25' choco install vcredist2005 vcredist2008 vcredist2010  vcredist2012 msvisualcplusplus2012-redist vcredist2013 msvisualcplusplus2013-redis vcredist2017 vcredist140 vcredist-all jre8 directx -y & DISM /Online /Enable-Feature /FeatureName:NetFx3 /All & dism /Online /enable-feature /FeatureName:"LegacyComponents" /All & dism /Online /enable-feature /FeatureName:"DirectPlay" /All
 ECHO "%choice%" is not valid, try again
 ECHO.
 goto start
