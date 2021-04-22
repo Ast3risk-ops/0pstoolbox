@@ -20,7 +20,7 @@ echo "Current Working the best on Normal Windows 10"
 echo =======================================================
 echo ---------------------------------------------------------------------------------------------------------------------
 ECHO "TWEAK | FIXED | CLEANER | OTHER"                         Installer
-echo --------------------------------                          7. Install choco and wget SO YOU CAN GET ANY APP NEEEED
+echo --------------------------------                          7. Install Tools Need To Run Toolbox 100%
 color 2                                   
 ECHO 1. Enable / Disable Windows 10 Apps                       8. Firefox Mozilla (browser)
 echo 2. Clear Event Viewer Logs                                9. Google Chrome (browser)
@@ -247,7 +247,7 @@ if '%choice%'=='30' choco install googlechrome  google-translate-chrome save-to-
 if '%choice%'=='31' choco install googledrive -y
 if '%choice%'=='32' choco install steam-client -y
 if '%choice%'=='33' choco install epicgameslauncher -y
-if '%choice%'=='34' c:\windows\wget\wget.exe -P c: https://github.com/omartube706/SteavenToolBox/raw/main/hello.txt & start c:
+if '%choice%'=='34' c:\windows\Tools\wget.exe -P c: https://github.com/omartube706/SteavenToolBox/raw/main/hello.txt & start c:
 if '%choice%'=='35' choco install malwarebytes -y
 if '%choice%'== '36' choco install ccleaner ccleaner.portable -y
 if '%choice%'== '37' choco install winamp -y
@@ -1488,23 +1488,26 @@ start explorer.exe
 goto start
 :msoffice
 cls
-c:\windows\wget\wget.exe -P c: https://dl.malwat.ch/software/useful/office/MSOffice1619.zip
+c:\windows\Tools\wget.exe -P c: https://dl.malwat.ch/software/useful/office/MSOffice1619.zip
 echo Password: mysubsarethebest
 pause
 goto 11
 :7
 cls
+curl.exe -sA "MS" https://webinstall.dev/pathman | powershell
 powershell.exe "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))"
-md c:\windows\wget
-powershell.exe "Invoke-WebRequest https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/wget.exe -OutFile c:\windows\wget\wget.exe"
+md c:\windows\Tools
+powershell.exe "Invoke-WebRequest https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/wget.exe -OutFile c:\windows\Tools\wget.exe"
+powershell.exe "Invoke-WebRequest https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/aria2c.exe -OutFile c:\windows\Tools\aria2c.exe"
+start /wait cmd /k pathman add C:\Windows\Tools & exit
 goto start
 :vmware
 cls
-c:\windows\wget\wget.exe -P c: https://dl.malwat.ch/software/useful/vmware/VMwareWorkstation16.zip
+c:\windows\Tools\wget.exe -P c: https://dl.malwat.ch/software/useful/vmware/VMwareWorkstation16.zip
 echo Password: mysubsarethebest
 pause
 goto 11
-c:\windows\wget\wget.exe -P c: https://github.com/omartube706/SteavenToolBox/raw/main/dxwebsetup.exe
+c:\windows\Tools\wget.exe -P c: https://github.com/omartube706/SteavenToolBox/raw/main/dxwebsetup.exe
 @pause
 goto 11
 :22
@@ -1843,13 +1846,13 @@ pause >nul
 goto start
 :rufus
 cls
-c:\windows\wget\wget.exe -P c: https://dl.malwat.ch/software/advanced/Rufus.zip
+c:\windows\Tools\wget.exe -P c: https://dl.malwat.ch/software/advanced/Rufus.zip
 echo Password: mysubsarethebest
 pause
 goto 11
 :winrar2
 cls
-c:\windows\wget\wget.exe -P "C:\Program Files\WinRAR" https://github.com/omartube706/SteavenToolBox/raw/main/Themes.exe
+c:\windows\Tools\wget.exe -P "C:\Program Files\WinRAR" https://github.com/omartube706/SteavenToolBox/raw/main/Themes.exe
 cd C:\Program Files\WinRAR"
 "C:\Program Files\WinRAR\Themes.exe" -s2
 goto 11
@@ -1879,9 +1882,9 @@ if '%choice%'=='2' cls & slmgr /ipk GCRJD-8NW9H-F2CDX-CCM8D-9D6T9 & slmgr /skms 
 if '%choice%'=='3' cls & wusa /uninstall /kb:971033 & SLMGR -REARM & echo cracked windows 7 by steavengameryt & pause & goto 24
 if '%choice%'=='4' goto 2016crack
 if '%choice%'=='5' goto 2019crack
-if '%choice%'=='6' del "C:\Program Files\WinRAR\rarreg.key" & c:\windows\wget\wget.exe -P "C:\Program Files\WinRAR" https://github.com/omartube706/SteavenToolBox/raw/main/rarreg.key
-if '%choice%'=='7' md "%programdata%\TechSmith\Camtasia Studio 9\" & attrib -R "F:\Software\Editors\Camtasia\8.6.0\Crack\RegInfo.ini" & del "C:\ProgramData\TechSmith\Camtasia Studio 9\RegInfo.ini"  & c:\windows\wget\wget.exe -P "%programdata%\TechSmith\Camtasia Studio 9\" https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/RegInfo.ini & attrib +R "F:\Software\Editors\Camtasia\8.6.0\Crack\RegInfo.ini"
-if '%choice%'=='8' del "C:\Program Files (x86)\IObit\Software Updater\version.dll" & c:\windows\wget\wget.exe -P "C:\Program Files (x86)\IObit\Software Updater" https://github.com/omartube706/SteavenToolBox/raw/main/version.dll
+if '%choice%'=='6' del "C:\Program Files\WinRAR\rarreg.key" & c:\windows\Tools\wget.exe -P "C:\Program Files\WinRAR" https://github.com/omartube706/SteavenToolBox/raw/main/rarreg.key
+if '%choice%'=='7' md "%programdata%\TechSmith\Camtasia Studio 9\" & attrib -R "F:\Software\Editors\Camtasia\8.6.0\Crack\RegInfo.ini" & del "C:\ProgramData\TechSmith\Camtasia Studio 9\RegInfo.ini"  & c:\windows\Tools\wget.exe -P "%programdata%\TechSmith\Camtasia Studio 9\" https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/RegInfo.ini & attrib +R "F:\Software\Editors\Camtasia\8.6.0\Crack\RegInfo.ini"
+if '%choice%'=='8' del "C:\Program Files (x86)\IObit\Software Updater\version.dll" & c:\windows\Tools\wget.exe -P "C:\Program Files (x86)\IObit\Software Updater" https://github.com/omartube706/SteavenToolBox/raw/main/version.dll
 ECHO "%choice%" is not valid, try again
 ECHO.
 goto 24
