@@ -47,7 +47,7 @@ if '%choice%'=='8' goto 11
 if '%choice%'=='9' goto Choice
 if '%choice%'=='10' goto 24
 if '%choice%'=='11' powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/onedrive.ps1'))"
-if '%choice%'=='12' choco install vcredist2005 vcredist2008 vcredist2010  vcredist2012 msvisualcplusplus2012-redist vcredist2013 msvisualcplusplus2013-redis vcredist2017 vcredist140 vcredist-all jre8 directx -y & DISM /Online /Enable-Feature /FeatureName:NetFx3 /All & dism /Online /enable-feature /FeatureName:"LegacyComponents" /All & dism /Online /enable-feature /FeatureName:"DirectPlay" /All
+if '%choice%'=='12' choco install vcredist2005 vcredist2008 vcredist2010  vcredist2012 msvisualcplusplus2012-redist vcredist2013 msvisualcplusplus2013-redis vcredist2017 vcredist140 vcredist-all jre8 directx -y & DISM /Online /Enable-Feature /FeatureName:NetFx3 & DISM /Online /Enable-Feature /FeatureName:NetFx4 /All & dism /Online /enable-feature /FeatureName:"LegacyComponents" /All & dism /Online /enable-feature /FeatureName:"DirectPlay" /All
 if '%choice%'=='13' goto 17
 if '%choice%'=='14' goto 18
 if '%choice%'=='15' goto 15
@@ -85,6 +85,10 @@ echo Windows Media Player
 echo 11. Enable
 echo 12. Disable
 echo ---------------------------------------------------------------------------------------------------------------------
+echo Printing APPS
+echo 13. Enable all
+echo 14. Disable all
+echo ---------------------------------------------------------------------------------------------------------------------
 echo 0. Back to menu
 set choice=
 set /p choice=Type the number.
@@ -101,6 +105,8 @@ if '%choice%'=='9' dism /online /Enable-Feature /FeatureName:Internet-Explorer-O
 if '%choice%'=='10' dism /online /Disable-Feature /FeatureName:Internet-Explorer-Optional-amd64
 if '%choice%'=='11' DISM /online /Enable-feature /featurename:WindowsMediaPlayer
 if '%choice%'=='12' DISM /online /disable-feature /featurename:WindowsMediaPlayer
+if '%choice%'=='13' dism /online /Enable-Feature /FeatureName:Printing-PrintToPDFServices-Features & dism /online /Enable-Feature /FeatureName:Printing-XPSServices-Features & dism /online /Enable-Feature /FeatureNamePrinting-Foundation-Features & dism /online /Enable-Feature /FeatureNamePrinting-Foundation-InternetPrinting-Client & dism /online /Enable-Feature /FeatureNamePrinting-Foundation-LPDPrintService & dism /online /Enable-Feature /FeatureNamePrinting-Foundation-LPRPortMonitor
+if '%choice%'=='14' dism /online /Disable-Feature /FeatureName:Printing-PrintToPDFServices-Features & dism /online /Disable-Feature /FeatureName:Printing-XPSServices-Features & dism /online /Disable-Feature /FeatureNamePrinting-Foundation-Features & dism /online /Disable-Feature /FeatureNamePrinting-Foundation-InternetPrinting-Client & dism /online /Disable-Feature /FeatureNamePrinting-Foundation-LPDPrintService & dism /online /Disable-Feature /FeatureNamePrinting-Foundation-LPRPortMonitor
 if '%choice%'=='0' goto start
 ECHO "%choice%" is not valid, try again
 ECHO.
