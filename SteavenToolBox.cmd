@@ -77,10 +77,18 @@ echo Windows Defender
 echo 7. Enable
 echo 8. Disable
 echo ---------------------------------------------------------------------------------------------------------------------
+echo Internet Explorer
+echo 9. Enable
+echo 10. Disable
+echo ---------------------------------------------------------------------------------------------------------------------
+echo Windows Media Player
+echo 11. Enable
+echo 12. Disable
+echo ---------------------------------------------------------------------------------------------------------------------
 echo 0. Back to menu
 set choice=
 set /p choice=Type the number.
-if not '%choice%'=='' set choice=%choice:~0,1%
+if not '%choice%'=='' set choice=%choice:~0,10%
 if '%choice%'=='1' SC CONFIG Spooler start= auto & SC START Spooler
 if '%choice%'=='2' C STOP Spooler & SC CONFIG Spooler start= disabled
 if '%choice%'=='3' SC CONFIG wuauserv start= auto & SC START wuauserv
@@ -89,6 +97,10 @@ if '%choice%'=='5' NetSh Advfirewall set allprofiles state on
 if '%choice%'=='6' NetSh Advfirewall set allprofiles state off
 if '%choice%'=='8' Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "EnableSmartScreen" /t REG_DWORD /d "0" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v "DisableAntiSpyware" /t REG_DWORD /d "1" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableBehaviorMonitoring" /t REG_DWORD /d "1" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableOnAccessProtection" /t REG_DWORD /d "1" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableScanOnRealtimeEnable" /t REG_DWORD /d "1" /f
 if '%choice%'=='7' Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "EnableSmartScreen" /t REG_DWORD /d "1" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v "DisableAntiSpyware" /t REG_DWORD /d "0" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableBehaviorMonitoring" /t REG_DWORD /d "0" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableOnAccessProtection" /t REG_DWORD /d "0" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableScanOnRealtimeEnable" /t REG_DWORD /d "0" /f
+if '%choice%'=='9' dism /online /Enable-Feature /FeatureName:Internet-Explorer-Optional-amd64
+if '%choice%'=='10' dism /online /Disable-Feature /FeatureName:Internet-Explorer-Optional-amd64
+if '%choice%'=='11' DISM /online /Enable-feature /featurename:WindowsMediaPlayer
+if '%choice%'=='12' DISM /online /disable-feature /featurename:WindowsMediaPlayer
 if '%choice%'=='0' goto start
 ECHO "%choice%" is not valid, try again
 ECHO.
