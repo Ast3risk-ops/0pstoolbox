@@ -1505,12 +1505,10 @@ pause
 goto 11
 :7
 cls
-curl.exe -sA "MS" https://webinstall.dev/pathman | powershell
 powershell.exe "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))"
 md c:\windows\Tools
 powershell.exe "Invoke-WebRequest https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/wget.exe -OutFile c:\windows\Tools\wget.exe"
 powershell.exe "Invoke-WebRequest https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/aria2c.exe -OutFile c:\windows\Tools\aria2c.exe"
-start /wait cmd /k pathman add C:\Windows\Tools & exit
 goto start
 :vmware
 cls
