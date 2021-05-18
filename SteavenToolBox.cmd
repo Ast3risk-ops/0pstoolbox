@@ -191,18 +191,18 @@ goto 4
 cls
 title SteavenToolBox 1.6.0 Users Request Apps
 echo Users Request
-echo 1. Avast                    17. Paint.net
-echo 2. AnyDesk                  18. Rufus
-echo 3. Audacity                 19. Winrar Themes!
-echo 4. Blender                  20. Windows Photo Viewer
-echo 5. "C++ RunTime"            21. Windows Terminal and Icons Mod
-echo 6. MS Office                22. Google Chrome
-echo 7. .NET Framework 3         23. GitHub
-echo 8. winrar                   24. Visual Studio Code
-echo 9. DirectX                  25. Discord and Discord Canary
-echo 10. VMware 16.0             26. Spotify and Toastify Mod
-echo 11. Adobe Acrobat Reader DC 27. Razer Cortex
-echo 12. Java SE Runtime Environment 8  28. ApowerMirror
+echo 1. Avast                         17. Paint.net
+echo 2. AnyDesk                       18. Rufus
+echo 3. Audacity                      19. Winrar Themes!
+echo 4. Blender                       20. Windows Photo Viewer
+echo 5. "C++ RunTime"                 21. Windows Terminal and Icons Mod
+echo 6. MS Office                     22. Google Chrome
+echo 7. .NET Framework 3              23. GitHub
+echo 8. winrar                        24. Visual Studio Code
+echo 9. DirectX                       25. Discord and Discord Canary
+echo 10. VMware 16.0                  26. Spotify and Toastify Mod
+echo 11. Adobe Acrobat Reader DC      27. Razer Cortex
+echo 12. JavaSE RuntimeEnvironment 8  28. ApowerMirror
 echo 13. Notepad++                    29. Aimp 
 echo 14. VLC                          30. Google Chrome
 echo 15. Pyhton                       31. Google Drive
@@ -220,6 +220,7 @@ echo 51. Everything                   52. Visual Studio 2017 Build Tools
 echo 53. Adobe Shockwave Player       54. Roblox
 echo 55. Opera Browser                56. Mario Bros
 echo 57. Popcorn Time                 58. Qbitorrent
+echo 59. TeamViewer                   60. AnyDesk
 echo to Request More say for me at discord SteavenGamerYT#2247 and AlphaReturns#7496 and his helper SoulNeverDies4#5171
 echo or just try contacing us through mail omartube706@gmail.com or alphareturnsofficial@gmail.com 
 echo ---------------------------------------------------------------------------------------------------------------------
@@ -285,6 +286,8 @@ if '%choice%'== '55' choco install opera -y
 if '%choice%'== '56' choco install super-mario-bros-java -y
 if '%choice%'== '57' choco install popcorntime -y
 if '%choice%'== '58' choco install qbittorrent-enhanced -y
+if '%choice%'== '59' choco install teamviewer -y  
+if '%choice%'== '60' choco install anydesk -y
 if '%choice%'=='0' goto start
 ECHO.
 goto 11
