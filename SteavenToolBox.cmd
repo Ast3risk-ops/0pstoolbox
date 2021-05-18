@@ -9,13 +9,19 @@ echo off
 title SteavenToolBox 1.6.1
 cls
 ECHO.
+color f
 echo =========================================================================
+color c
 echo "If you see something glitchy or something else please tag us on Discord"
+color f
 echo =========================================================================
 echo =====================================================================
+color c
 echo "SteavenToolBox 1.6.1 | Current Working Windows 10 Version 2009 20h2"
+color f
 echo =====================================================================
 echo =======================================================
+color c
 echo "Current Working the best on Normal Windows 10"
 echo =======================================================
 echo ---------------------------------------------------------------------------------------------------------------------
