@@ -218,6 +218,7 @@ echo 47. Winaero Tweaker              48. Iobit Program Pack
 echo 49. Process Explorer             50. WinDirStat
 echo 51. Everything                   52. Visual Studio 2017 Build Tools
 echo 53. Adobe Shockwave Player       54. Roblox
+echo 55. Opera Browser
 echo to Request More say for me at discord SteavenGamerYT#2247 and AlphaReturns#7496 and his helper SoulNeverDies4#5171
 echo ---------------------------------------------------------------------------------------------------------------------
 echo 0. Back to menu
@@ -278,6 +279,7 @@ if '%choice%'== '51' choco install everything
 if '%choice%'== '52' choco install visualstudio2017buildtools
 if '%choice%'== '53' choco install adobeshockwaveplayer
 if '%choice%'== '54' aria2c https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/Roblox.exe & start /wait roblox.exe
+if '%choice%'== '55' choco install opera -y
 if '%choice%'=='0' goto start
 ECHO.
 goto 11
