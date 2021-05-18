@@ -6,14 +6,14 @@ ECHO on
 Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\NDIS" /v "Start" /t REG_DWORD /d "0" /f
 reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\ACPI" /v "Start" /t REG_DWORD /d "0" /f
 echo off
-title SteavenToolBox 1.6.0
+title SteavenToolBox 1.6.1
 cls
 ECHO.
 echo =========================================================================
 echo "If you see something glitchy or something else please tag us on Discord"
 echo =========================================================================
 echo =====================================================================
-echo "SteavenToolBox 1.6.0 | Current Working Windows 10 Version 2009 20h2"
+echo "SteavenToolBox 1.6.1 | Current Working Windows 10 Version 2009 20h2"
 echo =====================================================================
 echo =======================================================
 echo "Current Working the best on Normal Windows 10"
