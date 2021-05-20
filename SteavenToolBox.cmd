@@ -13,10 +13,10 @@ echo =========================================================================
 echo "If you see something glitchy or something else please tag us on Discord"
 echo =========================================================================
 echo =====================================================================
-echo "ՏteavenToolbox 1.6.1 | Current Working Windows 10 Version 2009 20h2"
+echo "SteavenToolbox 1.6.1 | Current Working Windows 10 Version 2009 20h2"
 echo =====================================================================
 echo =======================================================
-echo "Current Working the best on Normal Windows 10"
+echo "Current Working the best on Normal Windows 10 ✪"
 echo =======================================================
 echo ---------------------------------------------------------------------------------------------------------------------
 ECHO "TWEAK | FIXED | CLEANER | OTHER"                         Installer
