@@ -13,7 +13,7 @@ echo =========================================================================
 echo "If you see something glitchy or something else please tag us on Discord"
 echo =========================================================================
 echo =====================================================================
-echo "SteavenToolBox 1.6.1 | Current Working Windows 10 Version 2009 20h2"
+echo ✪ ՏteavenToolbox 1.6.1 | Current Working Windows 10 Version 2009 20h2 ✪
 echo =====================================================================
 echo =======================================================
 echo "Current Working the best on Normal Windows 10"
