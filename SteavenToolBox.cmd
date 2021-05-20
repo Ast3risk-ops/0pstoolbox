@@ -20,16 +20,16 @@ echo "Current Working the best on Normal Windows 10"
 echo =======================================================
 echo ---------------------------------------------------------------------------------------------------------------------
 ECHO "TWEAK | FIXED | CLEANER | OTHER"                         Installer
-echo --------------------------------                          7. Install Tools Need To Run Toolbox
+echo --------------------------------                          ---------
 color c                                    
-ECHO 1. Enable / Disable Windows 10 Apps                       8. Users Request
-echo 2. Clear Event Viewer Logs                                9. Reinstall Windows 10 preinstalled apps
-echo 3. "Clear Cache Updates | Delivery Optimization"          10. "Crack & Activation of apps"
-echo 4. "Hibernation | Fastboot | Sleepmode | Sysmain"         11. Uninstall onedrive
-echo 5. Trimors Stuff                                          12. Full RunTime
-echo 6. Disable Services                                       13. Game Launchers
-echo 15. Steaven Speed up                                      14. Office
-echo 16. Disable Action Center 
+ECHO 1. Enable / Disable Windows 10 Apps                       7. Install Tools Need To Run Toolbox
+echo 2. Clear Event Viewer Logs                                8. Users Request
+echo 3. "Clear Cache Updates | Delivery Optimization"          9. Reinstall Windows 10 preinstalled apps
+echo 4. "Hibernation | Fastboot | Sleepmode | Sysmain"         10. "Crack & Activation of apps"
+echo 5. Trimors Stuff                                          11. Uninstall onedrive
+echo 6. Disable Services                                       12. Full RunTime
+echo 15. Steaven Speed up                                      13. Game Launchers
+echo 16. Disable Action Center                                 14. Office
 echo 17. Right click Take Ownership Menu                      
 echo 18. Right Click Open Command Window here                  
 echo ---------------------------------------------------------------------------------------------------------------------
