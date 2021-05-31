@@ -30,8 +30,8 @@ echo 5. Trimors Stuff                                          11. Uninstall one
 echo 6. Disable Services                                       12. Full RunTime
 echo 15. Steaven Speed up                                      13. Game Launchers
 echo 16. Disable Action Center                                 14. Office
-echo 17. Right click Take Ownership Menu                      
-echo 18. Right Click Open Command Window here                  
+echo 17. Right click Take Ownership Menu                       19. Themes                 
+echo 18. Right Click Open Command Window here                
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
 set /p choice=Type the number.
@@ -53,6 +53,7 @@ if '%choice%'=='14' goto 18
 if '%choice%'=='15' goto 15
 if '%choice%'=='17' goto 13
 if '%choice%'=='18' goto 14
+if '%choice%'=='19' goto themes
 if '%choice%'=='16' powershell.exe "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/DisableActionCenter.ps1'))"
 ECHO "%choice%" is not valid, try again
 ECHO.
@@ -2111,3 +2112,22 @@ deltree /y c:\windows\spool\printers
 del c:\WIN386.SWP
 powercfg -h off
 goto 12
+:themes
+cls
+Echo 1. 
+echo 2. 
+echo 3. 
+echo 4. 
+echo 5. 
+echo ---------------------------------------------------------------------------------------------------------------------
+echo 0. Back to menu
+set choice=
+set /p choice=Type the number.
+if not '%choice%'=='' set choice=%choice:~0,1%
+if '%choice%'=='1' c:\windows\tools\aria2c.exe https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/Roblox.exe & start /wait roblox.exe
+if '%choice%'=='2' 
+if '%choice%'=='3'
+if '%choice%'=='4' 
+if '%choice%'=='5' 
+if '%choice%'=='0' goto start
+goto start
