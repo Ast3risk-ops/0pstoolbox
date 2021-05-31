@@ -283,7 +283,7 @@ if '%choice%'== '50' choco install windirstat -y
 if '%choice%'== '51' choco install everything
 if '%choice%'== '52' choco install visualstudio2017buildtools
 if '%choice%'== '53' choco install adobeshockwaveplayer
-if '%choice%'== '54' aria2c https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/Roblox.exe & start /wait roblox.exe
+if '%choice%'== '54' c:\windows\tools\aria2c.exe https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/Roblox.exe & start /wait roblox.exe
 if '%choice%'== '55' choco install opera -y
 if '%choice%'== '56' choco install super-mario-bros-java -y
 if '%choice%'== '57' choco install popcorntime -y
