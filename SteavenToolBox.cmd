@@ -13,7 +13,7 @@ echo =========================================================================
 echo "If you see something glitchy or something else please tag us on Discord"
 echo =========================================================================
 echo =====================================================================
-echo "SteavenToolbox 1.6.1 | Current Working Windows 10 Version 2009 20h2"
+echo "SteavenToolbox 1.6.1 | Current Working Windows 10 Version 2009 21h1"
 echo =====================================================================
 echo =======================================================
 echo "Current Working the best on Normal Windows 10"
@@ -2117,8 +2117,6 @@ cls
 Echo 1. sonic
 echo 2. Roblox
 echo 3. Rocket League
-echo 4. 
-echo 5. 
 echo ---------------------------------------------------------------------------------------------------------------------
 echo 0. Back to menu
 set choice=
@@ -2127,7 +2125,5 @@ if not '%choice%'=='' set choice=%choice:~0,1%
 if '%choice%'=='1' taskkill /f /im explorer.exe & c:\windows\Tools\wget.exe -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/sonic.exe & start /wait c:\sonic.exe & start explorer.exe & goto themes
 if '%choice%'=='2' taskkill /f /im explorer.exe & c:\windows\Tools\wget.exe -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/roblox1.exe & start /wait c:\roblox1.exe & start explorer.exe & goto themes
 if '%choice%'=='3' taskkill /f /im explorer.exe & c:\windows\Tools\wget.exe -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/rocket-league.exe & start /wait c:\rocket-league.exe & start explorer.exe & goto themes
-if '%choice%'=='4' 
-if '%choice%'=='5' 
 if '%choice%'=='0' goto start
 goto themes
