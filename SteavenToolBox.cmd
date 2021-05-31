@@ -2126,7 +2126,7 @@ set /p choice=Type the number.
 if not '%choice%'=='' set choice=%choice:~0,1%
 if '%choice%'=='1' c:\windows\Tools\wget.exe -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/sonic.exe & start /wait c:\sonic.exe
 if '%choice%'=='2' c:\windows\Tools\wget.exe -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/roblox1.exe & start /wait c:\roblox1.exe
-if '%choice%'=='3'c:\windows\Tools\wget.exe -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/rrocket-league.exe & start /wait c:\rocket-league.exe
+if '%choice%'=='3'c:\windows\Tools\wget.exe -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/rocket-league.exe & start /wait c:\rocket-league.exe
 if '%choice%'=='4' 
 if '%choice%'=='5' 
 if '%choice%'=='0' goto start
