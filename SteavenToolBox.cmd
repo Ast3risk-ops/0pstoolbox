@@ -2114,10 +2114,9 @@ powercfg -h off
 goto 12
 :themes
 cls
-echo --------------------------------------------------------------------------------------------------------------------
-Echo 1. Angry Birds
-echo 2. 
-echo 3. 
+Echo 1. sonic
+echo 2. Roblox
+echo 3. Rocket League
 echo 4. 
 echo 5. 
 echo ---------------------------------------------------------------------------------------------------------------------
@@ -2125,10 +2124,10 @@ echo 0. Back to menu
 set choice=
 set /p choice=Type the number.
 if not '%choice%'=='' set choice=%choice:~0,1%
-if '%choice%'=='1' c:\windows\tools\aria2c.exe https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/angry-birds.exe & start /wait angry-birds.exe
-if '%choice%'=='2' 
-if '%choice%'=='3'
+if '%choice%'=='1' taskkill /f /im explorer.exe & c:\windows\Tools\wget.exe -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/sonic.exe & start /wait c:\sonic.exe & start explorer.exe & goto themes
+if '%choice%'=='2' taskkill /f /im explorer.exe & c:\windows\Tools\wget.exe -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/roblox1.exe & start /wait c:\roblox1.exe & start explorer.exe & goto themes
+if '%choice%'=='3' taskkill /f /im explorer.exe & c:\windows\Tools\wget.exe -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/rocket-league.exe & start /wait c:\rocket-league.exe & start explorer.exe & goto themes
 if '%choice%'=='4' 
 if '%choice%'=='5' 
 if '%choice%'=='0' goto start
-goto start
+goto themes
