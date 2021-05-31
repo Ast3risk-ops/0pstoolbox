@@ -2114,7 +2114,7 @@ powercfg -h off
 goto 12
 :themes
 cls
-Echo 1. Angry Birds
+Echo 1. sonic
 echo 2. 
 echo 3. 
 echo 4. 
@@ -2124,7 +2124,7 @@ echo 0. Back to menu
 set choice=
 set /p choice=Type the number.
 if not '%choice%'=='' set choice=%choice:~0,1%
-if '%choice%'=='1' c:\windows\tools\aria2c.exe https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/angry-birds.exe & start /wait angry-birds.exe
+if '%choice%'=='1' c:\windows\Tools\wget.exe -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/sonic.exe & start /wait sonic.exe
 if '%choice%'=='2' 
 if '%choice%'=='3'
 if '%choice%'=='4' 
