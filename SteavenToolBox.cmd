@@ -203,6 +203,7 @@ echo 55. Opera Browser                56. Mario Bros
 echo 57. Popcorn Time                 58. Qbitorrent
 echo 59. TeamViewer                   60. AnyDesk
 echo 61. OneDrive                     62. Process Hacker    
+echo 63. WinNtSetup
 echo ---------------------------------------------------------------------------------------------------------------------
 echo to Request More say for me at discord SteavenGamerYT#2247 and AlphaReturns#7496 and his helper SoulNeverDies4#5171
 echo or just try contacing us through mail omartube706@gmail.com or alphareturnsofficial@gmail.com 
@@ -273,6 +274,7 @@ if '%choice%'== '59' choco install teamviewer -y
 if '%choice%'== '60' choco install anydesk -y
 if '%choice%'== '61' choco install onedrive onedrivebully -y
 if '%choice%'== '62' choco install processhacker.install -y 
+if '%choice%'== '63'wget -P c: https://github.com/omartube706/SteavenToolBox/raw/main/WinNTSetup_x64.zip & start c:\WinNTSetup_x64.zip
 if '%choice%'=='0' goto start
 ECHO.
 goto 11
