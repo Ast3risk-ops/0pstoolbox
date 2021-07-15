@@ -23,7 +23,7 @@ echo ---------------------------------------------------------------------------
 ECHO "TWEAK | FIXED | CLEANER | OTHER"                         Installer
 echo --------------------------------                          ---------
 color c                                    
-ECHO 1. Enable / Disable Windows 10 Apps                       7. Install Tools Need To Run Toolbox
+ECHO 1. Enable / Disable Windows 10 Apps                       7. Repair Toolbox Runtime
 echo 2. Clear Event Viewer Logs                                8. Users Request
 echo 3. "Clear Cache Updates | Delivery Optimization"          9. Reinstall Windows 10 preinstalled apps
 echo 4. "Hibernation | Fastboot | Sleepmode | Sysmain"         10. "Crack & Activation of apps"
