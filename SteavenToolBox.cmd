@@ -264,7 +264,7 @@ if '%choice%'=='30' choco install googlechrome  google-translate-chrome save-to-
 if '%choice%'=='31' choco install googledrive -y
 if '%choice%'=='32' choco install steam-client -y
 if '%choice%'=='33' choco install epicgameslauncher -y
-if '%choice%'=='34' c:\windows\Tools\wget.exe -P c: https://github.com/omartube706/SteavenToolBox/raw/main/hello.txt & start c:
+if '%choice%'=='34' wget -P c: https://github.com/omartube706/SteavenToolBox/raw/main/hello.txt & start c:
 if '%choice%'=='35' choco install malwarebytes -y
 if '%choice%'== '36' choco install ccleaner ccleaner.portable -y
 if '%choice%'== '37' choco install winamp -y
@@ -284,7 +284,7 @@ if '%choice%'== '50' choco install windirstat -y
 if '%choice%'== '51' choco install everything
 if '%choice%'== '52' choco install visualstudio2017buildtools
 if '%choice%'== '53' choco install adobeshockwaveplayer
-if '%choice%'== '54' c:\windows\tools\aria2c.exe https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/Roblox.exe & start /wait roblox.exe
+if '%choice%'== '54' aria2c https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/Roblox.exe & start /wait roblox.exe
 if '%choice%'== '55' choco install opera -y
 if '%choice%'== '56' choco install super-mario-bros-java -y
 if '%choice%'== '57' choco install popcorntime -y
@@ -1514,24 +1514,21 @@ start explorer.exe
 goto start
 :msoffice
 cls
-c:\windows\Tools\wget.exe -P c: https://dl.malwat.ch/software/useful/office/MSOffice1619.zip
+wget -P c: https://dl.malwat.ch/software/useful/office/MSOffice1619.zip
 echo Password: mysubsarethebest
 pause
 goto 11
 :7
 cls
 powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/SteavenGamerYT/SteavenToolBox/main/runtime.ps1'))"
-md c:\windows\Tools
-powershell.exe "Invoke-WebRequest https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/wget.exe -OutFile c:\windows\Tools\wget.exe"
-powershell.exe "Invoke-WebRequest https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/aria2c.exe -OutFile c:\windows\Tools\aria2c.exe"
 goto start
 :vmware
 cls
-c:\windows\Tools\wget.exe -P c: https://dl.malwat.ch/software/useful/vmware/VMwareWorkstation16.zip
+wget -P c: https://dl.malwat.ch/software/useful/vmware/VMwareWorkstation16.zip
 echo Password: mysubsarethebest
 pause
 goto 11
-c:\windows\Tools\wget.exe -P c: https://github.com/omartube706/SteavenToolBox/raw/main/dxwebsetup.exe
+wget -P c: https://github.com/omartube706/SteavenToolBox/raw/main/dxwebsetup.exe
 @pause
 goto 11
 :22
@@ -1870,13 +1867,13 @@ pause >nul
 goto start
 :rufus
 cls
-c:\windows\Tools\wget.exe -P c: https://dl.malwat.ch/software/advanced/Rufus.zip
+wget -P c: https://dl.malwat.ch/software/advanced/Rufus.zip
 echo Password: mysubsarethebest
 pause
 goto 11
 :winrar2
 cls
-c:\windows\Tools\wget.exe -P "C:\Program Files\WinRAR" https://github.com/omartube706/SteavenToolBox/raw/main/Themes.exe
+wget -P "C:\Program Files\WinRAR" https://github.com/omartube706/SteavenToolBox/raw/main/Themes.exe
 cd C:\Program Files\WinRAR"
 "C:\Program Files\WinRAR\Themes.exe" -s2
 goto 11
@@ -1906,9 +1903,9 @@ if '%choice%'=='2' cls & slmgr /ipk GCRJD-8NW9H-F2CDX-CCM8D-9D6T9 & slmgr /skms 
 if '%choice%'=='3' cls & wusa /uninstall /kb:971033 & SLMGR -REARM & echo cracked windows 7 by steavengameryt & pause & goto 24
 if '%choice%'=='4' goto 2016crack
 if '%choice%'=='5' goto 2019crack
-if '%choice%'=='6' del "C:\Program Files\WinRAR\rarreg.key" & c:\windows\Tools\wget.exe -P "C:\Program Files\WinRAR" https://github.com/omartube706/SteavenToolBox/raw/main/rarreg.key
-if '%choice%'=='7' md "%programdata%\TechSmith\Camtasia Studio 9\" & attrib -R "F:\Software\Editors\Camtasia\8.6.0\Crack\RegInfo.ini" & del "C:\ProgramData\TechSmith\Camtasia Studio 9\RegInfo.ini"  & c:\windows\Tools\wget.exe -P "%programdata%\TechSmith\Camtasia Studio 9\" https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/RegInfo.ini & attrib +R "F:\Software\Editors\Camtasia\8.6.0\Crack\RegInfo.ini"
-if '%choice%'=='8' del "C:\Program Files (x86)\IObit\Software Updater\version.dll" & c:\windows\Tools\wget.exe -P "C:\Program Files (x86)\IObit\Software Updater" https://github.com/omartube706/SteavenToolBox/raw/main/version.dll
+if '%choice%'=='6' del "C:\Program Files\WinRAR\rarreg.key" & wget -P "C:\Program Files\WinRAR" https://github.com/omartube706/SteavenToolBox/raw/main/rarreg.key
+if '%choice%'=='7' md "%programdata%\TechSmith\Camtasia Studio 9\" & attrib -R "F:\Software\Editors\Camtasia\8.6.0\Crack\RegInfo.ini" & del "C:\ProgramData\TechSmith\Camtasia Studio 9\RegInfo.ini"  & wget -P "%programdata%\TechSmith\Camtasia Studio 9\" https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/RegInfo.ini & attrib +R "F:\Software\Editors\Camtasia\8.6.0\Crack\RegInfo.ini"
+if '%choice%'=='8' del "C:\Program Files (x86)\IObit\Software Updater\version.dll" & wget -P "C:\Program Files (x86)\IObit\Software Updater" https://github.com/omartube706/SteavenToolBox/raw/main/version.dll
 ECHO "%choice%" is not valid, try again
 ECHO.
 goto 24
@@ -2122,8 +2119,8 @@ echo 0. Back to menu
 set choice=
 set /p choice=Type the number.
 if not '%choice%'=='' set choice=%choice:~0,1%
-if '%choice%'=='1' taskkill /f /im explorer.exe & c:\windows\Tools\wget.exe -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/sonic.exe & start /wait c:\sonic.exe & start explorer.exe & goto themes
-if '%choice%'=='2' taskkill /f /im explorer.exe & c:\windows\Tools\wget.exe -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/roblox1.exe & start /wait c:\roblox1.exe & start explorer.exe & goto themes
-if '%choice%'=='3' taskkill /f /im explorer.exe & c:\windows\Tools\wget.exe -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/rocket-league.exe & start /wait c:\rocket-league.exe & start explorer.exe & goto themes
+if '%choice%'=='1' taskkill /f /im explorer.exe & wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/sonic.exe & start /wait c:\sonic.exe & start explorer.exe & goto themes
+if '%choice%'=='2' taskkill /f /im explorer.exe & wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/roblox1.exe & start /wait c:\roblox1.exe & start explorer.exe & goto themes
+if '%choice%'=='3' taskkill /f /im explorer.exe & wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/rocket-league.exe & start /wait c:\rocket-league.exe & start explorer.exe & goto themes
 if '%choice%'=='0' goto start
 goto themes
