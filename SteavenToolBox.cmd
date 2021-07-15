@@ -162,30 +162,12 @@ echo NOTE: A computer with 4GB of RAM would have a 3.5GB hiberfil.sys file on yo
 set choice=
 set /p choice=Type the number.
 if not '%choice%'=='' set choice=%choice:~0,1%
-if '%choice%'=='1' goto disablehiberfil.sys
-if '%choice%'=='2' goto enablehiberfil.sys
-if '%choice%'=='3' goto disablesysmain
-if '%choice%'=='4' goto enablesysmain
+if '%choice%'=='1' powercfg.exe -h off & goto 4
+if '%choice%'=='2' powercfg.exe -h on & goto 4
+if '%choice%'=='3' SC STOP SysMain & SC CONFIG SysMain start= disabled & goto 4
+if '%choice%'=='4' SC CONFIG SysMain start= auto & SC start SysMain & goto 4
 if '%choice%'=='0' goto start
 goto start
-:disablehiberfil.sys
-cls
-powercfg.exe -h off
-goto 4
-:enablehiberfil.sys
-cls
-powercfg.exe -h on
-goto 4
-:disablesysmain
-cls
-SC STOP SysMain
-SC CONFIG SysMain start= disabled
-goto 4
-:enablesysmain
-cls
-SC CONFIG SysMain start= auto
-SC start SysMain
-goto 4
 :11
 cls
 title SteavenToolBox 1.6.0 Users Request Apps
