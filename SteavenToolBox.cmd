@@ -75,8 +75,8 @@ echo 5. Enable
 echo 6. Disable
 echo ---------------------------------------------------------------------------------------------------------------------
 echo Windows Defender (using app)
-echo 7. Enable & Disable (x86)
-echo 8. Enable & Disable (x64)
+echo 7. "Enable & Disable (x86)"
+echo 8. "Enable & Disable (x64)"
 echo ---------------------------------------------------------------------------------------------------------------------
 echo Internet Explorer
 echo 9. Enable
