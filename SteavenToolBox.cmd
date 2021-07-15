@@ -2114,6 +2114,7 @@ cls
 Echo 1. sonic
 echo 2. Roblox
 echo 3. Rocket League
+echo 4. Steaven Theme
 echo ---------------------------------------------------------------------------------------------------------------------
 echo 0. Back to menu
 set choice=
@@ -2122,5 +2123,6 @@ if not '%choice%'=='' set choice=%choice:~0,1%
 if '%choice%'=='1' taskkill /f /im explorer.exe & wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/sonic.exe & start /wait c:\sonic.exe & start explorer.exe & goto themes
 if '%choice%'=='2' taskkill /f /im explorer.exe & wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/roblox1.exe & start /wait c:\roblox1.exe & start explorer.exe & goto themes
 if '%choice%'=='3' taskkill /f /im explorer.exe & wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/rocket-league.exe & start /wait c:\rocket-league.exe & start explorer.exe & goto themes
+if '%choice%'=='4'  wget -P c: https://raw.githubusercontent.com/SteavenGamerYT/SteavenToolBox/main/Steaven.deskthemepack & start /wait c:\Steaven.deskthemepack & goto themes
 if '%choice%'=='0' goto start
 goto themes
