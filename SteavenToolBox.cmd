@@ -66,7 +66,7 @@ echo Print Spooler for Printer (services)
 echo 1. Enable
 echo 2. Disable
 echo ---------------------------------------------------------------------------------------------------------------------
-echo Windows Updates (services)
+echo Windows Updates (services and Regedit)
 echo 3. Enable
 echo 4. Disable
 echo ---------------------------------------------------------------------------------------------------------------------
@@ -96,8 +96,8 @@ set /p choice=Type the number.
 if not '%choice%'=='' set choice=%choice:~0,10%
 if '%choice%'=='1' SC CONFIG Spooler start= auto & SC START Spooler
 if '%choice%'=='2' C STOP Spooler & SC CONFIG Spooler start= disabled
-if '%choice%'=='3' SC CONFIG wuauserv start= auto & SC START wuauserv
-if '%choice%'=='4' SC CONFIG wuauserv start= disabled & SC START wuauserv
+if '%choice%'=='3' SC CONFIG wuauserv start= auto & SC START wuauserv & Reg.exe delete "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "DoNotConnectToWindowsUpdateInternetLocations" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /f
+if '%choice%'=='4' SC CONFIG wuauserv start= disabled & SC START wuauserv & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "DoNotConnectToWindowsUpdateInternetLocations" /t REG_DWORD /d "1" /f
 if '%choice%'=='5' NetSh Advfirewall set allprofiles state on
 if '%choice%'=='6' NetSh Advfirewall set allprofiles state off
 if '%choice%'=='8' Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "EnableSmartScreen" /t REG_DWORD /d "0" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v "DisableAntiSpyware" /t REG_DWORD /d "1" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableBehaviorMonitoring" /t REG_DWORD /d "1" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableOnAccessProtection" /t REG_DWORD /d "1" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableScanOnRealtimeEnable" /t REG_DWORD /d "1" /f
