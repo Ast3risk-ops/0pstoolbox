@@ -100,10 +100,10 @@ if '%choice%'=='4' SC CONFIG wuauserv start= disabled & SC START wuauserv & Reg.
 if '%choice%'=='5' NetSh Advfirewall set allprofiles state on
 if '%choice%'=='6' NetSh Advfirewall set allprofiles state off
 if '%choice%'=='7' wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/dControl.exe & start /wait c:\dControl.exe
-if '%choice%'=='9' dism /online /Enable-Feature /FeatureName:Internet-Explorer-Optional-amd64
-if '%choice%'=='10' dism /online /Disable-Feature /FeatureName:Internet-Explorer-Optional-amd64
-if '%choice%'=='11' DISM /online /Enable-feature /featurename:WindowsMediaPlayer
-if '%choice%'=='12' DISM /online /disable-feature /featurename:WindowsMediaPlayer
+if '%choice%'=='9' dism /online /NoRestart /Enable-Feature /FeatureName:Internet-Explorer-Optional-amd64
+if '%choice%'=='10' dism /online /NoRestart /Disable-Feature /FeatureName:Internet-Explorer-Optional-amd64
+if '%choice%'=='11' DISM /online /NoRestart /Enable-feature /featurename:WindowsMediaPlayer
+if '%choice%'=='12' DISM /online /NoRestart /disable-feature /featurename:WindowsMediaPlayer
 if '%choice%'=='13' dism /online /NoRestart /Enable-Feature /FeatureName:Printing-PrintToPDFServices-Features & dism /online /NoRestart /Enable-Feature /FeatureName:Printing-XPSServices-Features & dism /online /NoRestart /Enable-Feature /FeatureName:Printing-Foundation-Features & dism /online /NoRestart /Enable-Feature /FeatureName:Printing-Foundation-InternetPrinting-Client & dism /online /NoRestart /Enable-Feature /FeatureName:Printing-Foundation-LPDPrintService & dism /online /NoRestart /Enable-Feature /FeatureName:Printing-Foundation-LPRPortMonitor & dism /online /NoRestart /Enable-Feature /FeatureName:Printing-Foundation-Features
 if '%choice%'=='14' dism /online /NoRestart /Disable-Feature /FeatureName:Printing-PrintToPDFServices-Features & dism /online /NoRestart /Disable-Feature /FeatureName:Printing-XPSServices-Features & dism /online /NoRestart /Disable-Feature /FeatureName:Printing-Foundation-Features & dism /online /NoRestart /Disable-Feature /FeatureName:Printing-Foundation-InternetPrinting-Client & dism /online /NoRestart /Disable-Feature /FeatureName:Printing-Foundation-LPDPrintService & dism /online /NoRestart /Disable-Feature /FeatureName:Printing-Foundation-LPRPortMonitor & dism /online /NoRestart /Disable-Feature /FeatureName:Printing-Foundation-Features
 if '%choice%'=='0' goto start
