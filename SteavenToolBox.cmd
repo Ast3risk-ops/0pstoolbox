@@ -99,7 +99,7 @@ if '%choice%'=='3' SC CONFIG wuauserv start= auto & SC START wuauserv & Reg.exe 
 if '%choice%'=='4' SC CONFIG wuauserv start= disabled & SC START wuauserv & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "DoNotConnectToWindowsUpdateInternetLocations" /t REG_DWORD /d "1" /f
 if '%choice%'=='5' NetSh Advfirewall set allprofiles state on
 if '%choice%'=='6' NetSh Advfirewall set allprofiles state off
-if '%choice%'=='7' wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/dControl.exe & start /wait c:\WsBlocker.exe
+if '%choice%'=='7' wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/dControl.exe & start /wait c:\dControl.exe
 if '%choice%'=='9' dism /online /Enable-Feature /FeatureName:Internet-Explorer-Optional-amd64
 if '%choice%'=='10' dism /online /Disable-Feature /FeatureName:Internet-Explorer-Optional-amd64
 if '%choice%'=='11' DISM /online /Enable-feature /featurename:WindowsMediaPlayer
