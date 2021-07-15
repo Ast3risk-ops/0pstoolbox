@@ -274,7 +274,7 @@ if '%choice%'== '59' choco install teamviewer -y
 if '%choice%'== '60' choco install anydesk -y
 if '%choice%'== '61' choco install onedrive onedrivebully -y
 if '%choice%'== '62' choco install processhacker.install -y 
-if '%choice%'== '63'wget -P c: https://github.com/omartube706/SteavenToolBox/raw/main/WinNTSetup_x64.zip & start c:\WinNTSetup_x64.zip
+if '%choice%'== '63' wget -P c: https://github.com/omartube706/SteavenToolBox/raw/main/WinNTSetup_x64.zip & start c:\WinNTSetup_x64.zip
 if '%choice%'=='0' goto start
 ECHO.
 goto 11
