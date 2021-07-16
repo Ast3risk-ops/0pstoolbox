@@ -1954,6 +1954,7 @@ Echo 1. sonic
 echo 2. Roblox
 echo 3. Rocket League
 echo 4. Steaven Theme
+echo 5. Call of duty Black Ops 4
 echo ---------------------------------------------------------------------------------------------------------------------
 echo 0. Back to menu
 set choice=
@@ -1963,5 +1964,6 @@ if '%choice%'=='1' taskkill /f /im explorer.exe & wget -P c: https://github.com/
 if '%choice%'=='2' taskkill /f /im explorer.exe & wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/roblox1.exe & start /wait c:\roblox1.exe & start explorer.exe & goto themes
 if '%choice%'=='3' taskkill /f /im explorer.exe & wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/rocket-league.exe & start /wait c:\rocket-league.exe & start explorer.exe & goto themes
 if '%choice%'=='4' wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/Steaven.deskthemepack & start /wait c:\Steaven.deskthemepack & goto themes
+if '%choice%'=='5' wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/call-of-duty-black-ops-4.deskthemepack & start /wait c:\call-of-duty-black-ops-4.deskthemepack & goto themes
 if '%choice%'=='0' goto start
 goto themes
