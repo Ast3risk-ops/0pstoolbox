@@ -13,10 +13,10 @@ echo =========================================================================
 echo "If you see something glitchy or something else please tag us on Discord"
 echo =========================================================================
 echo =====================================================================
-echo "SteavenToolbox 1.6.1 | Current Working Windows 10 Version 2009 21h1"
+echo "SteavenToolbox 1.6.2 | Current Working Windows 10 Version 2009 21h1"
 echo =====================================================================
 echo =======================================================
-echo "Current Working the best on Normal Windows 10"
+echo "Current Working the best on Normal Windows 10/Windows 11"
 echo =======================================================
 echo ---------------------------------------------------------------------------------------------------------------------
 ECHO "TWEAK | FIXED | CLEANER | OTHER"                         Installer
@@ -59,7 +59,7 @@ ECHO "%choice%" is not valid, try again
 ECHO.
 goto start
 :1
-title SteavenToolBox 1.6.0
+title SteavenToolBox 1.6.2
 cls
 echo ---------------------------------------------------------------------------------------------------------------------
 echo Print Spooler for Printer (services)
@@ -224,7 +224,7 @@ echo 57. Popcorn Time                 58. Qbitorrent
 echo 59. TeamViewer                   60. AnyDesk
 echo 61. OneDrive                     62. Process Hacker    
 echo ---------------------------------------------------------------------------------------------------------------------
-echo to Request More say for me at discord SteavenGamerYT#2247 and AlphaReturns#7496 and his helper SoulNeverDies4#5171
+echo to Request More say for me at discord SteavenGamerYT#2247 and TheAlpha#7496 and his helper SoulNeverDies4#5171
 echo or just try contacing us through mail omartube706@gmail.com or alphareturnsofficial@gmail.com 
 echo ---------------------------------------------------------------------------------------------------------------------
 echo 0. Back to menu
