@@ -12,4 +12,4 @@ and even that you can find youtubers speed up scripts inside it so you can just 
 Get it right now to edit your windows and make it complity your own
 
 
-to get it download SteavenToolBox.sfx.exe and install it everytime you want a perfect toolbox
+to get it open powershell as admin type iex ((New-Object System.Net.WebClient).DownloadString('https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/ToolBox.ps1'))
