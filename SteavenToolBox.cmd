@@ -54,7 +54,7 @@ if '%choice%'=='15' goto 15
 if '%choice%'=='17' goto 13
 if '%choice%'=='18' goto 14
 if '%choice%'=='19' goto themes
-if '%choice%'=='20' goto store
+if '%choice%'=='20' goto store22
 if '%choice%'=='16' powershell.exe "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/DisableActionCenter.ps1'))"
 ECHO "%choice%" is not valid, try again
 ECHO.
@@ -2174,7 +2174,7 @@ netsh int tcp set global congestionprovider=ctcp
 echo TCP Tune
 netsh int tcp set global autotuninglevel=disabled
 goto start
-:store
+:store22
 cls
 cd c:\
 cd \
