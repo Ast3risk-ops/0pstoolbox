@@ -2172,4 +2172,4 @@ netsh int tcp set global autotuninglevel=normal
 netsh int tcp set global congestionprovider=ctcp
 echo TCP Tune
 netsh int tcp set global autotuninglevel=disabled
-:start
+goto start
