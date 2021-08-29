@@ -31,7 +31,7 @@ echo 6. Disable Services                                       12. Full RunTime
 echo 15. Steaven Speed up                                      13. Game Launchers
 echo 16. Disable Action Center                                 14. Office
 echo 17. Right click Take Ownership Menu                       19. Themes                 
-echo 18. Right Click Open Command Window here                
+echo 18. Right Click Open Command Window here                  20. install Store
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
 set /p choice=Type the number.
@@ -54,6 +54,7 @@ if '%choice%'=='15' goto 15
 if '%choice%'=='17' goto 13
 if '%choice%'=='18' goto 14
 if '%choice%'=='19' goto themes
+if '%choice%'=='20' goto store
 if '%choice%'=='16' powershell.exe "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/DisableActionCenter.ps1'))"
 ECHO "%choice%" is not valid, try again
 ECHO.
@@ -2172,4 +2173,12 @@ netsh int tcp set global autotuninglevel=normal
 netsh int tcp set global congestionprovider=ctcp
 echo TCP Tune
 netsh int tcp set global autotuninglevel=disabled
+goto start
+:store
+cls
+cd c:\
+cd \
+git clone https://github.com/kkkgo/LTSC-Add-MicrosoftStore.git
+cd LTSC-Add-MicrosoftStore
+Add-Store.cmd
 goto start
