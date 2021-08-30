@@ -6,7 +6,7 @@ Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\NDIS" /v "Start" /t REG_DWOR
 reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\ACPI" /v "Start" /t REG_DWORD /d "0" /f
 powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/SteavenGamerYT/SteavenToolBox/main/runtime.ps1'))"
 :start
-title SteavenToolBox 1.6.1
+title SteavenToolBox 1.6.3
 cls
 ECHO.
 echo =========================================================================
@@ -21,7 +21,7 @@ echo =======================================================
 echo ---------------------------------------------------------------------------------------------------------------------
 ECHO "TWEAK | FIXED | CLEANER | OTHER"                         Installer
 echo --------------------------------                          ---------
-color c                                    
+color a                                    
 ECHO 1. Enable / Disable Windows 10 Apps                       7. Repair Toolbox Runtime
 echo 2. Clear Event Viewer Logs                                8. Users Request
 echo 3. "Clear Cache Updates | Delivery Optimization"          9. Reinstall Windows 10 preinstalled apps
@@ -206,7 +206,7 @@ echo 59. TeamViewer                   60. AnyDesk
 echo 61. OneDrive                     62. Process Hacker    
 echo 63. WinNtSetup
 echo ---------------------------------------------------------------------------------------------------------------------
-echo to Request More say for me at discord SteavenGamerYT#2247 and TheAlpha#7496 and his helper SoulNeverDies4#5171
+echo to Request More say for me at discord "Omar Hany Kasban#2247" and TheAlpha#7496
 echo or just try contacing us through mail omartube706@gmail.com or alphareturnsofficial@gmail.com 
 echo ---------------------------------------------------------------------------------------------------------------------
 echo 0. Back to menu
@@ -1971,6 +1971,7 @@ goto themes
 :15
 cls
 echo off
+title Steaven Speedup 2.0
 wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/install_wim_tweak.exe
 cd c:\
 cd \
@@ -2121,6 +2122,9 @@ install_wim_tweak.exe /o /c Microsoft-Windows-Fax-Client-Feature-Opt-Package /r
 install_wim_tweak.exe /o /c HyperV-Hypervisor-Package /r
 install_wim_tweak.exe /o /c HyperV-Hypervisor-onecore-Package /r
 install_wim_tweak.exe /o /c HyperV-Hypervisor-minkernel-Package /r
+install_wim_tweak.exe /o /c Microsoft-Windows-WindowsMediaPlayer-Troubleshooters-Package /r
+install_wim_tweak.exe /o /c Microsoft-Windows-InternetExplorer-Package-ua /r
+install_wim_tweak.exe /o /c Microsoft-Windows-InternetExplorer-Optional-Package /r
 echo disabling unwanted services
 sc stop gupdate
 sc config gupdate start=disabled
