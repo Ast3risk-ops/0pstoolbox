@@ -32,6 +32,7 @@ echo 15. Steaven Speed up                                      13. Game Launcher
 echo 16. Disable Action Center                                 14. Office
 echo 17. Right click Take Ownership Menu                       19. Themes                 
 echo 18. Right Click Open Command Window here                  20. install Store
+echo                                                           21. Reload Toolbox
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
 set /p choice=Type the number.
@@ -55,6 +56,7 @@ if '%choice%'=='17' goto 13
 if '%choice%'=='18' goto 14
 if '%choice%'=='19' goto themes
 if '%choice%'=='20' goto store22
+if '%choice%'=='21' powershell iex ((New-Object System.Net.WebClient).DownloadString('https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/ToolBox.ps1'))
 if '%choice%'=='16' powershell.exe "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/DisableActionCenter.ps1'))"
 ECHO "%choice%" is not valid, try again
 ECHO.
