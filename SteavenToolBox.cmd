@@ -1809,15 +1809,59 @@ echo 2. Epic Games
 echo 3. Parsec
 echo 4. Origin
 echo 5. Playnite
+echo 6. Amazon Games
+echo 7. Gameplay Time Tracker
+echo 8. Console Classix
+echo 9. Nvidia GeForce NOW
+echo 10. GOG Galaxy
+echo 11. Mupen64Plus
+echo 12. Bethesda.Net
+echo 13. PCSX2
+echo 14. FS-UAE
+echo 15. RetroArch
+echo 16. Game Backup Monitor
+echo 17. Steam Library Manager
+echo 18. LaunchBox
+echo 19. GameSave Manager
+echo 20. BorderlessGaming
+echo 21. itch.io
+echo 22. EmulationStation
+echo 23. DOSBox
+echo 24. Steam Cleaner
+echo 25. Battle.net
+echo 26. Dolphin Emulator
+echo 27. Joy To Key
 echo 0. Back to menu
 set choice=
 set /p choice=Type the number.
-if not '%choice%'=='' set choice=%choice:~0,1%
+if not '%choice%'=='' set choice=%choice:~0,10%
 if '%choice%'=='1' choco install steam-client steamcmd -y
 if '%choice%'=='2' choco install epicgameslauncher -y
 if '%choice%'=='3' choco install parsec -y
 if '%choice%'=='4' choco install origin -y
 if '%choice%'=='5' choco install playnite -y
+if '%choice%'=='6' choco install amazongames -y
+if '%choice%'=='7' choco install gameplay-time-tracker -y
+if '%choice%'=='8' choco install consoleclassix -y
+if '%choice%'=='9' choco install nvidia-geforce-now -y
+if '%choice%'=='10' choco install goggalaxy -y
+if '%choice%'=='11' choco install mupen64plus -y
+if '%choice%'=='12' choco install bethesdanet -y
+if '%choice%'=='13' choco install pcsx2.install -y
+if '%choice%'=='14' choco install fs-uae -y
+if '%choice%'=='15' choco install retroarch -y
+if '%choice%'=='16' choco install gbm -y
+if '%choice%'=='17' choco install steamlibrarymanager.portable -y
+if '%choice%'=='18' choco install launchbox -y
+if '%choice%'=='19' choco install gamesavemanager -y
+if '%choice%'=='20' choco install borderlessgaming -y
+if '%choice%'=='21' choco install itch -y
+if '%choice%'=='22' choco install emulationstation.install -y
+if '%choice%'=='23' choco install dosbox -y
+if '%choice%'=='24' choco install steam-cleaner -y
+if '%choice%'=='25' choco install battle.net -y
+if '%choice%'=='26' choco install dolphin -y
+if '%choice%'=='27' choco install joytokey -y
 if '%choice%'=='0' goto start
 goto start
 ECHO "%choice%" is not valid, try again
