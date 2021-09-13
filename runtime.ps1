@@ -22,14 +22,19 @@ Try{
 Catch{
 	# winget is not installed. Install it from the Github release
 	Write-Host "winget is not found, installing it right now."
-	
-	$download = "https://github.com/microsoft/winget-cli/releases/download/v1.0.11692/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle"
+
+	$asset = Invoke-RestMethod -Method Get -Uri 'https://api.github.com/repos/microsoft/winget-cli/releases/latest' | ForEach-Object assets | Where-Object name -like "*.msixbundle"
 	$output = $PSScriptRoot + "\winget-latest.appxbundle"
-	Write-Host "Dowloading latest release"
-	Invoke-WebRequest -Uri $download -OutFile $output
-	
-	Write-Host "Installing the package"
+	Write-Host "Downloading latest winget release"
+	Invoke-WebRequest -Uri $asset.browser_download_url -OutFile $output
+
+	Write-Host "Installing the winget package"
 	Add-AppxPackage -Path $output
+
+    Write-Host "Cleanup winget install package"
+    if (Test-Path -Path $output) {
+        Remove-Item $output -Force -ErrorAction SilentlyContinue
+    }
 }
 Finally {
 	# Start installing the packages with winget
@@ -40,4 +45,4 @@ Finally {
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-scoop install aria2 wget curl grep sed less touch sudo git
+scoop install aria2 wget curl grep sudo git
