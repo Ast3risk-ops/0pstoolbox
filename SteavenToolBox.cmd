@@ -28,7 +28,7 @@ echo 3. "Clear Cache Updates | Delivery Optimization"          9. Reinstall Wind
 echo 4. "Hibernation | Fastboot | Sleepmode | Sysmain"         10. "Crack & Activation of apps"
 echo 5. Trimors Stuff                                          11. Uninstall onedrive
 echo 6. Disable Services                                       12. Full RunTime
-echo 15. Steaven Speed up                                      13. Game Launchers
+echo 15. Steaven Speed up (Uninstalls Hyper-v,IE,MeidaPlayer)  13. Game Launchers
 echo 16. Disable Action Center                                 14. Office
 echo 17. Right click Take Ownership Menu                       19. Themes                 
 echo 18. Right Click Open Command Window here                  20. install Store
@@ -69,7 +69,7 @@ echo Print Spooler for Printer (services)
 echo 1. Enable
 echo 2. Disable
 echo ---------------------------------------------------------------------------------------------------------------------
-echo Windows Updates (services and Regedit)
+echo Windows Updates (Regedit)
 echo 3. Enable
 echo 4. Disable
 echo ---------------------------------------------------------------------------------------------------------------------
@@ -98,8 +98,8 @@ set /p choice=Type the number.
 if not '%choice%'=='' set choice=%choice:~0,10%
 if '%choice%'=='1' SC CONFIG Spooler start= auto & SC START Spooler
 if '%choice%'=='2' C STOP Spooler & SC CONFIG Spooler start= disabled
-if '%choice%'=='3' SC CONFIG wuauserv start= auto & SC START wuauserv & Reg.exe delete "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "DoNotConnectToWindowsUpdateInternetLocations" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /f
-if '%choice%'=='4' SC CONFIG wuauserv start= disabled & SC START wuauserv & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "DoNotConnectToWindowsUpdateInternetLocations" /t REG_DWORD /d "1" /f
+if '%choice%'=='3' Reg.exe delete "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "DoNotConnectToWindowsUpdateInternetLocations" /f & Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /f
+if '%choice%'=='4' Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "DoNotConnectToWindowsUpdateInternetLocations" /t REG_DWORD /d "1" /f
 if '%choice%'=='5' NetSh Advfirewall set allprofiles state on
 if '%choice%'=='6' NetSh Advfirewall set allprofiles state off
 if '%choice%'=='7' wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/dControl.exe & start /wait c:\dControl.exe
