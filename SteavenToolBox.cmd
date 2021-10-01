@@ -3,33 +3,28 @@ cls
 call :IsAdmin
 echo off
 Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\NDIS" /v "Start" /t REG_DWORD /d "0" /f
-reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\ACPI" /v "Start" /t REG_DWORD /d "0" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\ACPI" /v "Start" /t REG_DWORD /d "0" /f
 powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/SteavenGamerYT/SteavenToolBox/main/runtime.ps1'))"
 :start
-title SteavenToolBox 1.6.3
+title SteavenToolbox 1.7
 cls
-ECHO.
-echo =========================================================================
-echo "If you see something glitchy or something else please tag us on Discord"
-echo =========================================================================
 echo =====================================================================
-echo "SteavenToolbox 1.6.2 | We care about your pc!"
+echo "SteavenToolbox 1.7 | We care about your pc!"
 echo =====================================================================
 echo ---------------------------------------------------------------------------------------------------------------------
 ECHO "TWEAK | FIXED | CLEANER | OTHER"                         Installer
 echo --------------------------------                          ---------
 color a                                    
-ECHO 1. Enable / Disable Windows 10 Apps                       7. Repair Toolbox Runtime
-echo 2. Clear Event Viewer Logs                                8. Users Request
-echo 3. "Clear Cache Updates | Delivery Optimization"          9. Reinstall Windows 10 preinstalled apps
-echo 4. "Hibernation | Fastboot | Sleepmode | Sysmain"         10. "Crack & Activation of apps" 	
-echo 5. Trimors Stuff                                          11. Uninstall onedrive
-echo 6. Disable Services                                       12. Full RunTime
-echo 15. Uninstall Some Preloaded packages forever!            13. Game Launchers
-echo 16. Disable Action Center                                 14. Office
-echo 17. Right click Take Ownership Menu                       19. Themes                 
-echo 18. Right Click Open Command Window here                  20. install Store
-echo 22. Windows Update Fix                                    21. Reload Toolbox
+ECHO 1. Enable / Disable Windows 10 Apps                       10. Reload Toolbox
+echo 2. Clear Event Viewer Logs                                11. Install Apps that you need
+echo 3. "Clear Cache Updates | Delivery Optimization"          12. Reinstall Windows 10 preinstalled apps
+echo 4. "Hibernation | Fastboot | Sleepmode | Sysmain"         13. Game Launchers
+echo 5. Trimors Stuff                                          14. Office
+echo 6. Disable Services                                       15. "Crack & Activation of apps" 	
+echo 7. Uninstall Some Preloaded packages forever!             16. Uninstall onedrive
+echo 8. Windows Update Fix                                     17. Full RunTime
+echo 9. Right Click Tweaks                                     18. Themes
+echo                                                           19. Install Store (after removing it)                                                                                     
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
 set /p choice=Type the number.
@@ -40,27 +35,24 @@ if '%choice%'=='3' goto 3
 if '%choice%'=='4' goto 4
 if '%choice%'=='5' goto 5
 if '%choice%'=='6' goto 6
-if '%choice%'=='7' goto 7
-if '%choice%'=='8' goto 11
-if '%choice%'=='9' goto Choice
-if '%choice%'=='10' goto 24
-if '%choice%'=='11' powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/onedrive.ps1'))"
-if '%choice%'=='12' choco install vcredist2005 vcredist2008 vcredist2010  vcredist2012 msvisualcplusplus2012-redist vcredist2013 vcredist2017 vcredist140 vcredist-all jre8 directx -y & DISM /Online /Enable-Feature /FeatureName:NetFx3 & DISM /Online /Enable-Feature /FeatureName:NetFx4 /All & dism /Online /enable-feature /FeatureName:"LegacyComponents" /All & dism /Online /enable-feature /FeatureName:"DirectPlay" /All
+if '%choice%'=='7' goto 15
+if '%choice%'=='8' goto updatefix
+if '%choice%'=='9' goto rightclick
+if '%choice%'=='10' goto powershell iex ((New-Object System.Net.WebClient).DownloadString('https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/ToolBox.ps1'))
+if '%choice%'=='11' goto 11
+if '%choice%'=='12' goto Choice
 if '%choice%'=='13' goto 17
 if '%choice%'=='14' goto 18
-if '%choice%'=='15' goto 15
-if '%choice%'=='17' goto 13
-if '%choice%'=='18' goto 14
-if '%choice%'=='19' goto themes
-if '%choice%'=='20' goto store22
-if '%choice%'=='22' goto updatefix
-if '%choice%'=='21' powershell iex ((New-Object System.Net.WebClient).DownloadString('https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/ToolBox.ps1'))
-if '%choice%'=='16' powershell.exe "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/DisableActionCenter.ps1'))"
+if '%choice%'=='15' goto 24
+if '%choice%'=='16' powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/onedrive.ps1'))"
+if '%choice%'=='17' choco install vcredist2005 vcredist2008 vcredist2010  vcredist2012 msvisualcplusplus2012-redist vcredist2013 vcredist2017 vcredist140 vcredist-all jre8 directx -y & DISM /Online /Enable-Feature /FeatureName:NetFx3 & DISM /Online /Enable-Feature /FeatureName:NetFx4 /All & dism /Online /enable-feature /FeatureName:"LegacyComponents" /All & dism /Online /enable-feature /FeatureName:"DirectPlay" /All
+if '%choice%'=='18' goto themes
+if '%choice%'=='19' goto store22
 ECHO "%choice%" is not valid, try again
 ECHO.
 goto start
 :1
-title SteavenToolBox 1.6.2
+title SteavenToolbox 1.7
 cls
 echo ---------------------------------------------------------------------------------------------------------------------
 echo Print Spooler for Printer (services)
@@ -171,111 +163,28 @@ if '%choice%'=='0' goto start
 goto start
 :11
 cls
-title SteavenToolBox 1.6.0 Users Request Apps
-echo Users Request
-echo 1. Avast                         17. Paint.net
-echo 2. AnyDesk                       18. Rufus
-echo 3. Audacity                      19. Winrar Themes!
-echo 4. Blender                       20. Windows Photo Viewer
-echo 5. "C++ RunTime"                 21. Windows Terminal and Icons Mod
-echo 6. MS Office                     22. Google Chrome
-echo 7. .NET Framework 3              23. GitHub
-echo 8. winrar                        24. Visual Studio Code
-echo 9. DirectX                       25. Discord and Discord Canary
-echo 10. VMware 16.0                  26. Spotify and Toastify Mod
-echo 11. Adobe Acrobat Reader DC      27. Razer Cortex
-echo 12. JavaSE RuntimeEnvironment 8  28. ApowerMirror
-echo 13. Notepad++                    29. Aimp 
-echo 14. VLC                          30. Google Chrome
-echo 15. Pyhton                       31. Google Drive
-echo 16. Office 365 Business          32. Steam
-echo 33. Epic Games                   34. Hello World.text
-echo 35. Malwarebytes                 36. CCLeaner
-echo 37. Winamp                       38. Foobar2000
-echo 39. Twitch                       40. WPS Office
-echo 41. Camtasia                     42. Sysinternals
-echo 43. Chromium                     44. CygWim
-echo 45. Dropbox                      46. Virtualbox
-echo 47. Winaero Tweaker              48. Iobit Program Pack
-echo 49. Process Explorer             50. WinDirStat
-echo 51. Everything                   52. Visual Studio 2017 Build Tools
-echo 53. Adobe Shockwave Player       54. Roblox
-echo 55. Opera Browser                56. Mario Bros
-echo 57. Popcorn Time                 58. Qbitorrent
-echo 59. TeamViewer                   60. AnyDesk
-echo 61. OneDrive                     62. Process Hacker    
-echo 63. WinNtSetup
-echo ---------------------------------------------------------------------------------------------------------------------
-echo to Request More say for me at discord "Omar Hany Kasban#2247" and TheAlpha#7496
-echo or just try contacing us through mail omartube706@gmail.com or alphareturnsofficial@gmail.com 
-echo ---------------------------------------------------------------------------------------------------------------------
+color d
+echo Install Apps
+echo 1. Firefox
+echo 2. Brave
+echo 3. Chrome
+echo 4. Vlc
+echo 5. Github
+echo 6. Discord
+echo 7. Notepad Plus Plus
+echo 8. Vs Code
 echo 0. Back to menu
 set choice=
 set /p choice=Type the number.
 if not '%choice%'=='' set choice=%choice:~0,100%
-if '%choice%'=='1' choco install avastfreeantivirus -y
-if '%choice%'=='2' choco install anydesk anydesk.install anydesk.portable -y
-if '%choice%'=='3' choco install audacity -y
-if '%choice%'=='4' choco install blender -y
-if '%choice%'=='5' choco install vcredist2005 vcredist2008 vcredist2010  vcredist2012 msvisualcplusplus2012-redist vcredist2013 vcredist2017 vcredist140 vcredist-all -y
-if '%choice%'=='6' goto msoffice
-if '%choice%'=='7' DISM /Online /Enable-Feature /FeatureName:NetFx3 /All 
-if '%choice%'=='8' choco install winrar -y
-if '%choice%'=='9' choco install directx -y
-if '%choice%'=='10' goto vmware
-if '%choice%'=='11' choco install adobereader -y
-if '%choice%'=='12' choco install jre8 -y
-if '%choice%'=='13' choco install notepadplusplus.install -y
-if '%choice%'=='14' choco install vlc -y
-if '%choice%'=='15' choco install python3 -y
-if '%choice%'=='16' choco install office365business -y
-if '%choice%'=='17' choco install paint.net -y
-if '%choice%'=='18' goto rufus
-if '%choice%'=='19' goto winrar2
-if '%choice%'=='20' goto winphtoviewer
-if '%choice%'=='21' choco install microsoft-windows-te          rminal terminal-icons.powershell -y
-if '%choice%'=='22' choco install googlechrome -y
-if '%choice%'=='23' choco install github github-desktop -y
-if '%choice%'=='24' choco install vscode -y
-if '%choice%'=='25' choco install discord discord.install discord-canary -y
-if '%choice%'=='26' choco install spotify toastify -y
-if '%choice%'=='27' choco install gamebooster -y
-if '%choice%'=='28' start https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/apowermirror-setup.exe
-if '%choice%'=='29' choco install aimp -y
-if '%choice%'=='30' choco install googlechrome  google-translate-chrome save-to-google-drive-chrome -y
-if '%choice%'=='31' choco install googledrive -y
-if '%choice%'=='32' choco install steam-client -y
-if '%choice%'=='33' choco install epicgameslauncher -y
-if '%choice%'=='34' wget -P c: https://github.com/omartube706/SteavenToolBox/raw/main/hello.txt & start c:
-if '%choice%'=='35' choco install malwarebytes -y
-if '%choice%'== '36' choco install ccleaner ccleaner.portable -y
-if '%choice%'== '37' choco install winamp -y
-if '%choice%'== '38' choco install foobar2000 -y
-if '%choice%'== '39' choco install twitch -y
-if '%choice%'== '40' choco install wps-office-free -y
-if '%choice%'== '41' choco install camtasia -y
-if '%choice%'== '42' choco install sysinternals -y
-if '%choice%'== '43' choco install chromium -y
-if '%choice%'== '44' choco install cygwin -y
-if '%choice%'== '45' choco install dropbox -y
-if '%choice%'== '46' choco install virtualbox -y
-if '%choice%'== '47' choco install winaero-tweaker -y
-if '%choice%'== '48' choco install iobit-uninstaller iobit-malware-fighter io-unlocker -y
-if '%choice%'== '49' choco install procexp -y
-if '%choice%'== '50' choco install windirstat -y
-if '%choice%'== '51' choco install everything
-if '%choice%'== '52' choco install visualstudio2017buildtools
-if '%choice%'== '53' choco install adobeshockwaveplayer
-if '%choice%'== '54' aria2c https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/Roblox.exe & start /wait roblox.exe
-if '%choice%'== '55' choco install opera -y
-if '%choice%'== '56' choco install super-mario-bros-java -y
-if '%choice%'== '57' choco install popcorntime -y
-if '%choice%'== '58' choco install qbittorrent-enhanced -y
-if '%choice%'== '59' choco install teamviewer -y  
-if '%choice%'== '60' choco install anydesk -y
-if '%choice%'== '61' choco install onedrive onedrivebully -y
-if '%choice%'== '62' choco install processhacker.install -y 
-if '%choice%'== '63' wget -P c: https://github.com/omartube706/SteavenToolBox/raw/main/WinNTSetup_x64.zip & start c:\WinNTSetup_x64.zip
+if '%choice%'=='1' powershell -command "winget install --id Mozilla.Firefox"
+if '%choice%'=='2' powershell -command "winget install --id BraveSoftware.BraveBrowser"
+if '%choice%'=='3' powershell -command "winget install --id Google.Chrome"
+if '%choice%'=='4' powershell -command "winget install --id VideoLAN.VLC"
+if '%choice%'=='5' powershell -command "winget install --id GitHub.GitHubDesktop"
+if '%choice%'=='6' powershell -command "winget install --id Discord.Discord"
+if '%choice%'=='7' powershell -command "winget install --id Notepad++.Notepad++"
+if '%choice%'=='8' powershell -command "winget install --id Microsoft.VisualStudioCode"
 if '%choice%'=='0' goto start
 ECHO.
 goto 11
@@ -1428,10 +1337,6 @@ wget -P c: https://dl.malwat.ch/software/useful/office/MSOffice1619.zip
 echo Password: mysubsarethebest
 pause
 goto 11
-:7
-cls
-powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/SteavenGamerYT/SteavenToolBox/main/runtime.ps1'))"
-goto start
 :vmware
 cls
 wget -P c: https://dl.malwat.ch/software/useful/vmware/VMwareWorkstation16.zip
@@ -2089,3 +1994,18 @@ if '%choice%'=='0' goto start
 ECHO "%choice%" is not valid, try again
 ECHO.
 goto start
+:rightclick
+cls
+echo ---------------------------------------------------------------------------------------------------------------------
+echo 1. Right click Take Ownership Menu
+echo 2. Right Click Open Command Window here
+echo 0. Main
+set choice=
+set /p choice=Type the number.
+if not '%choice%'=='' set choice=%choice:~0,100%
+if '%choice%'=='1' goto 13
+if '%choice%'=='2' goto 14
+if '%choice%'=='0' goto start
+ECHO "%choice%" is not valid, try again
+ECHO.
+goto rightclick
