@@ -2016,6 +2016,7 @@ cls
 echo ---------------------------------------------------------------------------------------------------------------------
 echo 1. Get Rid of Hyper-v Forever (removes subsystem for linux and android)
 echo 2. Get Rid of Appx forever (store incloding it's apps)
+echo 3. Get Rid of Internet Explorer Forever (removes that old ie 11 that no one uses)
 echo 0. Back to Main
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
@@ -2023,7 +2024,8 @@ set /p choice=Type the number.
 if not '%choice%'=='' set choice=%choice:~0,100%
 if '%choice%'=='1' goto uhyperv
 if '%choice%'=='0' goto start
-if '%choice%'=='2'
+if '%choice%'=='2' powershell -command "Get-AppxPackage * | Remove-AppxPackage"
+if '%choice%'=='3' goto ieremove
 ECHO "%choice%" is not valid, try again
 ECHO.
 goto 15
@@ -2035,6 +2037,14 @@ cd \
 install_wim_tweak.exe /o /c HyperV /r
 install_wim_tweak.exe /o /c Microsoft-Hyper-V /r
 install_wim_tweak.exe /o /c Microsoft-Windows-HyperV /r
+goto 15
+:ieremove
+cls
+wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/install_wim_tweak.exe
+cd c:\
+cd \
+install_wim_tweak.exe /o /c Microsoft-Windows-InternetExplorer /r
+goto 15
 :store22
 cls
 cd c:\
