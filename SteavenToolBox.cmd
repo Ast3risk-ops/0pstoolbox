@@ -13,11 +13,8 @@ echo =========================================================================
 echo "If you see something glitchy or something else please tag us on Discord"
 echo =========================================================================
 echo =====================================================================
-echo "SteavenToolbox 1.6.2 | Current Working Windows 10 Version 2009 21h1"
+echo "SteavenToolbox 1.6.2 | We care about your pc!"
 echo =====================================================================
-echo =======================================================
-echo "Current Working the best on Normal Windows 10/Windows 11"
-echo =======================================================
 echo ---------------------------------------------------------------------------------------------------------------------
 ECHO "TWEAK | FIXED | CLEANER | OTHER"                         Installer
 echo --------------------------------                          ---------
@@ -28,7 +25,7 @@ echo 3. "Clear Cache Updates | Delivery Optimization"          9. Reinstall Wind
 echo 4. "Hibernation | Fastboot | Sleepmode | Sysmain"         10. "Crack & Activation of apps"
 echo 5. Trimors Stuff                                          11. Uninstall onedrive
 echo 6. Disable Services                                       12. Full RunTime
-echo 15. Steaven Speed up (Uninstalls Hyper-v,IE,MeidaPlayer)  13. Game Launchers
+echo 15. Uninstall Some Preloaded packages forever!            13. Game Launchers
 echo 16. Disable Action Center                                 14. Office
 echo 17. Right click Take Ownership Menu                       19. Themes                 
 echo 18. Right Click Open Command Window here                  20. install Store
@@ -2016,8 +2013,17 @@ if '%choice%'=='0' goto start
 goto themes
 :15
 cls
-echo off
-title Steaven Speedup 2.0
+echo ---------------------------------------------------------------------------------------------------------------------
+echo 1. Get Rid of Hyper-v Forever (removes subsystem for linux and android)
+set choice=
+set /p choice=Type the number.
+if not '%choice%'=='' set choice=%choice:~0,100%
+if '%choice%'=='1' goto uhyperv
+ECHO "%choice%" is not valid, try again
+ECHO.
+goto 15
+:uhyperv
+cls
 wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/install_wim_tweak.exe
 cd c:\
 cd \
@@ -2133,97 +2139,9 @@ install_wim_tweak.exe /o /c Microsoft-Windows-HyperV-OptionalFeature-VirtualMach
 install_wim_tweak.exe /o /c Microsoft-Windows-HyperV-OptionalFeature-VirtualMachinePlatform-Package /r
 install_wim_tweak.exe /o /c HyperV-Host-Compute-PowerShell-Module-Package /r
 install_wim_tweak.exe /o /c HyperV-Hypervisor-Package /r
-install_wim_tweak.exe /o /c Microsoft-Windows-Internet-Browser-Package /r
-install_wim_tweak.exe /o /c microsoft-windows-internetexplorer-optional-package-Wrapper /r
-install_wim_tweak.exe /o /c Microsoft-Windows-InternetExplorer-Package-ua /r
-install_wim_tweak.exe /o /c Microsoft-Windows-InternetExplorer-Optional-Package /r
-install_wim_tweak.exe /o /c microsoft-windows-mediaplayer-package-Wrapper /r
-install_wim_tweak.exe /o /c Microsoft-Windows-MediaPlayer-Package /r
-install_wim_tweak.exe /o /c Microsoft-Windows-MediaPlayer-Payload-Package /r
-install_wim_tweak.exe /o /c Microsoft-Windows-MobilePC-Client-Premium-Packag /r
-install_wim_tweak.exe /o /c Microsoft-Windows-OneDrive-Setup-Package /r
-install_wim_tweak.exe /o /c Microsoft-Windows-OneDrive-Setup-WOW64-Package /r
-install_wim_tweak.exe /o /c Microsoft-Windows-Portable-Devices-merged-Package /r
-install_wim_tweak.exe /o /c Microsoft-Windows-Portable-Devices-Package /r
-install_wim_tweak.exe /o /c Microsoft-Windows-Portable-Devices-WOW64-merged-Package /r
-install_wim_tweak.exe /o /c Microsoft-Windows-Portable-Devices-WOW64-Package /r
-install_wim_tweak.exe /o /c Microsoft-Windows-Printing-XpsDocumentWriter-Opt-Package /r
-install_wim_tweak.exe /o /c Microsoft-Windows-Printing-XPSServices-Package /r
-install_wim_tweak.exe /o /c microsoft-windows-quickassist-package-Wrapper /r
-install_wim_tweak.exe /o /c Microsoft-Windows-QuickAssist-Package /r
-install_wim_tweak.exe /o /c Microsoft-Windows-StepsRecorder-Package-Wrapper /r
-install_wim_tweak.exe /o /c Microsoft-Windows-StepsRecorder-Package /r
-install_wim_tweak.exe /o /c Microsoft-Windows-WindowsMediaPlayer-Troubleshooters-Package /r
-install_wim_tweak.exe /o /c microsoft-windows-wordpad-fod-package-Wrapper /r
-install_wim_tweak.exe /o /c Microsoft-Windows-WordPad-FoD-Package /r
-install_wim_tweak.exe /o /c microsoft-windows-hello-face-package-Wrapper /r
-install_wim_tweak.exe /o /c Microsoft-Windows-Hello-Face-Package /r
-install_wim_tweak.exe /o /c Microsoft-Windows-TabletPCMath-Package-Wrapper /r
-install_wim_tweak.exe /o /c Microsoft-Windows-TabletPCMath-Package /r
-install_wim_tweak.exe /o /c Microsoft-Windows-WebcamExperience-Package /r
-install_wim_tweak.exe /o /c Microsoft-Windows-WebcamExperience-WOW64-Package /r
-install_wim_tweak.exe /o /c Microsoft-Windows-WindowsMediaPlayer-Troubleshooters-Package /r
-install_wim_tweak.exe /o /c Microsoft-Windows-WordPad-FoD-Package /r
-install_wim_tweak.exe /o /c Microsoft-Windows-Fax-Client-Feature-Opt-Package /r
 install_wim_tweak.exe /o /c HyperV-Hypervisor-Package /r
 install_wim_tweak.exe /o /c HyperV-Hypervisor-onecore-Package /r
 install_wim_tweak.exe /o /c HyperV-Hypervisor-minkernel-Package /r
-install_wim_tweak.exe /o /c Microsoft-Windows-WindowsMediaPlayer-Troubleshooters-Package /r
-install_wim_tweak.exe /o /c Microsoft-Windows-InternetExplorer-Package-ua /r
-install_wim_tweak.exe /o /c Microsoft-Windows-InternetExplorer-Optional-Package /r
-echo disabling unwanted services
-sc stop gupdate
-sc config gupdate start=disabled
-sc stop gupdatem
-sc config gupdatem start=disabled
-sc stop vmickvpexchange
-sc config vmickvpexchange start=disabled
-sc stop vmicguestinterface
-sc config vmicguestinterface start=disabled
-sc stop vmicshutdown
-sc config vmicshutdown start=disabled
-sc stop vmicheartbeat
-sc configvmicheartbeat start=disabled
-sc stop vmicvmsession
-sc config vmicvmsession start=disabled
-sc stop vmicrdv
-sc config vmicrdv start=disabled
-sc stop vmictimesync
-sc config vmictimesync start=disabled
-sc stop vmicvss
-sc config vmicvss start=disabled
-sc stop WpcMonSvc
-sc config WpcMonSvc start=disabled
-sc stop Spooler
-sc config Spooler start=disabled
-sc stop SysMain
-sc config SysMain start=disabled
-sc stop WSearch
-sc config WSearch start=disabled
-sc stop WerSvc
-sc config WerSvc start=disabled
-echo disabling uac
-reg ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 0 /f
-echo disabling hpet
-bcdedit /set useplatformclock no
-bcdedit /set useplatformtick yes
-bcdedit /set disabledynamictick yes
-echo disabling hibernation
-powercfg -h off
-echo adding ULTIMATE PERFORMANCE
-powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
-echo disabling Nagle's Algorithm
-REG ADD HKey_Local_Machine\System\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\ /v TcpAckFrequency /t REG_DWORD /d 0 /f
-REG ADD HKey_Local_Machine\System\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\ /v TCPNoDelay /t REG_DWORD /d 0 /f
-echo TCP Setup
-netsh int tcp show global
-netsh int tcp set global chimney=enabled
-netsh int tcp set heuristics disabled
-netsh int tcp set global autotuninglevel=normal
-netsh int tcp set global congestionprovider=ctcp
-echo TCP Tune
-netsh int tcp set global autotuninglevel=disabled
-goto start
 :store22
 cls
 cd c:\
