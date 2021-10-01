@@ -2015,10 +2015,15 @@ goto themes
 cls
 echo ---------------------------------------------------------------------------------------------------------------------
 echo 1. Get Rid of Hyper-v Forever (removes subsystem for linux and android)
+echo 2. Get Rid of Appx forever (store incloding it's apps)
+echo 0. Back to Main
+echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
 set /p choice=Type the number.
 if not '%choice%'=='' set choice=%choice:~0,100%
 if '%choice%'=='1' goto uhyperv
+if '%choice%'=='0' goto start
+if '%choice%'=='2'
 ECHO "%choice%" is not valid, try again
 ECHO.
 goto 15
@@ -2027,121 +2032,9 @@ cls
 wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/install_wim_tweak.exe
 cd c:\
 cd \
-install_wim_tweak.exe /o /c HyperV-Compute-Host-Containers-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-Compute-Host-Containers-Package /r
-install_wim_tweak.exe /o /c HyperV-Compute-Host-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-Compute-Host-Package /r
-install_wim_tweak.exe /o /c HyperV-Compute-Host-VirtualMachines-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-Compute-Host-VirtualMachines-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-Compute-Host-VirtualMachines-Package /r
-install_wim_tweak.exe /o /c HyperV-Compute-Storage-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-Compute-Storage-Package /r
-install_wim_tweak.exe /o /c HyperV-Compute-System-VirtualMachine-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-Compute-System-VirtualMachine-Package /r
-install_wim_tweak.exe /o /c HyperV-Compute-System-VmDirect-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-Compute-System-VmDirect-Package /r
-install_wim_tweak.exe /o /c HyperV-DynamicMemory-VirtualDevice-Package /r
-install_wim_tweak.exe /o /c HyperV-Feature-ApplicationGuard-Package /r
-install_wim_tweak.exe /o /c HyperV-Feature-Containers-Package /r
-install_wim_tweak.exe /o /c HyperV-Feature-VirtualMachinePlatform-Package /r
-install_wim_tweak.exe /o /c HyperV-Guest-KernelInt-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-Guest-KernelInt-Package /r
-install_wim_tweak.exe /o /c HyperV-Guest-KMCL-Package /r
-install_wim_tweak.exe /o /c HyperV-Host-Compute-Interop-Package /r
-install_wim_tweak.exe /o /c HyperV-Host-Compute-PowerShell-Module-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-Host-Devices-EmulatedChipset-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-Host-Devices-EmulatedChipset-Package /r
-install_wim_tweak.exe /o /c HyperV-HvSocket-Package /r
-install_wim_tweak.exe /o /c HyperV-Hypervisor-Package /r
-install_wim_tweak.exe /o /c HyperV-HypervisorPlatform-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-HypervisorPlatform-Package /r
-install_wim_tweak.exe /o /c HyperV-IntegrationComponents-VirtualDevice-Core-Package /r
-install_wim_tweak.exe /o /c HyperV-IsolatedVm-Package /r
-install_wim_tweak.exe /o /c HyperV-IsolatedVM-SVC-Package /r
-install_wim_tweak.exe /o /c HyperV-KernelInt-VirtualDevice-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-KernelInt-VirtualDevice-Package /r
-install_wim_tweak.exe /o /c HyperV-KernelInt-VSP-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-KernelInt-VSP-Package /r
-install_wim_tweak.exe /o /c HyperV-KMCL-Host-Package /r
-install_wim_tweak.exe /o /c HyperV-Networking-Containers-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-Networking-Containers-Package /r
-install_wim_tweak.exe /o /c HyperV-Networking-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-Networking-Package /r
-install_wim_tweak.exe /o /c HyperV-Networking-VirtualDevice-Emulated-Package /r
-install_wim_tweak.exe /o /c HyperV-Networking-VirtualDevice-Synthetic-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-Networking-VirtualDevice-Synthetic-Package /r
-install_wim_tweak.exe /o /c HyperV-Primitive-VirtualMachine-Package /r 
-install_wim_tweak.exe /o /c HyperV-RDP4VS-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-RDP4VS-Package /r
-install_wim_tweak.exe /o /c HyperV-Storage-QoS-Package /r
-install_wim_tweak.exe /o /c HyperV-Storage-VirtualDevice-FibreChannel-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-Storage-VirtualDevice-FibreChannel-Package /r
-install_wim_tweak.exe /o /c HyperV-Storage-VirtualDevice-IDE-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-Storage-VirtualDevice-IDE-Package /r
-install_wim_tweak.exe /o /c HyperV-Storage-VirtualDevice-PMEM-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-Storage-VirtualDevice-PMEM-Package /r
-install_wim_tweak.exe /o /c HyperV-Storage-VirtualDevice-SCSI-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-Storage-VirtualDevice-SCSI-Package /r
-install_wim_tweak.exe /o /c HyperV-Storage-VirtualDevice-SMB-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-Storage-VirtualDevice-SMB-Package /r
-install_wim_tweak.exe /o /c HyperV-Storage-VSP-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-Storage-VSP-Package /r
-install_wim_tweak.exe /o /c HyperV-UX-Common-Package /r
-install_wim_tweak.exe /o /c HyperV-UX-PowerShell-Module-HyperV-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-UX-PowerShell-Module-HyperV-Package /r
-install_wim_tweak.exe /o /c HyperV-UX-PowerShell-Module-HyperV-WOW64-Package /r
-install_wim_tweak.exe /o /c HyperV-UX-UI-62-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-UX-UI-62-Package /r
-install_wim_tweak.exe /o /c HyperV-UX-UI-63-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-UX-UI-63-Package /r
-install_wim_tweak.exe /o /c HyperV-UX-UI-Client-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-UX-UI-Client-Package /r
-install_wim_tweak.exe /o /c HyperV-UX-UI-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-UX-UI-Package /r
-install_wim_tweak.exe /o /c HyperV-VID-Package /r
-install_wim_tweak.exe /o /c HyperV-Virtio-Package /r
-install_wim_tweak.exe /o /c HyperV-VmBus-Host-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-VmBus-Host-Package /r
-install_wim_tweak.exe /o /c HyperV-VmBus-VirtualDevice-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-VmBus-VirtualDevice-Package /r
-install_wim_tweak.exe /o /c HyperV-VmChipset-Package /r
-install_wim_tweak.exe /o /c HyperV-VMMS-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-VMMS-Package /r
-install_wim_tweak.exe /o /c HyperV-VmSerial-Package /r
-install_wim_tweak.exe /o /c HyperV-VmTpm-Package /r
-install_wim_tweak.exe /o /c HyperV-VmUiDevices-Package /r
-install_wim_tweak.exe /o /c HyperV-Vpci-VirtualDevice-DDA-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-Vpci-VirtualDevice-DDA-Package /r
-install_wim_tweak.exe /o /c HyperV-Vpci-VirtualDevice-FlexIo-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-Vpci-VirtualDevice-FlexIo-Package /r
-install_wim_tweak.exe /o /c HyperV-Vpci-VirtualDevice-Gpup-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-Vpci-VirtualDevice-Gpup-Package /r
-install_wim_tweak.exe /o /c HyperV-Vpci-VSP-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-Vpci-VSP-Package /r
-install_wim_tweak.exe /o /c HyperV-Worker-merged-Package /r
-install_wim_tweak.exe /o /c HyperV-Worker-Package /r
-install_wim_tweak.exe /o /c Microsoft-Hyper-V-ClientEdition-Package /r
-install_wim_tweak.exe /o /c Microsoft-Hyper-V-ClientEdition-WOW64-Package /r
-install_wim_tweak.exe /o /c Microsoft-Hyper-V-Hypervisor-merged-Package /r
-install_wim_tweak.exe /o /c Microsoft-Hyper-V-Hypervisor-Package /r
-install_wim_tweak.exe /o /c Microsoft-Hyper-V-Offline-Common-merged-Package /r
-install_wim_tweak.exe /o /c Microsoft-Hyper-V-Offline-Common-Package /r
-install_wim_tweak.exe /o /c Microsoft-Hyper-V-Offline-Core-Group-merged-Package /r
-install_wim_tweak.exe /o /c Microsoft-Hyper-V-Offline-Core-Group-Package /r
-install_wim_tweak.exe /o /c Microsoft-Hyper-V-Online-Services-merged-Package /r
-install_wim_tweak.exe /o /c Microsoft-Hyper-V-Online-Services-Package /r
-install_wim_tweak.exe /o /c Microsoft-Hyper-V-Package-base-merged-Package /r
-install_wim_tweak.exe /o /c Microsoft-Hyper-V-Package-base-Package /r
-install_wim_tweak.exe /o /c Microsoft-Hyper-V-Services-Package /r
-install_wim_tweak.exe /o /c Microsoft-Windows-HyperV-OptionalFeature-HypervisorPlatform-Disabled-Package /r
-install_wim_tweak.exe /o /c Microsoft-Windows-HyperV-OptionalFeature-HypervisorPlatform-Package /r
-install_wim_tweak.exe /o /c Microsoft-Windows-HyperV-OptionalFeature-VirtualMachinePlatform-Disabled-Package /r
-install_wim_tweak.exe /o /c Microsoft-Windows-HyperV-OptionalFeature-VirtualMachinePlatform-Package /r
-install_wim_tweak.exe /o /c HyperV-Host-Compute-PowerShell-Module-Package /r
-install_wim_tweak.exe /o /c HyperV-Hypervisor-Package /r
-install_wim_tweak.exe /o /c HyperV-Hypervisor-Package /r
-install_wim_tweak.exe /o /c HyperV-Hypervisor-onecore-Package /r
-install_wim_tweak.exe /o /c HyperV-Hypervisor-minkernel-Package /r
+install_wim_tweak.exe /o /c HyperV /r
+install_wim_tweak.exe /o /c Microsoft-Hyper-V /r
+install_wim_tweak.exe /o /c Microsoft-Windows-HyperV /r
 :store22
 cls
 cd c:\
