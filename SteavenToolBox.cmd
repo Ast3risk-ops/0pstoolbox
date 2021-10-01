@@ -22,14 +22,14 @@ color a
 ECHO 1. Enable / Disable Windows 10 Apps                       7. Repair Toolbox Runtime
 echo 2. Clear Event Viewer Logs                                8. Users Request
 echo 3. "Clear Cache Updates | Delivery Optimization"          9. Reinstall Windows 10 preinstalled apps
-echo 4. "Hibernation | Fastboot | Sleepmode | Sysmain"         10. "Crack & Activation of apps"
+echo 4. "Hibernation | Fastboot | Sleepmode | Sysmain"         10. "Crack & Activation of apps" 	
 echo 5. Trimors Stuff                                          11. Uninstall onedrive
 echo 6. Disable Services                                       12. Full RunTime
 echo 15. Uninstall Some Preloaded packages forever!            13. Game Launchers
 echo 16. Disable Action Center                                 14. Office
 echo 17. Right click Take Ownership Menu                       19. Themes                 
 echo 18. Right Click Open Command Window here                  20. install Store
-echo                                                           21. Reload Toolbox
+echo 22. Windows Update Fix                                    21. Reload Toolbox
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
 set /p choice=Type the number.
@@ -53,6 +53,7 @@ if '%choice%'=='17' goto 13
 if '%choice%'=='18' goto 14
 if '%choice%'=='19' goto themes
 if '%choice%'=='20' goto store22
+if '%choice%'=='22' goto updatefix
 if '%choice%'=='21' powershell iex ((New-Object System.Net.WebClient).DownloadString('https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/ToolBox.ps1'))
 if '%choice%'=='16' powershell.exe "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/DisableActionCenter.ps1'))"
 ECHO "%choice%" is not valid, try again
@@ -1740,7 +1741,6 @@ echo 4. Crack Office 2016
 echo 5. Crack Office 2019
 echo 6. Crack winrar
 echo 7. Crack Camtasia 8.6.0
-echo 8. Crack IObit Software Updater
 echo 0. Back
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
@@ -1754,7 +1754,6 @@ if '%choice%'=='4' goto 2016crack
 if '%choice%'=='5' goto 2019crack
 if '%choice%'=='6' del "C:\Program Files\WinRAR\rarreg.key" & wget -P "C:\Program Files\WinRAR" https://github.com/omartube706/SteavenToolBox/raw/main/rarreg.key
 if '%choice%'=='7' md "%programdata%\TechSmith\Camtasia Studio 9\" & attrib -R "F:\Software\Editors\Camtasia\8.6.0\Crack\RegInfo.ini" & del "C:\ProgramData\TechSmith\Camtasia Studio 9\RegInfo.ini"  & wget -P "%programdata%\TechSmith\Camtasia Studio 9\" https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/RegInfo.ini & attrib +R "F:\Software\Editors\Camtasia\8.6.0\Crack\RegInfo.ini"
-if '%choice%'=='8' del "C:\Program Files (x86)\IObit\Software Updater\version.dll" & wget -P "C:\Program Files (x86)\IObit\Software Updater" https://github.com/omartube706/SteavenToolBox/raw/main/version.dll
 ECHO "%choice%" is not valid, try again
 ECHO.
 goto 24
@@ -2052,4 +2051,41 @@ cd \
 git clone https://github.com/kkkgo/LTSC-Add-MicrosoftStore.git
 cd LTSC-Add-MicrosoftStore
 Add-Store.cmd
+goto start
+:updatefix
+cls
+color 9
+echo ---------------------------------------------------------------------------------------------------------------------
+echo 0. Main
+echo ---------------------------------------------------------------------------------------------------------------------
+echo Chose your build that you are in right now
+echo That will make you never upgrade to newer build that mean stable pc stable performace!
+echo 1. 21h1
+echo 2. 20h2 (2009)
+echo 3. 20h1 (2004)
+echo 4. 19h2 (1909)
+echo 5. 19h1 (1903)
+echo 6. 1809
+echo 7. 1607
+echo ---------------------------------------------------------------------------------------------------------------------
+echo Chose If you want to not get non security and security updates or security updates only!
+echo Note: this wont remove the frist setting
+echo 8. Security Updates only
+echo 9. Security and non
+echo ---------------------------------------------------------------------------------------------------------------------
+set choice=
+set /p choice=Type the number.
+if not '%choice%'=='' set choice=%choice:~0,100%
+if '%choice%'=='1' reg add HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate /f /v TargetReleaseVersion /t REG_DWORD /d 1 & reg add HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate /f /v TargetReleaseVersionInfo /t REG_SZ /d 21h1
+if '%choice%'=='2' reg add HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate /f /v TargetReleaseVersion /t REG_DWORD /d 1 & reg add HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate /f /v TargetReleaseVersionInfo /t REG_SZ /d 20h2
+if '%choice%'=='3' reg add HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate /f /v TargetReleaseVersion /t REG_DWORD /d 1 & reg add HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate /f /v TargetReleaseVersionInfo /t REG_SZ /d 2004
+if '%choice%'=='4' reg add HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate /f /v TargetReleaseVersion /t REG_DWORD /d 1 & reg add HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate /f /v TargetReleaseVersionInfo /t REG_SZ /d 1903
+if '%choice%'=='5' reg add HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate /f /v TargetReleaseVersion /t REG_DWORD /d 1 & reg add HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate /f /v TargetReleaseVersionInfo /t REG_SZ /d 1903
+if '%choice%'=='6' reg add HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate /f /v TargetReleaseVersion /t REG_DWORD /d 1 & reg add HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate /f /v TargetReleaseVersionInfo /t REG_SZ /d 1809
+if '%choice%'=='7' reg add HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate /f /v TargetReleaseVersion /t REG_DWORD /d 1 & reg add HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate /f /v TargetReleaseVersionInfo /t REG_SZ /d 1607
+if '%choice%'=='8' Reg.exe add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v "AllowAutoWindowsUpdateDownloadOverMeteredNetwork" /t REG_DWORD /d "0" /f & Reg.exe add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v "DeferFeatureUpdatesPeriodInDays" /t REG_DWORD /d "869" /f & Reg.exe add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v "DeferQualityUpdatesPeriodInDays" /t REG_DWORD /d "4" /f & Reg.exe add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v "BranchReadinessLevel" /t REG_DWORD /d "32" /f
+if '%choice%'=='9' Reg.exe delete "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v "AllowAutoWindowsUpdateDownloadOverMeteredNetwork" /f & Reg.exe delete "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v "DeferFeatureUpdatesPeriodInDays" /f & Reg.exe delete "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v "DeferQualityUpdatesPeriodInDays" /f & Reg.exe delete "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v "BranchReadinessLevel" /f
+if '%choice%'=='0' goto start
+ECHO "%choice%" is not valid, try again
+ECHO.
 goto start
