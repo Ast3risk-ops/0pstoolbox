@@ -20,11 +20,10 @@ echo 2. Clear Event Viewer Logs                                11. Install Apps 
 echo 3. "Clear Cache Updates | Delivery Optimization"          12. Reinstall Windows 10 preinstalled apps
 echo 4. "Hibernation | Fastboot | Sleepmode | Sysmain"         13. Game Launchers
 echo 5. Trimors Stuff                                          14. Office
-echo 6. Disable Services                                       15. "Crack & Activation of apps" 	
-echo 7. Uninstall Some Preloaded packages forever!             16. Uninstall onedrive
-echo 8. Windows Update Fix                                     17. Full RunTime
-echo 9. Right Click Tweaks                                     18. Themes
-echo                                                           19. Install Store (after removing it)                                                                                     
+echo 6. Disable Services                                       15. Uninstall onedrive 	
+echo 7. Uninstall Some Preloaded packages forever!             16. Full RunTime
+echo 8. Windows Update Fix                                     17. Themes
+echo 9. Right Click Tweaks                                     18. Install Store (after removing it)                                                                                   
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
 set /p choice=Type the number.
@@ -43,11 +42,10 @@ if '%choice%'=='11' goto 11
 if '%choice%'=='12' goto Choice
 if '%choice%'=='13' goto 17
 if '%choice%'=='14' goto 18
-if '%choice%'=='15' goto 24
-if '%choice%'=='16' powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/onedrive.ps1'))"
-if '%choice%'=='17' choco install vcredist2005 vcredist2008 vcredist2010  vcredist2012 msvisualcplusplus2012-redist vcredist2013 vcredist2017 vcredist140 vcredist-all jre8 directx -y & DISM /Online /Enable-Feature /FeatureName:NetFx3 & DISM /Online /Enable-Feature /FeatureName:NetFx4 /All & dism /Online /enable-feature /FeatureName:"LegacyComponents" /All & dism /Online /enable-feature /FeatureName:"DirectPlay" /All
-if '%choice%'=='18' goto themes
-if '%choice%'=='19' goto store22
+if '%choice%'=='15' powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/onedrive.ps1'))"
+if '%choice%'=='16' choco install vcredist2005 vcredist2008 vcredist2010  vcredist2012 msvisualcplusplus2012-redist vcredist2013 vcredist2017 vcredist140 vcredist-all jre8 directx -y & DISM /Online /Enable-Feature /FeatureName:NetFx3 & DISM /Online /Enable-Feature /FeatureName:NetFx4 /All & dism /Online /enable-feature /FeatureName:"LegacyComponents" /All & dism /Online /enable-feature /FeatureName:"DirectPlay" /All
+if '%choice%'=='17' goto themes
+if '%choice%'=='18' goto store22
 ECHO "%choice%" is not valid, try again
 ECHO.
 goto start
@@ -1634,65 +1632,6 @@ wget -P "C:\Program Files\WinRAR" https://github.com/omartube706/SteavenToolBox/
 cd C:\Program Files\WinRAR"
 "C:\Program Files\WinRAR\Themes.exe" -s2
 goto 11
-:24
-cls
-REG DELETE "HKCU\SOFTWARE\Microsoft\Windows Script Host\Settings" /v Enabled /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows Script Host\Settings" /v Enabled /f
-title Crack any app and windows
-cls
-echo ---------------------------------------------------------------------------------------------------------------------
-echo 1. Crack Windows 10
-echo 2. Crack Windows 8.1
-echo 3. Crack Windows 7
-echo 4. Crack Office 2016
-echo 5. Crack Office 2019
-echo 6. Crack winrar
-echo 7. Crack Camtasia 8.6.0
-echo 0. Back
-echo ---------------------------------------------------------------------------------------------------------------------
-set choice=
-set /p choice=Type the number.
-if not '%choice%'=='' set choice=%choice:~0,100%
-if '%choice%'=='0' goto start
-if '%choice%'=='1' cls & slmgr/ipk NW6C2-QMPVW-D7KKK-3GKT6-VCFB2 & slmgr /skms kms8.msguides.com & slmgr /ato & echo cracked windows 10 by steavengameryt & pause & goto 24
-if '%choice%'=='2' cls & slmgr /ipk GCRJD-8NW9H-F2CDX-CCM8D-9D6T9 & slmgr /skms kms8.msguides.com & slmgr /ato & echo cracked windows 8.1 by steavengameryt & pause & goto 24
-if '%choice%'=='3' cls & wusa /uninstall /kb:971033 & SLMGR -REARM & echo cracked windows 7 by steavengameryt & pause & goto 24
-if '%choice%'=='4' goto 2016crack
-if '%choice%'=='5' goto 2019crack
-if '%choice%'=='6' del "C:\Program Files\WinRAR\rarreg.key" & wget -P "C:\Program Files\WinRAR" https://github.com/omartube706/SteavenToolBox/raw/main/rarreg.key
-if '%choice%'=='7' md "%programdata%\TechSmith\Camtasia Studio 9\" & attrib -R "F:\Software\Editors\Camtasia\8.6.0\Crack\RegInfo.ini" & del "C:\ProgramData\TechSmith\Camtasia Studio 9\RegInfo.ini"  & wget -P "%programdata%\TechSmith\Camtasia Studio 9\" https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/RegInfo.ini & attrib +R "F:\Software\Editors\Camtasia\8.6.0\Crack\RegInfo.ini"
-ECHO "%choice%" is not valid, try again
-ECHO.
-goto 24
-
-:2016crack
-cls
-ipt //nologo ospp.vbs /unpkey:WFG99 >nul&cscript //nologo ospp.vbs /unpkey:DRTFM >nul&cscript //nologo ospp.vbs /unpkey:BTDRB >nul&cscript //nologo ospp.vbs /unpkey:CPQVG >nul&cscript //nologo ospp.vbs /inpkey:XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99 >nul&set i=1
-:server
-if %i%==1 set KMS_Sev=kms7.MSGuides.com
-if %i%==2 set KMS_Sev=kms8.MSGuides.com
-if %i%==3 set KMS_Sev=kms9.MSGuides.com
-if %i%==4 goto notsupported
-cscript //nologo ospp.vbs /sethst:%KMS_Sev% >nul&echo ============================================================================&echo.&echo.
-cscript //nologo ospp.vbs /act | find /i "successful" && (echo.&echo ============================================================================&echo.&echo #My official blog: www.muazforpc.wordpress.com&echo.&echo #Please feel free to contact me at if you have any questions or concerns.&echo.&echo #Please consider supporting this project: www.muazforpc.wordpress.com&echo #Your support is helping me keep my servers running everyday!&echo.&echo ============================================================================&choice /n /c YN /m "Would you like to visit my blog [Y,N]?" & if errorlevel 2 exit) || (echo The connection to my KMS server failed! Trying to connect to another one... & echo Please wait... & echo. & echo. & set /a i+=1 & goto server)
-explorer "https://muazforpc.wordpress.com"&goto halt
-:notsupported
-echo.&echo ============================================================================&echo Sorry! Your version is not supported.&echo Please try installing the latest version here: bit.ly/odt2k16
-:halt
-pause >nul
-goto 24
-:2019crack
-cls
-cd /d %ProgramFiles%\Microsoft Office\Office16
-cd /d %ProgramFiles(x86)%\Microsoft Office\Office16
-for /f %x in ('dir /b ..\root\Licenses16\ProPlus2019VL*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%x"
-cscript ospp.vbs /setprt:1688
-cscript ospp.vbs /unpkey:6MWKP >nul
-cscript ospp.vbs /inpkey:NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP
-cscript ospp.vbs /sethst:kms8.msguides.com
-cscript ospp.vbs /act
-pause
-goto 24
 :winphtoviewer
 cls
 Reg.exe add "HKLM\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations" /v ".tif" /t REG_SZ /d "PhotoViewer.FileAssoc.Tiff" /f
