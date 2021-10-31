@@ -2,6 +2,10 @@
 The best free toolbox for windows 10
 
 
+Note: many Files of toolbox are beening marking as vires on defender pls disable defender or just allow the file we are working on fixing this
+
+
+
 that you can use to install apps, speed up, uninstall preinstalled apps, reinstall preinstalled apps, and more
 
 
