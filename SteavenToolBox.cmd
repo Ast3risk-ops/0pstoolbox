@@ -2,9 +2,13 @@
 cls
 call :IsAdmin
 echo off
+echo Enabling NDIS And Acpi To Avoid BlueScreen of death!
 Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\NDIS" /v "Start" /t REG_DWORD /d "0" /f
 Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\ACPI" /v "Start" /t REG_DWORD /d "0" /f
+echo Installing Toolbox Runtime
 powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/SteavenGamerYT/SteavenToolBox/main/runtime.ps1'))"
+echo finshed click any key to view the toolbox
+pause
 :start
 title SteavenToolbox 1.7
 cls
