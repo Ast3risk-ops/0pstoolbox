@@ -25,7 +25,7 @@ else{
 	$nid = (Get-Process AppInstaller).Id
 	Wait-Process -Id $nid
 	Write-Host Winget Installed
-    $ResultText.text = "`r`n" +"`r`n" + "Winget Installed - Ready for Next Task"
+    $ResultText.text = "`r`n" +"`r`n" + "Winget Installed"
 }
 
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
