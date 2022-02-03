@@ -12,7 +12,7 @@ echo finshed
 title SteavenToolbox 1.8
 cls
 echo =====================================================================
-echo "SteavenToolbox 1.8 | We care about your pc!"
+echo "SteavenToolbox 1.8 | We care about your pc!" "Windows 10 only!"
 echo =====================================================================
 echo ---------------------------------------------------------------------------------------------------------------------
 ECHO "TWEAK | FIXED | CLEANER | OTHER"                         Installer
