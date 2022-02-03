@@ -9,10 +9,10 @@ echo Installing Toolbox Runtime
 powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/SteavenGamerYT/SteavenToolBox/main/runtime.ps1'))"
 echo finshed
 :start
-title SteavenToolbox 1.7
+title SteavenToolbox 1.8
 cls
 echo =====================================================================
-echo "SteavenToolbox 1.7 | We care about your pc!"
+echo "SteavenToolbox 1.8 | We care about your pc!"
 echo =====================================================================
 echo ---------------------------------------------------------------------------------------------------------------------
 ECHO "TWEAK | FIXED | CLEANER | OTHER"                         Installer
@@ -53,7 +53,7 @@ ECHO "%choice%" is not valid, try again
 ECHO.
 goto start
 :1
-title SteavenToolbox 1.7
+title SteavenToolbox 1.8
 cls
 echo ---------------------------------------------------------------------------------------------------------------------
 echo Print Spooler for Printer (services)
