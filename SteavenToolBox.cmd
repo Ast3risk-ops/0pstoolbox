@@ -9,10 +9,10 @@ echo Installing Toolbox Runtime
 powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/SteavenGamerYT/SteavenToolBox/main/runtime.ps1'))"
 echo finshed
 :start
-title SteavenToolbox 1.8
+title SteavenToolbox 1.9
 cls
 echo =====================================================================
-echo "SteavenToolbox 1.8 | We care about your pc!" "Windows 10 only!"
+echo "SteavenToolbox 1.9| We care about your pc!" "Windows 10 and Windows 11!"
 echo =====================================================================
 echo ---------------------------------------------------------------------------------------------------------------------
 ECHO "TWEAK | FIXED | CLEANER | OTHER"                         Installer
