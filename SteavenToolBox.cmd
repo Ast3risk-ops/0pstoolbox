@@ -175,6 +175,7 @@ echo 6. Discord
 echo 7. Notepad Plus Plus
 echo 8. Vs Code
 echo 9. Paint.net
+echo 10. Search Deflector
 echo 0. Back to menu
 set choice=
 set /p choice=Type the number.
@@ -188,6 +189,7 @@ if '%choice%'=='6' powershell -command "winget install --id Discord.Discord"
 if '%choice%'=='7' powershell -command "winget install --id Notepad++.Notepad++"
 if '%choice%'=='8' powershell -command "winget install --id Microsoft.VisualStudioCode"
 if '%choice%'=='9' powershell -command "choco install paint.net -y"
+if '%choice%'=='9' powershell -command "winget install --id SearchDeflector.SearchDeflector"
 if '%choice%'=='0' goto start
 ECHO.
 goto 11
