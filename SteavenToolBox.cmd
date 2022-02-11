@@ -1681,6 +1681,7 @@ echo off
 cls
 echo adding new powerplane
 powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
+echo
 echo making windows Faster
 Reg.exe add "HKCU\Control Panel\Desktop" /v "MenuShowDelay" /t REG_SZ /d "0" /f
 Reg.exe add "HKCU\Control Panel\Desktop" /v "WaitToKillAppTimeout" /t REG_SZ /d "5000" /f
