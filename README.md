@@ -17,3 +17,6 @@ Get it right now to edit your windows and make it complity your own
 
 
 to get it open powershell as admin type iex ((New-Object System.Net.WebClient).DownloadString('https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/ToolBox.ps1'))
+
+
+> "Test and text"
