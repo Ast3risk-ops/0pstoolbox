@@ -20,7 +20,13 @@ run powershell **WITHOUT ADMIN** type
 `iwr -useb get.scoop.sh | iex`
 
 
-Note: many Files of toolbox are beening marking as vires on defender pls disable defender or just allow the file we are working on fixing this
+> **Notes**
+
+
+many Files of toolbox are beening marking as vires on defender pls disable defender or just allow the file we are working on fixing this
+
+
+> **Readme**
 
 
 that you can use to install apps, speed up, uninstall preinstalled apps, reinstall preinstalled apps, and more
