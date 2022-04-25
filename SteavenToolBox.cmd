@@ -1593,7 +1593,7 @@ ECHO.
 goto 15
 :uhyperv
 cls
-wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/install_wim_tweak.exe
+wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/Apps/install_wim_tweak.exe
 cd c:\
 cd \
 install_wim_tweak.exe /o /c HyperV /r
@@ -1602,7 +1602,7 @@ install_wim_tweak.exe /o /c Microsoft-Windows-HyperV /r
 goto 15
 :ieremove
 cls
-wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/install_wim_tweak.exe
+wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/Apps/install_wim_tweak.exe
 cd c:\
 cd \
 install_wim_tweak.exe /o /c Microsoft-Windows-InternetExplorer /r
