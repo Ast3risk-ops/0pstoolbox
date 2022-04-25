@@ -5,6 +5,9 @@ A Free Open Source Toolbox For Windows 11 and Windows 10!
 > **Start SteavenToolBox**
 
 
+run powershell **With admin** type
+
+
 `iex ((New-Object System.Net.WebClient).DownloadString('https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/ToolBox.ps1'))`
 
 
