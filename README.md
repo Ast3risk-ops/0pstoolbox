@@ -5,7 +5,7 @@ A Free Open Source Toolbox For Windows 11 and Windows 10!
 > **Start SteavenToolBox**
 
 
-run powershell **With admin** type
+run powershell **With admin** and type
 
 
 `iex ((New-Object System.Net.WebClient).DownloadString('https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/ToolBox.ps1'))`
@@ -14,7 +14,7 @@ run powershell **With admin** type
 > **Toolbox No longer install scoop (Importanted)**
 
 
-run powershell **WITHOUT ADMIN** type
+run powershell **WITHOUT ADMIN** and type
 
 
 `Set-ExecutionPolicy RemoteSigned -scope CurrentUser`
