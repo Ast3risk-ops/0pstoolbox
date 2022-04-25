@@ -43,7 +43,7 @@ if '%choice%'=='11' goto 11
 if '%choice%'=='12' goto Choice
 if '%choice%'=='13' goto 17
 if '%choice%'=='14' goto 18
-if '%choice%'=='15' powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/onedrive.ps1'))"
+if '%choice%'=='15' powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/Scripts/onedrive.ps1'))"
 if '%choice%'=='16' choco install vcredist2005 vcredist2008 vcredist2010  vcredist2012 msvisualcplusplus2012-redist vcredist2013 vcredist2017 vcredist140 vcredist-all jre8 directx -y & DISM /Online /Enable-Feature /FeatureName:NetFx3 & DISM /Online /Enable-Feature /FeatureName:NetFx4 /All & dism /Online /enable-feature /FeatureName:"LegacyComponents" /All & dism /Online /enable-feature /FeatureName:"DirectPlay" /All
 if '%choice%'=='17' goto themes
 if '%choice%'=='18' goto store22
@@ -91,7 +91,7 @@ if '%choice%'=='3' Reg.exe delete "HKLM\SOFTWARE\Policies\Microsoft\Windows\Wind
 if '%choice%'=='4' Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "DoNotConnectToWindowsUpdateInternetLocations" /t REG_DWORD /d "1" /f
 if '%choice%'=='5' NetSh Advfirewall set allprofiles state on
 if '%choice%'=='6' NetSh Advfirewall set allprofiles state off
-if '%choice%'=='7' wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/dControl.exe & start /wait c:\dControl.exe
+if '%choice%'=='7' wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/Apps/dControl.exe & start /wait c:\dControl.exe
 if '%choice%'=='9' dism /online /NoRestart /Enable-Feature /FeatureName:Internet-Explorer-Optional-amd64
 if '%choice%'=='10' dism /online /NoRestart /Disable-Feature /FeatureName:Internet-Explorer-Optional-amd64
 if '%choice%'=='11' DISM /online /NoRestart /Enable-feature /featurename:WindowsMediaPlayer
