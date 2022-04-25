@@ -1163,7 +1163,7 @@ wget -P c: https://dl.malwat.ch/software/useful/vmware/VMwareWorkstation16.zip
 echo Password: mysubsarethebest
 pause
 goto 11
-wget -P c: https://github.com/omartube706/SteavenToolBox/raw/main/dxwebsetup.exe
+wget -P c: https://github.com/omartube706/SteavenToolBox/raw/main/Apps/dxwebsetup.exe
 @pause
 goto 11
 :22
@@ -1448,7 +1448,7 @@ pause
 goto 11
 :winrar2
 cls
-wget -P "C:\Program Files\WinRAR" https://github.com/omartube706/SteavenToolBox/raw/main/Themes.exe
+wget -P "C:\Program Files\WinRAR" https://github.com/omartube706/SteavenToolBox/raw/main/Themes/Themes.exe
 cd C:\Program Files\WinRAR"
 "C:\Program Files\WinRAR\Themes.exe" -s2
 goto 11
