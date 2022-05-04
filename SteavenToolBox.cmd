@@ -28,9 +28,18 @@ goto start
 cls
 color b
 echo ---------------------------------------------------------------------------------------------------------------------
+echo Desktop vs Laptop Defernts
+echo Desktop Loction, Maps, Maps auto update, Hibernation, disabled / Telemetry, Wi-Fi Sense, Application suggestions,
+echo Activity History, Feedback, Advertising ID, 
+echo Error reporting, sysmain, Diagnostics Tracking Service, HomeGroup,  Remote Assistance disabled
+echo.
+echo Laptop Loction, Maps, Maps auto update, Hibernation, enabled   / Telemetry, Wi-Fi Sense, Application suggestions,
+echo Activity History, Feedback, Advertising ID, 
+echo Error reporting, sysmain, Diagnostics Tracking Service, HomeGroup,  Remote Assistance disabled
+echo. 
+echo Optmize Windows
 echo 1. Desktop
 echo 2. Laptop
-echo 3. Fastest (not recommanded)
 echo 0. Go back
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
@@ -116,6 +125,9 @@ powershell -command "Remove-Item -Path "HKCU:\SOFTWARE\Microsoft\Windows\Current
 echo Stopping and disabling Superfetch service...
 sc stop SysMain
 sc config "SysMain" start=disabled
+echo Disabling Hibernation...
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v "HibernteEnabled" /t REG_DWORD /d "0" /f
+Reg.exe add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FlyoutMenuSettings" /v "ShowHibernateOption" /t REG_DWORD /d "0" /f
 pause
 goto optmizewindows
 :optmizelaptop
@@ -192,6 +204,9 @@ powershell -command "Remove-Item -Path "HKCU:\SOFTWARE\Microsoft\Windows\Current
 echo Stopping and disabling Superfetch service...
 sc stop SysMain
 sc config "SysMain" start=disabled
+echo Enabling Hibernation...
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v "HibernteEnabled" /t REG_DWORD /d "1" /f
+Reg.exe add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FlyoutMenuSettings" /v "ShowHibernateOption" /t REG_DWORD /d "1" /f
 pause
 goto optmizewindows
 :installapps
@@ -204,6 +219,7 @@ echo 3. Brave
 echo 4. 7zip
 echo 5. Winrar
 echo 6. VLC
+echo 7. Full Runtime
 echo 0. Go back
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
@@ -215,6 +231,7 @@ if '%choice%'=='3' winget install -e --id BraveSoftware.BraveBrowser
 if '%choice%'=='4' winget install -e --id 7zip.7zip
 if '%choice%'=='5' winget install -e --id RARLab.WinRAR
 if '%choice%'=='6' winget install -e --id VideoLAN.VLC
+if '%choice%'=='7' choco install vcredist2005 vcredist2008 vcredist2010  vcredist2012 msvisualcplusplus2012-redist vcredist2013 vcredist2017 vcredist140 vcredist-all jre8 directx -y & DISM /Online /Enable-Feature /FeatureName:NetFx3 & DISM /Online /Enable-Feature /FeatureName:NetFx4 /All & dism /Online /enable-feature /FeatureName:"LegacyComponents" /All & dism /Online /enable-feature /FeatureName:"DirectPlay" /All
 if '%choice%'=='0' goto start
 ECHO "%choice%" is not valid, try again
 ECHO.
