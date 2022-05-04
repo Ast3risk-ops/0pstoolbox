@@ -12,7 +12,7 @@ echo "SteavenToolbox 2.0 | We care about your pc!" "Windows 10 and Windows 11!"
 echo ==========================================================================
 echo ---------------------------------------------------------------------------------------------------------------------                                    
 echo 1. Optmize windows (not finshed but it dose some)
-echo 2. Install Apps
+echo 2. Install Features, Programs and Apps
 echo 3. Windows Update Fix 
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
@@ -220,6 +220,7 @@ echo 4. 7zip
 echo 5. Winrar
 echo 6. VLC
 echo 7. Full Runtime
+echo 8. Install Windows Subsystem for Linux
 echo 0. Go back
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
@@ -232,6 +233,7 @@ if '%choice%'=='4' winget install -e --id 7zip.7zip
 if '%choice%'=='5' winget install -e --id RARLab.WinRAR
 if '%choice%'=='6' winget install -e --id VideoLAN.VLC
 if '%choice%'=='7' choco install vcredist2005 vcredist2008 vcredist2010  vcredist2012 msvisualcplusplus2012-redist vcredist2013 vcredist2017 vcredist140 vcredist-all jre8 directx -y & DISM /Online /Enable-Feature /FeatureName:NetFx3 & DISM /Online /Enable-Feature /FeatureName:NetFx4 /All & dism /Online /enable-feature /FeatureName:"LegacyComponents" /All & dism /Online /enable-feature /FeatureName:"DirectPlay" /All
+if '%choice%'=='8' wsl --install
 if '%choice%'=='0' goto start
 ECHO "%choice%" is not valid, try again
 ECHO.
