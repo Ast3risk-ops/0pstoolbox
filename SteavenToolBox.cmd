@@ -249,7 +249,7 @@ goto optmizewindows
 cls
 color b
 echo ---------------------------------------------------------------------------------------------------------------------
-echo 1. browsers
+echo 1. Browsers
 echo 2. 7zip
 echo 3. Winrar
 echo 4. VLC
