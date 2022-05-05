@@ -249,14 +249,36 @@ goto optmizewindows
 cls
 color b
 echo ---------------------------------------------------------------------------------------------------------------------
+echo 1. browsers
+echo 2. 7zip
+echo 3. Winrar
+echo 4. VLC
+echo 5. Full Runtime
+echo 6. Install Windows Subsystem for Linux
+echo 0. Go back
+echo ---------------------------------------------------------------------------------------------------------------------
+set choice=
+set /p choice=Type the number.
+if not '%choice%'=='' set choice=%choice:~0,100%
+if '%choice%'=='1' goto browsers
+if '%choice%'=='2' winget install -e --id 7zip.7zip
+if '%choice%'=='3' winget install -e --id RARLab.WinRAR
+if '%choice%'=='4' winget install -e --id VideoLAN.VLC
+if '%choice%'=='5' choco install vcredist2005 vcredist2008 vcredist2010  vcredist2012 msvisualcplusplus2012-redist vcredist2013 vcredist2017 vcredist140 vcredist-all jre8 directx -y & DISM /Online /Enable-Feature /FeatureName:NetFx3 & DISM /Online /Enable-Feature /FeatureName:NetFx4 /All & dism /Online /enable-feature /FeatureName:"LegacyComponents" /All & dism /Online /enable-feature /FeatureName:"DirectPlay" /All
+if '%choice%'=='6' wsl --install
+if '%choice%'=='0' goto start
+ECHO "%choice%" is not valid, try again
+ECHO.
+goto installapps
+:browsers
+cls
+color b
+echo ---------------------------------------------------------------------------------------------------------------------
 echo 1. Firefox
 echo 2. Chrome
 echo 3. Brave
-echo 4. 7zip
-echo 5. Winrar
-echo 6. VLC
-echo 7. Full Runtime
-echo 8. Install Windows Subsystem for Linux
+echo 4. Chromium
+echo 5. Edge
 echo 0. Go back
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
@@ -265,11 +287,8 @@ if not '%choice%'=='' set choice=%choice:~0,100%
 if '%choice%'=='1' winget install -e --id Mozilla.Firefox
 if '%choice%'=='2' winget install -e --id Google.Chrome
 if '%choice%'=='3' winget install -e --id BraveSoftware.BraveBrowser
-if '%choice%'=='4' winget install -e --id 7zip.7zip
-if '%choice%'=='5' winget install -e --id RARLab.WinRAR
-if '%choice%'=='6' winget install -e --id VideoLAN.VLC
-if '%choice%'=='7' choco install vcredist2005 vcredist2008 vcredist2010  vcredist2012 msvisualcplusplus2012-redist vcredist2013 vcredist2017 vcredist140 vcredist-all jre8 directx -y & DISM /Online /Enable-Feature /FeatureName:NetFx3 & DISM /Online /Enable-Feature /FeatureName:NetFx4 /All & dism /Online /enable-feature /FeatureName:"LegacyComponents" /All & dism /Online /enable-feature /FeatureName:"DirectPlay" /All
-if '%choice%'=='8' wsl --install
+if '%choice%'=='4' winget install -e --id eloston.ungoogled-chromium
+if '%choice%'=='5' winget install -e --id Microsoft.Edge
 if '%choice%'=='0' goto start
 ECHO "%choice%" is not valid, try again
 ECHO.
