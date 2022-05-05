@@ -32,10 +32,14 @@ echo Desktop vs Laptop Defernts
 echo Desktop Loction, Maps, Maps auto update, Hibernation, disabled / Telemetry, Wi-Fi Sense, Application suggestions,
 echo Activity History, Feedback, Advertising ID, 
 echo Error reporting, sysmain, Diagnostics Tracking Service, HomeGroup,  Remote Assistance disabled
+echo Show task manager details, file operations details, hide Cortana Button, Task View button, People icon,
+echo tray icons, enable NumLock after startup, change default Explorer view to This PC
 echo.
 echo Laptop Loction, Maps, Maps auto update, Hibernation, enabled   / Telemetry, Wi-Fi Sense, Application suggestions,
 echo Activity History, Feedback, Advertising ID, 
 echo Error reporting, sysmain, Diagnostics Tracking Service, HomeGroup,  Remote Assistance disabled
+echo Show task manager details, file operations details, hide Cortana Button, Task View button, People icon,
+echo tray icons, enable NumLock after startup, change default Explorer view to This PC
 echo. 
 echo Optmize Windows
 echo 1. Desktop
