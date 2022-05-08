@@ -29,17 +29,19 @@ cls
 color b
 echo ---------------------------------------------------------------------------------------------------------------------
 echo Desktop vs Laptop Defernts
-echo Desktop Loction, Maps, Maps auto update, Hibernation, disabled / Telemetry, Wi-Fi Sense, Application suggestions,
+echo Desktop Loction, Maps, Maps auto update, Hibernation, Power Thrttling, disabled / Telemetry, Wi-Fi Sense, Application suggestions,
 echo Activity History, Feedback, Advertising ID, 
 echo Error reporting, sysmain, Diagnostics Tracking Service, HomeGroup,  Remote Assistance disabled
 echo Show task manager details, file operations details, hide Cortana Button, Task View button, People icon,
 echo tray icons, enable NumLock after startup, change default Explorer view to This PC
+echo gamebar, Driver Searching disabled, made system faster using regedit
 echo.
-echo Laptop Loction, Maps, Maps auto update, Hibernation, enabled   / Telemetry, Wi-Fi Sense, Application suggestions,
+echo Laptop Loction, Maps, Maps auto update, Hibernation, Power Thrttling, enabled   / Telemetry, Wi-Fi Sense, Application suggestions,
 echo Activity History, Feedback, Advertising ID, 
 echo Error reporting, sysmain, Diagnostics Tracking Service, HomeGroup,  Remote Assistance disabled
 echo Show task manager details, file operations details, hide Cortana Button, Task View button, People icon,
 echo tray icons, enable NumLock after startup, change default Explorer view to This PC
+echo gamebar, Driver Searching disabled, made system faster using regedit
 echo. 
 echo Optmize Windows
 echo 1. Desktop
@@ -148,6 +150,27 @@ echo Enabling NumLock after startup...
 Reg.exe add "HKU\.DEFAULT\Control Panel\Keyboard" /v "InitialKeyboardIndicators" /t REG_DWORD /d "558319670" /f
 echo Changing default Explorer view to This PC...
 Reg.exe add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "LaunchTo" /t REG_DWORD /d "1" /f
+echo Using regedit to improve RAM 
+echo Disabling Game Bar (Game Dvr)
+Reg.exe add "HKLM\SYSTEM\GameConfigStore" /v "GameDVR_DXGIHonorFSEWindowsCompatible" /t REG_DWORD /d "0" /f
+Reg.exe add "HKLM\SYSTEM\GameConfigStore" /v "GameDVR_HonorUserFSEBehaviorMode" /t REG_DWORD /d "0" /f
+Reg.exe add "HKLM\SYSTEM\GameConfigStore" /v "GameDVR_EFSEFeatureFlags" /t REG_DWORD /d "0" /f
+Reg.exe add "HKLM\SYSTEM\GameConfigStore" /v "GameDVR_Enabled" /t REG_DWORD /d "0" /f
+echo  Disabling Power Thrttling
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerThrottling" /v "PowerThrottlingOff" /t REG_DWORD /d "0" /f
+echo Disabling Driver Searching
+Reg.exe add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\DriverSearching" /v "SearchOrderConfig" /t REG_DWORD /d "0" /f
+echo Making System Responsiveness Better using regedit
+Reg.exe add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "NetworkThrottlingIndex" /t REG_DWORD /d "10" /f
+Reg.exe add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "SystemResponsiveness" /t REG_DWORD /d "20" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control" /v "WaitToKillServiceTimeout" /t REG_DWORD /d "2000" /f
+Reg.exe add "HKCU\Control Panel\Desktop" /v "AutoEndTasks" /t REG_SZ /d "1" /f
+Reg.exe add "HKCU\Control Panel\Desktop" /v "HungAppTimeout" /t REG_SZ /d "1000" /f
+Reg.exe add "HKCU\Control Panel\Desktop" /v "MenuShowDelay" /t REG_SZ /d "8" /f
+Reg.exe add "HKCU\Control Panel\Desktop" /v "WaitToKillAppTimeout" /t REG_SZ /d "2000" /f
+Reg.exe add "HKCU\Control Panel\Desktop" /v "LowLevelHooksTimeout" /t REG_SZ /d "1000" /f
+Reg.exe add "HKCU\Control Panel\Mouse" /v "MouseHoverTime" /t REG_SZ /d "8" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control" /v "WaitToKillServiceTimeout" /t REG_SZ /d "2000" /f
 pause
 goto optmizewindows
 :optmizelaptop
@@ -243,6 +266,27 @@ echo Enabling NumLock after startup...
 Reg.exe add "HKU\.DEFAULT\Control Panel\Keyboard" /v "InitialKeyboardIndicators" /t REG_DWORD /d "558319670" /f
 echo Changing default Explorer view to This PC...
 Reg.exe add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "LaunchTo" /t REG_DWORD /d "1" /f
+echo  Enabling Power Thrttling
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerThrottling" /v "PowerThrottlingOff" /t REG_DWORD /d "1" /f
+echo Using regedit to improve RAM 
+echo Disabling Game Bar (Game Dvr)
+Reg.exe add "HKLM\SYSTEM\GameConfigStore" /v "GameDVR_DXGIHonorFSEWindowsCompatible" /t REG_DWORD /d "0" /f
+Reg.exe add "HKLM\SYSTEM\GameConfigStore" /v "GameDVR_HonorUserFSEBehaviorMode" /t REG_DWORD /d "0" /f
+Reg.exe add "HKLM\SYSTEM\GameConfigStore" /v "GameDVR_EFSEFeatureFlags" /t REG_DWORD /d "0" /f
+Reg.exe add "HKLM\SYSTEM\GameConfigStore" /v "GameDVR_Enabled" /t REG_DWORD /d "0" /f
+echo Disabling Driver Searching
+Reg.exe add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\DriverSearching" /v "SearchOrderConfig" /t REG_DWORD /d "0" /f
+echo Making System Responsiveness Better using regedit
+Reg.exe add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "NetworkThrottlingIndex" /t REG_DWORD /d "10" /f
+Reg.exe add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "SystemResponsiveness" /t REG_DWORD /d "20" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control" /v "WaitToKillServiceTimeout" /t REG_DWORD /d "2000" /f
+Reg.exe add "HKCU\Control Panel\Desktop" /v "AutoEndTasks" /t REG_SZ /d "1" /f
+Reg.exe add "HKCU\Control Panel\Desktop" /v "HungAppTimeout" /t REG_SZ /d "1000" /f
+Reg.exe add "HKCU\Control Panel\Desktop" /v "MenuShowDelay" /t REG_SZ /d "8" /f
+Reg.exe add "HKCU\Control Panel\Desktop" /v "WaitToKillAppTimeout" /t REG_SZ /d "2000" /f
+Reg.exe add "HKCU\Control Panel\Desktop" /v "LowLevelHooksTimeout" /t REG_SZ /d "1000" /f
+Reg.exe add "HKCU\Control Panel\Mouse" /v "MouseHoverTime" /t REG_SZ /d "8" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control" /v "WaitToKillServiceTimeout" /t REG_SZ /d "2000" /f
 pause
 goto optmizewindows
 :installapps
