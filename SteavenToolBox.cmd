@@ -14,6 +14,7 @@ echo ---------------------------------------------------------------------------
 echo 1. Optmize windows (not finshed but it dose some)
 echo 2. Install Features, Programs and Apps
 echo 3. Windows Update Fix 
+echo 4. Crack Windows & Office
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
 set /p choice=Type the number.
@@ -21,6 +22,7 @@ if not '%choice%'=='' set choice=%choice:~0,100%
 if '%choice%'=='1' goto optmizewindows
 if '%choice%'=='2' goto installapps
 if '%choice%'=='3' goto updatefix
+if '%choice%'=='3' goto crack
 ECHO "%choice%" is not valid, try again
 ECHO.
 goto start
@@ -383,6 +385,17 @@ if '%choice%'=='0' goto start
 ECHO "%choice%" is not valid, try again
 ECHO.
 goto updatefix
+:crack
+cls
+echo 1. Crack Windows & Office
+echo 0. Go Back
+set choice=
+set /p choice=Type the number.
+if not '%choice%'=='' set choice=%choice:~0,100%
+if '%choice%'=='1' powershell -command "irm https://massgrave.dev/get | iex"
+if '%choice%'=='0' goto start
+ECHO "%choice%" is not valid, try again
+ECHO.
 :IsAdmin
 Reg.exe query "HKU\S-1-5-19\Environment"
 If Not %ERRORLEVEL% EQU 0 (
