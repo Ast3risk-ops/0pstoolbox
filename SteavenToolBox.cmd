@@ -396,7 +396,7 @@ if '%choice%'=='1' powershell -command "irm https://massgrave.dev/get | iex"
 if '%choice%'=='0' goto start
 ECHO "%choice%" is not valid, try again
 ECHO.
-goto crack
+goto start
 
 :IsAdmin
 Reg.exe query "HKU\S-1-5-19\Environment"
