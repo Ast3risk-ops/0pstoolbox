@@ -22,7 +22,7 @@ if not '%choice%'=='' set choice=%choice:~0,100%
 if '%choice%'=='1' goto optmizewindows
 if '%choice%'=='2' goto installapps
 if '%choice%'=='3' goto updatefix
-if '%choice%'=='3' goto crack
+if '%choice%'=='4' goto crack
 ECHO "%choice%" is not valid, try again
 ECHO.
 goto start
@@ -396,6 +396,8 @@ if '%choice%'=='1' powershell -command "irm https://massgrave.dev/get | iex"
 if '%choice%'=='0' goto start
 ECHO "%choice%" is not valid, try again
 ECHO.
+goto crack
+
 :IsAdmin
 Reg.exe query "HKU\S-1-5-19\Environment"
 If Not %ERRORLEVEL% EQU 0 (
