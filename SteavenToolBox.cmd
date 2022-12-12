@@ -12,17 +12,19 @@ echo "SteavenToolbox 2.0 | We care about your pc!" "Windows 10 and Windows 11!"
 echo ==========================================================================
 echo ---------------------------------------------------------------------------------------------------------------------                                    
 echo 1. Optmize windows (not finshed but it dose some)
-echo 2. Install Features, Programs and Apps
-echo 3. Windows Update Fix 
-echo 4. Crack Windows and Office
+echo 2. Update All Installed Apps To Thair Lastest Versions
+echo 3. Install Features, Programs and Apps
+echo 4. Windows Update Fix 
+echo 5. Crack Windows and Office
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
 set /p choice=Type the number.
 if not '%choice%'=='' set choice=%choice:~0,100%
 if '%choice%'=='1' goto optmizewindows
-if '%choice%'=='2' goto installapps
-if '%choice%'=='3' goto updatefix
-if '%choice%'=='4' goto crack
+if '%choice%'=='3' winget upgrade --all && choco upgrade all && scoop update
+if '%choice%'=='3' goto installapps
+if '%choice%'=='4' goto updatefix
+if '%choice%'=='5' goto crack
 ECHO "%choice%" is not valid, try again
 ECHO.
 goto start
