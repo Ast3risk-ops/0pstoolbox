@@ -32,6 +32,7 @@ Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')) | Out-Null
 choco install chocolateygui -y  | Out-Null
 Write-Output "Chocolatey is now installed"
+
 Invoke-RestMethod get.scoop.sh -outfile 'install.ps1'  | Out-Null
 Invoke-Expression "& {$(Invoke-RestMethod get.scoop.sh)} -RunAsAdmin"  | Out-Null
 scoop bucket add extras
