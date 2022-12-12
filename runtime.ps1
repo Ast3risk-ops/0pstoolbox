@@ -38,3 +38,4 @@ Invoke-Expression "& {$(Invoke-RestMethod get.scoop.sh)} -RunAsAdmin"  | Out-Nul
 scoop bucket add extras
 Write-Output "Scoop is now installed"
 scoop install sudo aria2 wget git
+Write-Output "Sudo and Aria2 and Wget and Git is now installed"
