@@ -14,7 +14,7 @@ echo ---------------------------------------------------------------------------
 echo 1. Optmize windows (not finshed but it dose some)
 echo 2. Install Features, Programs and Apps
 echo 3. Windows Update Fix 
-echo 4. Crack Windows & Office
+echo 4. Crack Windows and Office
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
 set /p choice=Type the number.
@@ -387,7 +387,7 @@ ECHO.
 goto updatefix
 :crack
 cls
-echo 1. Crack Windows & Office
+echo 1. Crack Windows and Office
 echo 0. Go Back
 set choice=
 set /p choice=Type the number.
