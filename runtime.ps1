@@ -33,7 +33,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 choco install chocolateygui -y  | Out-Null
 Write-Output "Chocolatey is now installed"
 Invoke-RestMethod get.scoop.sh -outfile 'install.ps1'  | Out-Null
-Invoke-Expression "& {$(irm get.scoop.sh)} -RunAsAdmin"  | Out-Null
+Invoke-Expression "& {$(Invoke-RestMethod get.scoop.sh)} -RunAsAdmin"  | Out-Null
 scoop bucket add extras
 Write-Output "Scoop is now installed"
 scoop install sudo aria2 wget git
