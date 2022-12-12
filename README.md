@@ -21,7 +21,7 @@ run powershell **With admin** and type
 `iex ((New-Object System.Net.WebClient).DownloadString('https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/ToolBox.lagacy.ps1'))`
 
 
-> **Toolbox No longer install scoop (Importanted for lagacy 1.9 only)**
+> **Toolbox No longer install scoop (Importanted for lagacy 1.9 only)  Fixed Since 12/12/2022**
 
 
 run powershell **WITHOUT ADMIN** and type
