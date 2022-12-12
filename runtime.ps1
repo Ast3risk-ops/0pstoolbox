@@ -30,6 +30,7 @@ else{
 
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+choco install chocolateygui -y
 irm get.scoop.sh -outfile 'install.ps1'
 iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
 scoop install sudo aria2 wget git
