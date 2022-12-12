@@ -335,7 +335,7 @@ if '%choice%'=='2' winget install -e --id Google.Chrome
 if '%choice%'=='3' winget install -e --id BraveSoftware.BraveBrowser
 if '%choice%'=='4' winget install -e --id eloston.ungoogled-chromium
 if '%choice%'=='5' winget install -e --id Microsoft.Edge
-if '%choice%'=='0' goto start
+if '%choice%'=='0' goto installapps
 ECHO "%choice%" is not valid, try again
 ECHO.
 goto installapps
