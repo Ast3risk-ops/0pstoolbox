@@ -23,12 +23,18 @@ set choice=
 set /p choice=Type the number.
 if not '%choice%'=='' set choice=%choice:~0,100%
 if '%choice%'=='1' goto optmizewindows
-if '%choice%'=='2' winget upgrade --all && choco upgrade all && scoop update && goto start
+if '%choice%'=='2' goto update
 if '%choice%'=='3' goto installapps
 if '%choice%'=='4' goto updatefix
 if '%choice%'=='5' goto crack
 ECHO "%choice%" is not valid, try again
 ECHO.
+goto start
+:update
+cls
+winget upgrade --all
+choco upgrade all
+scoop update 
 goto start
 :optmizewindows
 cls
