@@ -32,9 +32,9 @@ ECHO.
 goto start
 :update
 cls
-winget upgrade --all
-choco upgrade all
-scoop update 
+cmd /k winget upgrade --all
+cmd /k choco upgrade all
+cmd /k scoop update 
 goto start
 :optmizewindows
 cls
