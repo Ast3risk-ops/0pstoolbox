@@ -32,9 +32,13 @@ ECHO.
 goto start
 :update
 cls
-cmd /k winget upgrade --all
-cmd /k choco upgrade all
-cmd /k scoop update 
+echo Updateing All Apps
+echo ToolBox May Close 
+echo Dont forget to run it again
+puase
+winget upgrade --all
+choco upgrade all
+scoop update
 goto start
 :optmizewindows
 cls
