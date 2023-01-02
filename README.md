@@ -8,6 +8,9 @@ A Free Open Source Toolbox For Windows 11 and Windows 10!
 run powershell **With admin** and type
 
 
+`irm github.com/SteavenGamerYT/SteavenToolBox/raw/main/ToolBox.ps1 | iex`
+
+
 `iex ((New-Object System.Net.WebClient).DownloadString('https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/ToolBox.ps1'))`
 
 
