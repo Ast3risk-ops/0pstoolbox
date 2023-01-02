@@ -35,7 +35,7 @@ cls
 echo Updateing All Apps
 echo ToolBox May Close 
 echo Dont forget to run it again
-puase
+pause
 winget upgrade --all
 choco upgrade all
 scoop update
