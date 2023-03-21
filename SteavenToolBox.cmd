@@ -46,6 +46,12 @@ goto start
 cls
 color b
 echo ---------------------------------------------------------------------------------------------------------------------
+echo Desktop Vs Laptop vs 3
+echo Laptop have Power Thrttling enabled while Desktop have it disabled 
+echo Laptop Have automatic Maps updates enabled
+echo Laptop Have Maps while Desktop have it Uninstalled 
+echo Laptop Have NumLock disabled after Startup while Desktop have it disabled 
+echo 3 Bascily dont have any of this
 echo Optmize Windows
 echo 1. Desktop
 echo 2. Laptop
