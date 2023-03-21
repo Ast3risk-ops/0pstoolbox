@@ -62,7 +62,6 @@ echo.
 echo Optmize Windows
 echo 1. Desktop
 echo 2. Laptop
-echo 3. Chris Titus Tech Optmize Windows (Recommaded)
 echo 0. Go back
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
@@ -70,7 +69,6 @@ set /p choice=Type the number.
 if not '%choice%'=='' set choice=%choice:~0,100%
 if '%choice%'=='1' goto optmizedesktop
 if '%choice%'=='2' goto optmizelaptop
-if '%choice%'=='3' powershell -command "irm christitus.com/win | iex"
 if '%choice%'=='0' goto start
 ECHO "%choice%" is not valid, try again
 ECHO.
