@@ -46,7 +46,6 @@ goto start
 cls
 color b
 echo ---------------------------------------------------------------------------------------------------------------------
-echo. 
 echo Optmize Windows
 echo 1. Desktop
 echo 2. Laptop
