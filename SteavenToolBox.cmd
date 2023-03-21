@@ -28,7 +28,7 @@ if '%choice%'=='2' goto update
 if '%choice%'=='3' goto installapps
 if '%choice%'=='4' goto updatefix
 if '%choice%'=='5' goto crack
-if '%choice%'=='6' powershell -command "Invoke-WebRequest https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/Scripts/edge-uninstaller.cmd -OutFile C:\windows\temp\edge-uninstaller.cmd" && C:\windows\temp\edge-uninstaller.cmd
+if '%choice%'=='6' powershell -command "Invoke-WebRequest https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/Scripts/edge-uninstaller.cmd -OutFile C:\windows\temp\edge-uninstaller.cmd" && powershell.exe -command "C:\windows\temp\edge-uninstaller.cmd"
 ECHO "%choice%" is not valid, try again
 ECHO.
 goto start
