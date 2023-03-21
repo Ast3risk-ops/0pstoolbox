@@ -1,5 +1,5 @@
 @echo off
-@title Microsoft Edge Uninstaller [Windows 10 LTSC 2021/21H1 Edition]
+@title Microsoft Edge Uninstaller
 ver
 
 echo+
