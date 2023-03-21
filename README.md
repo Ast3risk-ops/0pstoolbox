@@ -1,4 +1,4 @@
-# 0pstoolbox
+# 0pstoolbox (currently broken, will fix soon)
 ## Disclaimer
 Technically the OG tool has no license, and GitHub's TOS allow me to fork user repos, so this is fine.
 
