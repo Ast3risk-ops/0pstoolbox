@@ -9,4 +9,4 @@ You can use this to do fuck all
 
 Launch Command:
 
-`irm github.com/ast3risk-ops/0pstoolbox/raw/main/SteavenToolBox.ps1 | iex`
+`irm github.com/ast3risk-ops/0pstoolbox/raw/main/0pstoolbox.ps1 | iex`
