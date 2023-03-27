@@ -18,11 +18,11 @@ ECHO "%choice%" is not valid, try again
 ECHO.
 goto prestart
 :start
-title SteavenToolbox 2.0
+title SteavenToolbox
 cls
 color b
 echo ==========================================================================
-echo "SteavenToolbox 2.0 | We care about your pc!" "Windows 10 and Windows 11!"
+echo "SteavenToolbox| We care about your pc!" "Windows 10 and Windows 11!"
 echo ==========================================================================
 echo ---------------------------------------------------------------------------------------------------------------------                                    
 echo 1. Optmize windows (not finshed but it dose some)
