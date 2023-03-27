@@ -19,6 +19,7 @@ echo 3. Install Features, Programs and Apps
 echo 4. Windows Update Fix 
 echo 5. Crack Windows and Office
 echo 6. Uninstall Apps
+echo 7. Repair Windows
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
 set /p choice=Type the number.
@@ -29,6 +30,7 @@ if '%choice%'=='3' goto installapps
 if '%choice%'=='4' goto updatefix
 if '%choice%'=='5' goto crack
 if '%choice%'=='6' goto uninstall
+if '%choice%'=='7' sfc /scannow && DISM /Online /Cleanup-Image /RestoreHealth && sfc /scannow && goto start
 ECHO "%choice%" is not valid, try again
 ECHO.
 goto start
