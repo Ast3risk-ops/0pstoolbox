@@ -19,6 +19,7 @@ goto check_admin_permissions
 
 echo+
 echo Press any key to remove Microsoft Edge from Windows 10/11 ...
+echo your Build is 
 ver
 pause >nul
 
