@@ -53,6 +53,7 @@ echo ---------------------------------------------------------------------------
 echo 1. Uninstall Edge
 echo 2. Uninstall OneDrive
 echo 3. Uninstall Microsoft Teams
+echo 4. Uninstall Windows Media Player (Legacay)
 echo 0. Go back
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
