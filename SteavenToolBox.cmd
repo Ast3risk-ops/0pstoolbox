@@ -40,6 +40,7 @@ cls
 echo ---------------------------------------------------------------------------------------------------------------------                                    
 echo 1. Uninstall Edge
 echo 2. Uninstall OneDrive
+echp 3. Uninstall Microsoft Teams
 echo 0. Go back
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
@@ -47,6 +48,7 @@ set /p choice=Type the number.
 if not '%choice%'=='' set choice=%choice:~0,100%
 if '%choice%'=='1' powershell -command "Invoke-WebRequest https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/Scripts/edge-uninstaller.cmd -OutFile C:\windows\temp\edge-uninstaller.cmd" && powershell.exe -command "C:\windows\temp\edge-uninstaller.cmd"
 if '%choice%'=='2' powershell -command "Invoke-WebRequest https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/Scripts/onedrive-uninstaller.cmd -OutFile C:\windows\temp\onedrive-uninstaller.cmd" && powershell.exe -command "C:\windows\temp\onedrive-uninstaller.cmd"
+if '%choice%'=='3' powershell -command "Invoke-WebRequest https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/Scripts/teams-uninstaller.cmd -OutFile C:\windows\temp\teams-uninstaller.cmd" && powershell.exe -command "C:\windows\temp\teams-uninstaller.cmd"
 if '%choice%'=='0' goto start
 ECHO "%choice%" is not valid, try again
 ECHO.
@@ -107,6 +109,8 @@ Reg.exe add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /v "Enable
 echo  Enabling Power Thrttling
 Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerThrottling" /v "PowerThrottlingOff" /t REG_DWORD /d "1" /f> nul
 :optmize
+echo Hiding Teams Icon From Taskbar
+Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "TaskbarMn" /t REG_DWORD /d "0" /f> nul
 echo Disabling Telemetry...
 Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v "AllowTelemetry" /t REG_DWORD /d "0" /f> nul
 Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v "DoNotShowFeedbackNotifications" /t REG_DWORD /d "0" /f> nul
