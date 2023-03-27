@@ -21,9 +21,9 @@ goto prestart
 title SteavenToolbox
 cls
 color b
-echo ==========================================================================
-echo "SteavenToolbox| We care about your pc!" "Windows 10 and Windows 11!"
-echo ==========================================================================
+echo =======================================================================
+echo "SteavenToolbox | We care about your pc!" "Windows 10 and Windows 11!"
+echo =======================================================================
 echo ---------------------------------------------------------------------------------------------------------------------                                    
 echo 1. Optmize windows (not finshed but it dose some)
 echo 2. Update All Installed Apps To Thair Lastest Versions
