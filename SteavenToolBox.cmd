@@ -2,8 +2,8 @@
 cls
 call :IsAdmin
 echo off
-powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/SteavenGamerYT/SteavenToolBox/main/Scripts/runtime.ps1'))"
-powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/SteavenGamerYT/SteavenToolBox/main/Scripts/runtime2.ps1'))"
+#powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/SteavenGamerYT/SteavenToolBox/main/Scripts/runtime.ps1'))"
+#powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/SteavenGamerYT/SteavenToolBox/main/Scripts/runtime2.ps1'))"
 Reg.exe add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v "VerboseStatus" /t REG_DWORD /d "1" /f
 :start
 title SteavenToolbox 2.0
@@ -32,6 +32,7 @@ if '%choice%'=='6' goto uninstall
 ECHO "%choice%" is not valid, try again
 ECHO.
 goto start
+
 :uninstall
 cls
 echo ---------------------------------------------------------------------------------------------------------------------                                    
@@ -44,10 +45,6 @@ set /p choice=Type the number.
 if not '%choice%'=='' set choice=%choice:~0,100%
 if '%choice%'=='1' powershell -command "Invoke-WebRequest https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/Scripts/edge-uninstaller.cmd -OutFile C:\windows\temp\edge-uninstaller.cmd" && powershell.exe -command "C:\windows\temp\edge-uninstaller.cmd"
 if '%choice%'=='2' powershell -command "Invoke-WebRequest https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/Scripts/onedrive-uninstaller.cmd -OutFile C:\windows\temp\onedrive-uninstaller.cmd" && powershell.exe -command "C:\windows\temp\onedrive-uninstaller.cmd"
-if '%choice%'=='3'
-if '%choice%'=='4'
-if '%choice%'=='5' 
-if '%choice%'=='6' 
 if '%choice%'=='0' goto start
 ECHO "%choice%" is not valid, try again
 ECHO.
@@ -84,7 +81,7 @@ set /p choice=Type the number.
 if not '%choice%'=='' set choice=%choice:~0,100%
 if '%choice%'=='1' goto optmizedesktop && goto optmize
 if '%choice%'=='2' goto optmizelaptop && goto optmize
-if '%choice%'=='3' goto optmize && pause && goto optmizewindows
+if '%choice%'=='3' cls && goto optmize && goto optmizewindows
 if '%choice%'=='4' powershell -command "irm christitus.com/win | iex"
 if '%choice%'=='0' goto start
 ECHO "%choice%" is not valid, try again
@@ -105,11 +102,9 @@ Reg.exe add "HKLM\SYSTEM\Maps" /v "AutoUpdateEnabled" /t REG_DWORD /d "1" /f> nu
 echo Installing Maps app
 winget install --id 9WZDNCRDTBVB> nul
 Reg.exe add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /v "EnableAutoTray" /t REG_DWORD /d "1" /f> nul
-echo Enabling NumLock after startup...
 echo  Enabling Power Thrttling
 Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerThrottling" /v "PowerThrottlingOff" /t REG_DWORD /d "1" /f> nul
 :optmize
-cls
 echo Disabling Telemetry...
 Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v "AllowTelemetry" /t REG_DWORD /d "0" /f> nul
 Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v "DoNotShowFeedbackNotifications" /t REG_DWORD /d "0" /f> nul
