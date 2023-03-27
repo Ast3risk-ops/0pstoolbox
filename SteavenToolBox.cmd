@@ -221,7 +221,7 @@ echo 3. Winrar
 echo 4. VLC
 echo 5. Full Runtime
 echo 6. Install Windows Subsystem for Linux
-echo 7. Exploerer Patcher
+echo 7. Resoure Hacker
 echo 0. Go back
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
