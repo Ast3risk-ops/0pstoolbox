@@ -37,6 +37,7 @@ cls
 echo ---------------------------------------------------------------------------------------------------------------------                                    
 echo 1. Uninstall Edge
 echo 2. Uninstall OneDrive
+echo 0. Go back
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
 set /p choice=Type the number.
@@ -47,6 +48,7 @@ if '%choice%'=='3'
 if '%choice%'=='4'
 if '%choice%'=='5' 
 if '%choice%'=='6' 
+if '%choice%'=='0' goto start
 ECHO "%choice%" is not valid, try again
 ECHO.
 goto start
