@@ -2,9 +2,21 @@
 cls
 call :IsAdmin
 echo off
-#powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/SteavenGamerYT/SteavenToolBox/main/Scripts/runtime.ps1'))"
-#powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/SteavenGamerYT/SteavenToolBox/main/Scripts/runtime2.ps1'))"
 Reg.exe add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v "VerboseStatus" /t REG_DWORD /d "1" /f
+:prestart
+cls
+echo ---------------------------------------------------------------------------------------------------------------------                                    
+echo 1. Install Runtime
+echo 2. Start Toolbox
+echo ---------------------------------------------------------------------------------------------------------------------
+set choice=
+set /p choice=Type the number.
+if not '%choice%'=='' set choice=%choice:~0,100%
+if '%choice%'=='1' powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/SteavenGamerYT/SteavenToolBox/main/Scripts/runtime.ps1'))" && powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/SteavenGamerYT/SteavenToolBox/main/Scripts/runtime2.ps1'))"
+if '%choice%'=='2' goto start
+ECHO "%choice%" is not valid, try again
+ECHO.
+goto prestart
 :start
 title SteavenToolbox 2.0
 cls
@@ -40,7 +52,7 @@ cls
 echo ---------------------------------------------------------------------------------------------------------------------                                    
 echo 1. Uninstall Edge
 echo 2. Uninstall OneDrive
-echp 3. Uninstall Microsoft Teams
+echo 3. Uninstall Microsoft Teams
 echo 0. Go back
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
