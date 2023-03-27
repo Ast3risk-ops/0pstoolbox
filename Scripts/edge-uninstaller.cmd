@@ -57,4 +57,3 @@ echo Press any key to exit.
 
 rem by @ishad0w
 pause >nul
-exit /b
