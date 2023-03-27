@@ -1,89 +1,27 @@
-@rem OneDrive Complete uninstaller batch process for Windows 10.
-@rem Run as administrator to completely delete all OneDrive components and files.
-@rem Written by TERRA Operative - 2020/03/02. V1.4
-@rem Feel free to distribute freely as long as you leave this entire file unchanged and intact,
-@rem and if you do make changes and adaptions, don't be a dick about not attributing where due.
-@rem And most importantly, peace out and keep it real.
-
-@echo OFF
-
-@REM Set variables for coloured text
-SETLOCAL EnableDelayedExpansion
-for /F "tokens=1,2 delims=#" %%a in ('"prompt #$H#$E# & echo on & for %%b in (1) do rem"') do (
-  set "DEL=%%a"
-)
-
-   echo ------Windows 10/11 OneDrive Uninstaller ------
-   echo.
-   
-@rem This code block detects if the script is being running with admin privileges. If it isn't it pauses and then quits.
-NET SESSION >nul 2>&1
-IF %ERRORLEVEL% EQU 0 (
-
-
-   echo        Administrator Privileges Detected!
-   echo.
-) ELSE (
-
-   echo.
-   call :colorEcho 0C "########### ERROR - ADMINISTRATOR PRIVILEGES REQUIRED #############"
-   echo.
-   call :colorEcho 0C "#                                                                 #"
-   echo.
-   call :colorEcho 0C "#"
-   call :colorEcho 07 "    This script must be run as administrator to work properly."
-   call :colorEcho 0C "    #"
-   echo.
-   call :colorEcho 0C "#"
-   call :colorEcho 07 "    If you're seeing this after double clicking on the icon,"
-   call :colorEcho 0C "     #"
-   echo.
-   call :colorEcho 0C "#"
-   call :colorEcho 07 "  then right click on the icon and select 'Run As Administrator'"
-   call :colorEcho 0C " #"
-   echo.
-   call :colorEcho 0C "#                                                                 #"
-   echo.
-   call :colorEcho 0C "###################################################################"
-   echo.
-   echo.
-
-   PAUSE
-   EXIT /B 1
-)
-
-   echo -----------------------------------------------
-   call :colorEcho 0C "                    WARNING"
-   echo.
-   call :colorEcho 0C "  This script will completely and permanently"
-   echo.
-   call :colorEcho 0C "      remove OneDrive from your computer."
-   echo.
-   call :colorEcho 0C "        Make sure all OneDrive documents"   
-   echo.
-   call :colorEcho 0C "       that are stored locally are fully"
-   echo.
-   call :colorEcho 0C "          backed up before proceeding."   
-   echo.
-   echo -----------------------------------------------
-   echo.
-
-   SET /P M=  Press 'Y' to continue or any other key to exit. 
-	if %M% ==Y goto PROCESSKILL
-	if %M% ==y goto PROCESSKILL
-
-   EXIT /B 1
-
-
-@rem Terminate any OneDrive process
-:PROCESSKILL
-   echo.
-   echo Terminating OneDrive process.
-   
-taskkill /f /im OneDrive.exe
-
-
-@rem Detect if OS is 32 or 64 bit
+Echo Shell Fixing
+Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "AppData" /t REG_EXPAND_SZ /d "%%USERPROFILE%%\AppData\Roaming" /f> nul
+Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "Cache" /t REG_EXPAND_SZ /d "%%USERPROFILE%%\AppData\Local\Microsoft\Windows\INetCache" /f> nul
+Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "Cookies" /t REG_EXPAND_SZ /d "%%USERPROFILE%%\AppData\Local\Microsoft\Windows\INetCookies" /f> nul
+Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "Favorites" /t REG_EXPAND_SZ /d "%%USERPROFILE%%\Favorites" /f> nul
+Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "History" /t REG_EXPAND_SZ /d "%%USERPROFILE%%\AppData\Local\Microsoft\Windows\History" /f> nul
+Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "Local AppData" /t REG_EXPAND_SZ /d "%%USERPROFILE%%\AppData\Local" /f> nul
+Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "My Music" /t REG_EXPAND_SZ /d "%%USERPROFILE%%\Music" /f> nul
+Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "My Video" /t REG_EXPAND_SZ /d "%%USERPROFILE%%\Videos" /f> nul
+Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "NetHood" /t REG_EXPAND_SZ /d "%%USERPROFILE%%\AppData\Roaming\Microsoft\Windows\Network Shortcuts" /f> nul
+Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "PrintHood" /t REG_EXPAND_SZ /d "%%USERPROFILE%%\AppData\Roaming\Microsoft\Windows\Printer Shortcuts" /f> nul
+Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "Programs" /t REG_EXPAND_SZ /d "%%USERPROFILE%%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs" /f> nul
+Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "Recent" /t REG_EXPAND_SZ /d "%%USERPROFILE%%\AppData\Roaming\Microsoft\Windows\Recent" /f> nul
+Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "SendTo" /t REG_EXPAND_SZ /d "%%USERPROFILE%%\AppData\Roaming\Microsoft\Windows\SendTo" /f> nul
+Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "Start Menu" /t REG_EXPAND_SZ /d "%%USERPROFILE%%\AppData\Roaming\Microsoft\Windows\Start Menu" /f> nul
+Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "Startup" /t REG_EXPAND_SZ /d "%%USERPROFILE%%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup" /f> nul
+Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "Templates" /t REG_EXPAND_SZ /d "%%USERPROFILE%%\AppData\Roaming\Microsoft\Windows\Templates" /f> nul
+Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "{374DE290-123F-4565-9164-39C4925E467B}" /t REG_EXPAND_SZ /d "%%USERPROFILE%%\Downloads" /f> nul
+Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "Desktop" /t REG_EXPAND_SZ /d "%%USERPROFILE%%\Desktop" /f> nul
+Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "My Pictures" /t REG_EXPAND_SZ /d "%%USERPROFILE%%\Pictures" /f> nul
+Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "Personal" /t REG_EXPAND_SZ /d "%%USERPROFILE%%\Documents" /f> nul
+Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "{F42EE2D3-909F-4907-8871-4C22FC0BF756}" /t REG_EXPAND_SZ /d "%%USERPROFILE%%\Documents" /f> nul
+Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "{0DDD015D-B06C-45D5-8C4C-F59713854639}" /t REG_EXPAND_SZ /d "%%USERPROFILE%%\Pictures" /f> nul
+taskkill /f /im OneDrive.exe> nul
 reg Query "HKLM\Hardware\Description\System\CentralProcessor\0" | find /i "x86" > NUL && set OS=32BIT || set OS=64BIT
 
 if %OS%==32BIT GOTO 32BIT
@@ -105,58 +43,13 @@ GOTO CLEAN
    echo Removing OneDrive setup files.
    
 %SystemRoot%\SysWOW64\OneDriveSetup.exe /uninstall
-GOTO CLEAN
-
-
-@rem Clean and remove OneDrive remnants
-:CLEAN
-   echo.
-   echo Removing remaining OneDrive folders.
-   
-   rd "%UserProfile%\OneDrive" /s /q
-   rd "%LocalAppData%\Microsoft\OneDrive" /s /q
-   rd "%ProgramData%\Microsoft OneDrive" /s /q
-   rd "C:\OneDriveTemp" /s /q
-   del "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\OneDrive.lnk" /s /f /q
-   
-   echo.
-   call :colorEcho 0C "If you see 'access denied' errors here, reboot and run this batch file again."
-   echo.
-   echo.
-   echo 'The system cannot find the file specified.' errors are ok, it means the files are already gone.
-   echo.
-
-
-
-@rem Delete and remove OneDrive in file explorer folder tree registry key
-   echo -----------------------------------------------
-   echo.
-   echo Removing OneDrive registry keys.
-   
-   REG Delete "HKEY_CLASSES_ROOT\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}" /f
-   REG Delete "HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}" /f
-   REG ADD "HKEY_CLASSES_ROOT\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}" /v System.IsPinnedToNameSpaceTree /d "0" /t REG_DWORD /f
-
-   echo.
-   echo.
-   echo 'The system was unable to find the specified registry key or value.' errors are ok,
-   echo it means the Registry entries already don't exist.
-   echo.
-   echo -----------------------------------------------
-   echo.
-   echo OneDrive Uninstall and cleaning completed.
-   echo.
-
-   PAUSE
-   echo So long and thanks for all the fish...
-   PING -n 2 127.0.0.1>nul
-   EXIT /B 1
-
-   
-@rem Settings for text colour
-
-:colorEcho
-echo off
-<nul set /p ".=%DEL%" > "%~2"
-findstr /v /a:%1 /R "^$" "%~2" nul
-del "%~2" > nul 2>&1i
+   echo Removing remaining OneDrive folders.   
+   rd "%UserProfile%\OneDrive" /s /q> nul
+   rd "%LocalAppData%\Microsoft\OneDrive" /s /q> nul
+   rd "%ProgramData%\Microsoft OneDrive" /s /q> nul
+   rd "C:\OneDriveTemp" /s /q> nul
+   del "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\OneDrive.lnk" /s /f /q> nul
+   echo Removing OneDrive registry keys.  
+   REG Delete "HKEY_CLASSES_ROOT\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}" /f> nul
+   REG Delete "HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}" /f> nul
+   REG ADD "HKEY_CLASSES_ROOT\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}" /v System.IsPinnedToNameSpaceTree /d "0" /t REG_DWORD /f> nul
