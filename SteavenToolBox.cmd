@@ -18,7 +18,7 @@ echo 2. Update All Installed Apps To Thair Lastest Versions
 echo 3. Install Features, Programs and Apps
 echo 4. Windows Update Fix 
 echo 5. Crack Windows and Office
-echo 6. Uninstall Edge
+echo 6. Uninstall Apps
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
 set /p choice=Type the number.
@@ -28,7 +28,25 @@ if '%choice%'=='2' goto update
 if '%choice%'=='3' goto installapps
 if '%choice%'=='4' goto updatefix
 if '%choice%'=='5' goto crack
-if '%choice%'=='6' powershell -command "Invoke-WebRequest https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/Scripts/edge-uninstaller.cmd -OutFile C:\windows\temp\edge-uninstaller.cmd" && powershell.exe -command "C:\windows\temp\edge-uninstaller.cmd"
+if '%choice%'=='6' goto uninstall
+ECHO "%choice%" is not valid, try again
+ECHO.
+goto start
+:uninstall
+cls
+echo ---------------------------------------------------------------------------------------------------------------------                                    
+echo 1. Uninstall Edge
+echo 2. Uninstall OneDrive
+echo ---------------------------------------------------------------------------------------------------------------------
+set choice=
+set /p choice=Type the number.
+if not '%choice%'=='' set choice=%choice:~0,100%
+if '%choice%'=='1' powershell -command "Invoke-WebRequest https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/Scripts/edge-uninstaller.cmd -OutFile C:\windows\temp\edge-uninstaller.cmd" && powershell.exe -command "C:\windows\temp\edge-uninstaller.cmd"
+if '%choice%'=='2' powershell -command "Invoke-WebRequest https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/Scripts/onedrive-uninstaller.cmd -OutFile C:\windows\temp\onedrive-uninstaller.cmd" && powershell.exe -command "C:\windows\temp\onedrive-uninstaller.cmd"
+if '%choice%'=='3'
+if '%choice%'=='4'
+if '%choice%'=='5' 
+if '%choice%'=='6' 
 ECHO "%choice%" is not valid, try again
 ECHO.
 goto start
