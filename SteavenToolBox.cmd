@@ -54,6 +54,7 @@ echo 1. Uninstall Edge
 echo 2. Uninstall OneDrive
 echo 3. Uninstall Microsoft Teams
 echo 4. Uninstall Windows Media Player (Legacay)
+echo 5. Uninstall Cortana
 echo 0. Go back
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
@@ -63,6 +64,7 @@ if '%choice%'=='1' powershell -command "Invoke-WebRequest https://github.com/Ste
 if '%choice%'=='2' powershell -command "Invoke-WebRequest https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/Scripts/onedrive-uninstaller.cmd -OutFile C:\windows\temp\onedrive-uninstaller.cmd" && powershell.exe -command "C:\windows\temp\onedrive-uninstaller.cmd"
 if '%choice%'=='3' powershell -command "Invoke-WebRequest https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/Scripts/teams-uninstaller.cmd -OutFile C:\windows\temp\teams-uninstaller.cmd" && powershell.exe -command "C:\windows\temp\teams-uninstaller.cmd"
 if '%choice%'=='4' powershell -command "Invoke-WebRequest https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/Scripts/windows-media-player-legacay-uninstaller.cmd -OutFile C:\windows\temp\windows-media-player-legacay-uninstaller.cmd" && powershell.exe -command "C:\windows\temp\windows-media-player-legacay-uninstaller.cmd"
+if '%choice%'=='5' powershell -command "Invoke-WebRequest https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/Scripts/cortana-uninstaller.cmd -OutFile C:\windows\temp\cortana-uninstaller.cmd" && powershell.exe -command "C:\windows\temp\cortana-uninstaller.cmd"
 if '%choice%'=='0' goto start
 ECHO "%choice%" is not valid, try again
 ECHO.
