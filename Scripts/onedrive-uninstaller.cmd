@@ -1,3 +1,5 @@
+echo off
+cls
 Echo Shell Fixing
 Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "AppData" /t REG_EXPAND_SZ /d "%%USERPROFILE%%\AppData\Roaming" /f> nul
 Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "Cache" /t REG_EXPAND_SZ /d "%%USERPROFILE%%\AppData\Local\Microsoft\Windows\INetCache" /f> nul
@@ -22,27 +24,8 @@ Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell 
 Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "{F42EE2D3-909F-4907-8871-4C22FC0BF756}" /t REG_EXPAND_SZ /d "%%USERPROFILE%%\Documents" /f> nul
 Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "{0DDD015D-B06C-45D5-8C4C-F59713854639}" /t REG_EXPAND_SZ /d "%%USERPROFILE%%\Pictures" /f> nul
 taskkill /f /im OneDrive.exe> nul
-reg Query "HKLM\Hardware\Description\System\CentralProcessor\0" | find /i "x86" > NUL && set OS=32BIT || set OS=64BIT
-
-if %OS%==32BIT GOTO 32BIT
-if %OS%==64BIT GOTO 64BIT
-
-
-@rem Uninstall OneDrive app
-:32BIT
-   echo.
-   echo This is a 32-bit operating system.
-   echo Removing OneDrive setup files.
-   
-%SystemRoot%\System32\OneDriveSetup.exe /uninstall
-GOTO CLEAN
-
-:64BIT
-   echo.
-   echo This is a 64-bit operating system.
-   echo Removing OneDrive setup files.
-   
-%SystemRoot%\SysWOW64\OneDriveSetup.exe /uninstall
+%SystemRoot%\System32\OneDriveSetup.exe /uninstall> nul
+%SystemRoot%\SysWOW64\OneDriveSetup.exe /uninstall> nul
    echo Removing remaining OneDrive folders.   
    rd "%UserProfile%\OneDrive" /s /q> nul
    rd "%LocalAppData%\Microsoft\OneDrive" /s /q> nul
