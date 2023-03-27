@@ -5,6 +5,7 @@ echo off
 Reg.exe add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v "VerboseStatus" /t REG_DWORD /d "1" /f
 :prestart
 cls
+color c
 echo ---------------------------------------------------------------------------------------------------------------------                                    
 echo 1. Install Runtime
 echo 2. Start Toolbox
