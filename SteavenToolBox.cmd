@@ -268,7 +268,7 @@ echo 1. Firefox
 echo 2. Chrome
 echo 3. Brave
 echo 4. Chromium
-echo 5. Edge
+echo 5. Edge (If you removed it before it may faill to reinstall)
 echo 0. Go back
 echo ---------------------------------------------------------------------------------------------------------------------
 set choice=
